@@ -1,0 +1,67 @@
+<footer>
+  <div class="footer-main">
+    <div class="container">
+      <div class="company-info">
+        <p style="margin-top:0">
+          Beverlosesteenweg 128<br />
+          3583 Paal-Beringen<br />
+          <span translate="belgium"></span>
+        </p>
+        <p>
+          BE 0824.630.751
+        </p>
+        <p>
+          <i class="fal fa-fw fa-phone"></i>&nbsp;<a href="tel:003211456210">+32 11 45 62 10</a><br />
+          <i class="fal fa-fw fa-fax"></i> +32 11 45 62 15<br />
+          <i class="fal fa-fw fa-envelope"></i>&nbsp;<a href="mailto:info@claes-machines.be">info@claes-machines.be</a>
+        </p>
+      </div>
+      <div class="company-opening">
+        <span class="title" translate="opening"></span>
+        <div class="opening-grid">
+          <span class="day" translate="monday"></span>
+          <span class="period">: 08:00 - 12:00 | 13:00 - 17:00</span>
+          <span class="day" translate="tuesday"></span>
+          <span class="period">: 08:00 - 12:00 | 13:00 - 17:00</span>
+          <span class="day" translate="wednesday"></span>
+          <span class="period">: 08:00 - 12:00 | 13:00 - 17:00</span>
+          <span class="day" translate="thursday"></span>
+          <span class="period">: 08:00 - 12:00 | 13:00 - 17:00</span>
+          <span class="day" translate="friday"></span>
+          <span class="period">: 08:00 - 12:00 | 13:00 - 16:00</span>
+        </div>
+      </div>
+      <div class="company-list">
+        <a href="https://www.claes-machines.be/" class="mac-color" target="_blank">
+          <span translate="mac"></span>
+          <br />
+          <pcm-website-logo company="mac" style="height: 56px"></pcm-website-logo>
+        </a>
+        <br />
+        <a href="https://www.groupclaes.be/" class="gro-color" target="_blank">
+          <span translate="gro"></span>
+          <br />
+          <pcm-website-logo company="gro" style="height: 56px"></pcm-website-logo>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="select-language">
+        <button mat-button #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="languageMenu">
+          <i class="fas fa-globe-europe fa-lg"></i>&nbsp; <span [textContent]="currentLanguage" translate></span>
+        </button>
+        <mat-menu #languageMenu="matMenu" [overlapTrigger]="false">
+          <button mat-menu-item *ngFor="let language of languages" (click)="menuTrigger.closeMenu();lang(language)">
+            <span [textContent]="language" translate></span>
+          </button>
+        </mat-menu>
+      </div>
+      <div class="copyright">
+        Copyright <i class="fal fa-copyright fa-sm"></i> {{ today | date:'yyyy' }} -
+        <a href="https://www.claes-distribution.be" target="_blank" class="dis-color" translate="dis"></a>
+      </div>
+    </div>
+  </div>
+</footer>

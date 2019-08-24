@@ -1,0 +1,7 @@
+<div class="container">
+  <h3 translate="newsList"></h3>
+  <i class="fas fa-fw fa-2x fa-spinner fa-pulse" *ngIf="!newsItems" style="margin:0 auto 1em;display:block;"></i>
+  <div class="placeholder">
+    <news-item *ngFor="let newsItem of newsItems" [content]="newsItem"></news-item>
+  </div>
+</div>

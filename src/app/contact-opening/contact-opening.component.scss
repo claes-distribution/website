@@ -1,0 +1,69 @@
+:host {
+  display: block;
+  margin-top: 2em;
+
+  h3 {
+    margin-top: 0;
+    margin: .6em 0 .4em 0;
+  }
+  div.container {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    div.office-opening {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    div.store-opening {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    div.wharehouse-opening {
+      grid-column: 1;
+      grid-row: 3;
+    }
+
+    @media screen and (min-width: 640px) {
+      grid-template-columns: 1fr 1fr;
+
+      div.store-opening {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      div.wharehouse-opening {
+        grid-column: 1 / 3;
+        grid-row: 2;
+      }
+    }
+
+    @media screen and (min-width: 940px) {
+      grid-template-columns: 1fr 1fr 1fr;
+
+      div.wharehouse-opening {
+        grid-column: 3;
+        grid-row: 1;
+      }
+    }
+  }
+
+  div.opening {
+    display: block;
+    margin: 0 auto;
+
+    span.title {
+      font-size: 17px;
+      margin-top: .7em;
+      margin-bottom: .5em;
+      display: block;
+    }
+
+    div.opening-grid {
+      display: grid;
+      grid-column-gap: .25em;
+      grid-template-columns: auto 1fr;
+    }
+  }
+}

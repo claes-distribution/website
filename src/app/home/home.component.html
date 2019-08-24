@@ -1,0 +1,37 @@
+<pcm-website-banner company="dis"></pcm-website-banner>
+<section>
+  <div class="container">
+    <h5 style="margin:1em 0" translate="homeTitle"></h5>
+  </div>
+  <div class="container qualities">
+    <div class="service">
+      <h3 translate="homeServiceTitle"></h3>
+      <p translate="homeServiceText"></p>
+    </div>
+    <div class="quality">
+      <h3 translate="homeQualityTitle"></h3>
+      <p translate="homeQualityText"></p>
+    </div>
+    <div class="experience">
+      <h3 translate="homeExperienceTitle"></h3>
+      <p translate="homeExperienceText"></p>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container top-categories">
+    <i class="fas fa-fw fa-2x fa-spinner fa-pulse" *ngIf="!categories" style="margin:0 auto 1em;display:block;"></i>
+    <div class="category" *ngFor="let category of categories">
+      <div class="category-label">
+        <a [href]="category.url" target="_blank">
+          <h4 class="dis-color" [innerText]="category.Name[culture]"></h4>
+        </a>
+        <pcm-website-category-image-slideshow [images]="category.images"></pcm-website-category-image-slideshow>
+        <a [href]="subCategory.url" target="_blank" *ngFor="let subCategory of category.Categories">
+          <div class="category-button dis-bgcolor" [innerText]="subCategory.Name[culture]"></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<news-list company="dis"></news-list>

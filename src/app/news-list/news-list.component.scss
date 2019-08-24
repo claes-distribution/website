@@ -1,0 +1,19 @@
+:host {
+  div.container {
+    margin-top: 2em;
+
+    div.placeholder {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      news-item {
+        display: block;
+        padding: 0 .5em;
+
+        &+news-item {
+          border-left: 1px solid currentColor;
+        }
+      }
+    }
+  }
+}

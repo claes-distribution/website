@@ -1,0 +1,79 @@
+/*
+ * Application global variables.
+ */
+
+// Angular Material custom theme
+// See https://material.angular.io/guide/theming for more details.
+//
+// You can also read https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1
+// for more insight about Angular Material theming.
+
+@import "~@angular/material/theming";
+// @import './src/app/core/shell/shell.component.scss';
+// @import './src/app/login/login.component.scss';
+/* @import './src/app/news/news.component.scss';
+@import './src/app/recipes/recipes.component.scss';
+@import './src/app/products/products.component.scss';
+@import './src/app/shared/product-detail/product-detail.component.scss';
+@import './src/app/shared/category-menu/category-menu.component.scss';
+@import './src/app/shared/basket-list/basket-list.component.scss'; */
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+
+$mat-green: (
+  50: #E8F5E9,
+  100: #C8E6C9,
+  200: #A5D6A7,
+  300: #81C784,
+  400: #66BB6A,
+  500: #71957D,
+  600: #43A047,
+  700: #3B6E4F,
+  800: #2E7D32,
+  900: #1B5E20,
+  A100: #B9F6CA,
+  A200: #69F0AE,
+  A400: #00E676,
+  A700: #3B6E4F,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: $black-87-opacity,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: $black-87-opacity,
+    A700: $black-87-opacity,
+  )
+);
+
+$app-color: mat-palette($mat-green, 500, 700, 900);
+$app-accent: mat-palette($mat-light-green);
+
+// The warn palette is optional (defaults to red).
+$app-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$app-theme: mat-light-theme($app-color, $app-accent, $app-warn);
+
+$custom-typography: mat-typography-config($font-family: 'Nunito'
+);
+
+@include angular-material-typography($custom-typography);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($app-theme);
+
+// Using the $theme variable from the pre-built theme you can call the theming function
+// @include shell-theme($app-theme);
+// @include login-theme($app-theme);
