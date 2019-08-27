@@ -1,0 +1,36 @@
+image: node:latest
+
+build:
+    stage: build
+cache:
+    paths:
+        - node_modules/
+        script:
+- npm install --quiet
+- npm run build-prod
+artifacts:
+    paths:
+        - dist/
+
+test:
+stage: test
+cache:
+    policy: pull
+paths:
+    - node_modules/
+    script:
+# install dependencies to use chrome w/ puppeteer
+- npm run test
+
+test:karma:
+  stage: test
+  image: trion/ng-cli-karma
+  allow_failure: false
+  script:
+    - ng test --code-coverage --progress false --watch false
+  coverage: '/Lines \W+: (\d+\.\d+)%.*/'
+  artifacts:
+    paths:
+      - coverage/
+  tags:
+    - docker

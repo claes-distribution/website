@@ -14,7 +14,6 @@ import { environment } from '../environments/environment';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
-
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
