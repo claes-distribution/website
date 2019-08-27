@@ -1,17 +1,3 @@
-build:
-  image: node:latest
-  stage: build
-  cache:
-    policy: pull
-    paths:
-     - node_modules/
-  script:
-   - npm install --quiet
-   - npm run build-prod
-  artifacts:
-    paths:
-     - dist/
-
 test:
   image: node:latest
   stage: test
@@ -34,3 +20,17 @@ test:karma:
      - coverage/
   tags:
     - docker
+
+build:
+  image: node:latest
+  stage: build
+  cache:
+    policy: pull
+    paths:
+     - node_modules/
+  script:
+   - npm install --quiet
+   - npm run build-prod
+  artifacts:
+    paths:
+     - dist/
