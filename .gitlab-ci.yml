@@ -1,26 +1,25 @@
 image: node:latest
 
 build:
-    stage: build
+  stage: build
 cache:
-    paths:
-        - node_modules/
-        script:
-- npm install --quiet
-- npm run build-prod
+  paths:
+    - node_modules/
+    script:
+      - npm install --quiet
+      - npm run build-prod
 artifacts:
-    paths:
-        - dist/
+  paths:
+    - dist/
 
 test:
 stage: test
 cache:
-    policy: pull
+  policy: pull
 paths:
-    - node_modules/
-    script:
-# install dependencies to use chrome w/ puppeteer
-- npm run test
+  - node_modules/
+  script:
+    - npm run test
 
 test:karma:
   stage: test
