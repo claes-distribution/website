@@ -25,10 +25,10 @@ export class HomeComponent implements OnInit {
         this.categories = items;
         for (const category of items) {
           // tslint:disable-next-line: max-line-length
-          category.url = this.sanitizer.bypassSecurityTrustUrl(`https://shop.claes-distribution.be/products/${category.Name[this.culture]}/${category.Id}?page=0&department=-1`);
+          category.url = this.sanitizer.bypassSecurityTrustUrl(`https://shop.claes-distribution.be/products/${category.Name[this.culture]}/${category.Id}?page=0&department=-1&ux=website`);
           for (const subcategory of category.Categories) {
             // tslint:disable-next-line: max-line-length
-            subcategory.url = this.sanitizer.bypassSecurityTrustUrl(`https://shop.claes-distribution.be/products/${subcategory.Name[this.culture]}/${subcategory.Id}?page=0&department=-1`);
+            subcategory.url = this.sanitizer.bypassSecurityTrustUrl(`https://shop.claes-distribution.be/products/${subcategory.Name[this.culture]}/${subcategory.Id}?page=0&department=-1&ux=website`);
           }
           this.api.getPcmImagesList(category.GroupId).subscribe(r => {
             const images = [];

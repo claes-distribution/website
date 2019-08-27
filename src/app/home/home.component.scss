@@ -6,7 +6,15 @@
 
     div.qualities {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr;
+
+      @media screen and (min-width: 760px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media screen and (min-width: 1140px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
 
       div {
         margin: 0 2em;
@@ -26,23 +34,24 @@
     color: White;
     transition: 180ms ease-in-out all;
     margin-top: 1px;
+    border: 1px solid transparent;
 
     &:hover {
       transform: scale(1.2);
-      margin-top: 0;
-      border: 1px solid rgba(0, 0, 0, 0.8);
+      // margin-top: 0;
+      border-color: rgba(0, 0, 0, 0.8);
 
       @media screen and (prefers-color-scheme: dark) {
-        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-color: rgba(255, 255, 255, 0.8);
       }
     }
   }
 
-  // section:nth-child(even) {
-  //   background-color: #f4f5f7;
+  section:nth-child(odd) {
+    background-color: #f4f5f7;
 
-  //   @media (prefers-color-scheme:dark) {
-  //     background-color: #111214;
-  //   }
-  // }
+    @media (prefers-color-scheme:dark) {
+      background-color: #111214;
+    }
+  }
 }

@@ -1,0 +1,22 @@
+:host {
+  div.slideshow {
+    margin: 0 auto;
+    height: 340px;
+    //width: 340px;
+    margin-bottom: .7em;
+
+    @media screen and (min-width: 760px) {
+      height: 340px;
+      //width: 680px;
+    }
+
+    @media screen and (min-width: 1140px) {
+      height: 340px;
+      //width: 1020px;
+    }
+
+    pcm-website-category-image {
+      height: inherit;
+    }
+  }
+}

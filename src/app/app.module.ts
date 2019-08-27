@@ -42,7 +42,7 @@ import { AboutCompanyComponent } from './about-company/about-company.component';
 import { AboutHistoryComponent } from './about-history/about-history.component';
 import { AboutMissionComponent } from './about-mission/about-mission.component';
 import { AboutStrategyComponent } from './about-strategy/about-strategy.component';
-import { AboutServiceSupportComponent } from './about-service-support/about-service-support.component';
+import { AboutOurAssetsComponent } from './about-our-assets/about-our-assets.component';
 import { MenuComponent } from './menu/menu.component';
 import { OrderComponent } from './order/order.component';
 import { PcmWebsiteCategoryImageSlideshowComponent } from './pcm-website-category-image-slideshow/pcm-website-category-image-slideshow.component';
@@ -61,7 +61,7 @@ import { PcmWebsiteCategoryImageComponent } from './pcm-website-category-image/p
     AboutHistoryComponent,
     AboutMissionComponent,
     AboutStrategyComponent,
-    AboutServiceSupportComponent,
+    AboutOurAssetsComponent,
     NewsListComponent,
     NewsItemComponent,
     ContactComponent,

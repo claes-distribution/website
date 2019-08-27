@@ -3,7 +3,9 @@
   <form [formGroup]="contactForm" (submit)="sendQuestion()">
     <mat-form-field class="department" appearance="outline">
       <mat-select placeholder="Select" formControlName="department" name="yeeter">
-        <mat-option value="" selected="true">Selecteer een afdeling</mat-option>
+        <mat-option value="" selected="true">
+          <span translate="selectDepartment"></span>
+        </mat-option>
         <mat-option value="info">
           <span translate="emailInfo"></span>
         </mat-option>

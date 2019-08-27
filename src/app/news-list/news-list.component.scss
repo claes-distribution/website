@@ -4,15 +4,19 @@
 
     div.placeholder {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr;
+
+      @media screen and (min-width: 760px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media screen and (min-width: 1140px) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
 
       news-item {
         display: block;
         padding: 0 .5em;
-
-        &+news-item {
-          border-left: 1px solid currentColor;
-        }
       }
     }
   }

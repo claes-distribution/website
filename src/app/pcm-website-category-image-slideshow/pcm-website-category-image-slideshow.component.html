@@ -1,3 +1,4 @@
-<div class="slideshow" *ngFor="let image of images">
-  <pcm-website-category-image [url]="image"></pcm-website-category-image>
+<div class="slideshow">
+  <pcm-website-category-image [url]="currentImageUrl"></pcm-website-category-image>
+  <!-- <pcm-website-category-image [url]="nextImageUrl" *ngIf="nextImageUrl"></pcm-website-category-image> -->
 </div>

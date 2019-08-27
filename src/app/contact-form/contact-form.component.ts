@@ -34,7 +34,7 @@ export class ContactFormComponent implements OnInit {
   sendQuestion() {
     const question: ContactQuestion = {
       Email: this.contactForm.value.email,
-      Company: 'claes-machines',
+      Company: 'claes-disrtribution',
       Department: this.contactForm.value.department,
       Question: `${this.contactForm.value.name} (${this.contactForm.value.phone})\n` + this.contactForm.value.question,
       Subject: this.contactForm.value.subject
@@ -42,6 +42,7 @@ export class ContactFormComponent implements OnInit {
 
     this.api.sendContactQuestion(question).subscribe((resp: string) => {
       alert(this.translate.instant('questionSent'));
+      this.contactForm.reset();
       this.ref.markForCheck();
     });
   }
