@@ -33,7 +33,7 @@ export class PcmWebsiteCategoryImageSlideshowComponent implements OnInit, OnDest
       this.updateImage();
 
       if (this.images.length > 1) {
-        const sub = interval(5000);
+        const sub = interval(2500);
         this.observer = sub.subscribe(x => {
           if (this.currentIndex < this.images.length - 1) {
             this.currentIndex++;
