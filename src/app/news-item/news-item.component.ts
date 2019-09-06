@@ -39,7 +39,7 @@ export class NewsItemComponent implements OnInit {
   }
 
   openDetail() {
-    window.open(`https://news.groupclaes.be/${this.content.id}/${this.content['title' + this.culture.toUpperCase()]}`);
+    window.open(`https://news.groupclaes.be/news/${this.content.id}/${this.content['title' + this.culture.toUpperCase()]}`);
   }
 
   get culture(): string {
