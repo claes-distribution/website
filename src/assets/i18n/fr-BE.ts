@@ -154,6 +154,7 @@ export const frBE = {
   'aboutOurAssetsText11': 'Réception des marchandises au moyen du scannage, gestion et traitement des commandes informatisés, préparation des commandes par RF, transport réfrigéré avec track & trace.',
   'aboutOurAssetsText12': 'Grâce aux informations générées par ces systèmes, nous pouvons tenir nos clients informés en permanence quant au statut de leur commande.',
   'aboutOurAssetsText13': 'La traçabilité de toutes les marchandises expédiées nous permet de procéder efficacement à un rappel de produit au moindre problème.',
+  'aboutOurAssetsText14': 'Afin de répondre à l’intérêt croissant suscité par les produits BIO et de servir encore mieux nos clients, nous avons obtenu notre certificat BIO.',
   'aboutOurAssetsCategory1': 'DENRÉES ALIMENTAIRES: ',
   'aboutOurAssetsCategory1Text': 'épices et condiments, additifs et aromatisants, ingrédients de base, chapelure, marinades, sauces et fonds, soupes et bouillons, pâtes et riz, conserves, boissons',
   'aboutOurAssetsCategory2': 'BOYAUX: ',

@@ -154,6 +154,7 @@ export const nlBE = {
   'aboutOurAssetsText11': 'Goederenontvangst via scanning, geïnformatiseerd voorraadbeheer en orderverwerking, orderpicking via RF, gekoeld transport met track & trace.',
   'aboutOurAssetsText12': 'Deze beschikbare informatie maakt dat we de klanten te allen tijde kunnen informeren over de status van hun bestelling. ',
   'aboutOurAssetsText13': 'De traceerbaarheid van alle uitgeleverde goederen zorgt ervoor dat we bij het minste probleem een efficiënte recall kunnen uitvoeren.',
+  'aboutOurAssetsText14': 'Om tegemoet te komen aan de groeiende interesse in BIO-producten en om onze klanten nog beter van dienst te zijn behaalden wij ons BIO – certificaat.',
   'aboutOurAssetsCategory1': 'VOEDINGSWAREN: ',
   'aboutOurAssetsCategory1Text': 'kruiden en specerijen, additieven en smaakmakers, basisingrediënten, paneermelen, marinades, sauzen en fonds, soepen en bouillons, deegwaren & rijst, conserven, dranken',
   'aboutOurAssetsCategory2': 'DARMEN: ',
