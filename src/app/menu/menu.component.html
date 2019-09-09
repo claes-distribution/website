@@ -1,4 +1,7 @@
 <mat-toolbar color="primary">
+  <a class="menu-link-button menu-button" #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="mobileMenu">
+    <i class="far fa-fw fa-lg fa-bars"></i>
+  </a>
   <a class="menu-link-button logo" routerLink="" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
     <pcm-website-logo company="dis"></pcm-website-logo>
   </a>
@@ -23,3 +26,20 @@
   </div>
 </mat-toolbar>
 <div class="spacer"></div>
+<mat-menu #mobileMenu="matMenu" [overlapTrigger]="false">
+  <button mat-menu-item routerLink="" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
+    <span translate="home"></span>
+  </button>
+  <button mat-menu-item routerLink="order" routerLinkActive="active">
+    <span translate="menuOrder"></span>
+  </button>
+  <button mat-menu-item href="https://www.groupclaes.be/vacancy" target="_blank">
+    <span translate="menuVacancies"></span>
+  </button>
+  <button mat-menu-item routerLink="about" routerLinkActive="active">
+    <span translate="menuAbout"></span>
+  </button>
+  <button mat-menu-item routerLink="contact" routerLinkActive="active">
+    <span translate="menuContact"></span>
+  </button>
+</mat-menu>
