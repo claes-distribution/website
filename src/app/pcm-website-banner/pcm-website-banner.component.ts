@@ -27,30 +27,32 @@ export class PcmWebsiteBannerComponent implements OnInit {
   }
 
   onResize(ev: UIEvent) {
-    if (this.company) {
-      if (this.element.nativeElement.offsetWidth <= 760 && this.currentSize !== 'small') {
-        console.log('small');
-        this.css = this.sanitizer.bypassSecurityTrustStyle(
-          `background-image: url('https://pcm.groupclaes.be/v2/content/${this.company}/website/banner-image?size=small');`
-        );
-        this.currentSize = 'small';
-        this.ref.markForCheck();
-        // tslint:disable-next-line: max-line-length
-      } else if (this.element.nativeElement.offsetWidth > 760 && this.element.nativeElement.offsetWidth <= 1140 && this.currentSize !== 'medium') {
-        console.log('medium');
-        this.css = this.sanitizer.bypassSecurityTrustStyle(
-          `background-image: url('https://pcm.groupclaes.be/v2/content/${this.company}/website/banner-image?size=medium');`
-        );
-        this.currentSize = 'medium';
-        this.ref.markForCheck();
-      } else if (this.element.nativeElement.offsetWidth > 1140 && this.currentSize !== 'large') {
-        console.log('large');
-        this.css = this.sanitizer.bypassSecurityTrustStyle(
-          `background-image: url('https://pcm.groupclaes.be/v2/content/${this.company}/website/banner-image?size=large');`
-        );
-        this.currentSize = 'large';
-        this.ref.markForCheck();
+    setTimeout(() => {
+      if (this.company) {
+        if (this.element.nativeElement.offsetWidth < 760 && this.currentSize !== 'small') {
+          console.log('small');
+          this.css = this.sanitizer.bypassSecurityTrustStyle(
+            `background-image: url('https://pcm.groupclaes.be/v2/content/${this.company}/website/banner-image?size=small');`
+          );
+          this.currentSize = 'small';
+          this.ref.markForCheck();
+          // tslint:disable-next-line: max-line-length
+        } else if (this.element.nativeElement.offsetWidth >= 760 && this.element.nativeElement.offsetWidth < 1140 && this.currentSize !== 'medium') {
+          console.log('medium');
+          this.css = this.sanitizer.bypassSecurityTrustStyle(
+            `background-image: url('https://pcm.groupclaes.be/v2/content/${this.company}/website/banner-image?size=medium');`
+          );
+          this.currentSize = 'medium';
+          this.ref.markForCheck();
+        } else if (this.element.nativeElement.offsetWidth >= 1140 && this.currentSize !== 'large') {
+          console.log('large');
+          this.css = this.sanitizer.bypassSecurityTrustStyle(
+            `background-image: url('https://pcm.groupclaes.be/v2/content/${this.company}/website/banner-image?size=large');`
+          );
+          this.currentSize = 'large';
+          this.ref.markForCheck();
+        }
       }
-    }
+    }, 100);
   }
 }
