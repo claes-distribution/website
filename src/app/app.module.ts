@@ -47,6 +47,7 @@ import { MenuComponent } from './menu/menu.component';
 import { OrderComponent } from './order/order.component';
 import { PcmWebsiteCategoryImageSlideshowComponent } from './pcm-website-category-image-slideshow/pcm-website-category-image-slideshow.component';
 import { PcmWebsiteCategoryImageComponent } from './pcm-website-category-image/pcm-website-category-image.component';
+import { EmailDisclaimerComponent } from './email-disclaimer/email-disclaimer.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { PcmWebsiteCategoryImageComponent } from './pcm-website-category-image/p
     ContactOpeningComponent,
     ContactInfoComponent,
     OrderComponent,
+    EmailDisclaimerComponent,
     PcmWebsiteCategoryImageSlideshowComponent,
     PcmWebsiteCategoryImageComponent
   ],
