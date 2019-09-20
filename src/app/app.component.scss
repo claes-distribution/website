@@ -25,3 +25,25 @@ div.floating-shop-button {
   right: 1em;
   bottom: 1em;
 }
+
+@media screen and (min-width: 760px) {
+  div.floating-shop-button button {
+    width: 64px;
+    height: 64px;
+
+    i.fa-lg {
+      font-size: 2em;
+    }
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  div.floating-shop-button button {
+    width: 80px;
+    height: 80px;
+
+    i.fa-lg {
+      font-size: 3em;
+    }
+  }
+}
