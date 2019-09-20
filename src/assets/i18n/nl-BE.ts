@@ -170,6 +170,15 @@ export const nlBE = {
   'aboutOurAssetsCategory7': 'HYGIËNE: ',
   'aboutOurAssetsCategory7Text': 'multi-reinigers, vloerreinigers, sanitair, ontvetters, ontsmettingsmiddelen, handhygiëne, wasmiddelen, zout & ontkalkers, box-en keukenrollen, poetsdoeken, dispensers, doseerpompen, insectenverdelgers, schoeisel, schorten, overalls, stofjassen, handschoenen, hoofddeksels',
 
+  // E-mail Disclaimer
+  'emailDisclaimerTitle': 'E-mail disclaimer',
+  'emailDisclaimerSubtitle': 'E-mailverkeer is onderworpen aan volgende voorwaarden:',
+  'emailDisclaimerText1': 'De informatie vervat in deze e-mails is <b>eigendom</b> van Group Claes of de met haar verbonden vennootschappen. Deze informatie is <b>strikt vertrouwelijk</b> en is uitsluitend bestemd voor gebruik door de geadresseerde. Het verder verspreiden, kopiëren of gebruiken van deze informatie is verboden zonder expliciete toelating.',
+  'emailDisclaimerText2': 'E-mails geven enkel het standpunt weer van de auteur ervan, en komen niet noodzakelijk overeen met het standpunt van de Group Claes of de vennootschappen die met haar verbonden zijn.',
+  'emailDisclaimerText3': 'Het aangaan van juridische verbintenissen dient krachtens onze firmaregels per brief of per fax te gebeuren en voorzien te worden van een <b>handtekening</b> van één of meerdere daartoe gemachtigde personen.',
+  'emailDisclaimerText4': 'Indien U deze e-mail per vergissing heeft ontvangen, verwittig dan alstublieft de afzender per reply e-mail en vernietig de per vergissing ontvangen e-mail. E-mail en bijgevoegde bestanden worden zorgvuldig gecontroleerd op computervirussen volgens onze standaardprocedures, doch wij waarborgen niet dat e-mailverkeer virusvrij is.',
+  'emailDisclaimerText5': '<b>Privacy</b>: E-mail die vanuit of naar bovenstaand adres van de afzender wordt verstuurd, kan door Group Claes gelezen en bewaard worden.',
+
   // Companies
   'gro': 'Group Claes',
   'dis': 'Claes Distribution',

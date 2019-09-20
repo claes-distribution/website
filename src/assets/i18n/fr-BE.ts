@@ -170,6 +170,15 @@ export const frBE = {
   'aboutOurAssetsCategory7': 'HYGIÈNE: ',
   'aboutOurAssetsCategory7Text': 'nettoyants multi-usage, nettoyants sol, sanitaires, dégraissants, désinfectants, hygiène des mains, détergents, sel et détartrants, essuie-tout, chiffons, distributeurs, doseurs, insecticides, chaussures, tabliers, combinaisons, cache poussière, gants, charlottes',
 
+  // E-mail Disclaimer
+  'emailDisclaimerTitle': 'E-mail disclaimer',
+  'emailDisclaimerSubtitle': 'Le trafic d\'e-mails est soumis aux conditions suivantes:',
+  'emailDisclaimerText1': 'Les informations contenues dans ces e-mails sont <n>la propriété</b> des Claes Distribution ou des sociétés qui y sont liées. Ces informations sont <b>strictement confidentielles</b> et sont exclusivement destinées à être utilisées par le destinataire. Toute diffusion, copie ou utilisation de ces informations est interdite sans autorisation expresse.',
+  'emailDisclaimerText2': 'Les e-mails reflètent uniquement la position de leur auteur, et ne correspondent pas nécessairement à la position des Claes Distribution ou des sociétés qui y sont liées.',
+  'emailDisclaimerText3': 'La prise d\'engagements juridiques doit se faire par lettre, en vertu des règles de notre société, et comporter <b>la signature</b> d\'une ou plusieurs personnes habilitées.',
+  'emailDisclaimerText4': 'Si vous avez reçu cet e-mail par erreur, veuillez en avertir l\'expéditeur en répondant à l\'e-mail et veuillez supprimer l\'e-mail en question. Nos procédures standard assurent un contrôle méticuleux des e-mails et des fichiers joints afin de détecter tout virus. Toutefois, nous ne pouvons garantir que le trafic d\'e-mails n\'en comporte aucun.',
+  'emailDisclaimerText5': '<b>Vie privée</b>: l\'e-mail envoyé depuis ou vers l\'adresse de l\'expéditeur ci-dessus, peut être lu et sauvegardé par les Claes Distribution.',
+
   // Companies
   'gro': 'Group Claes',
   'dis': 'Claes Distribution',
