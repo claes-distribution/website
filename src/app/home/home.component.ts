@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
           this.api.getPcmImagesList(category.GroupId).subscribe(r => {
             const images = [];
             for (const url of r.results) {
-              images.push('https://pcm.groupclaes.be/v2/' + url);
+              images.push('https://pcm.groupclaes.be/v2' + url);
             }
             category.images = images; // https://pcm.groupclaes.be/v2/content/file/7D7C326B-EADC-43A5-99D6-151CB42EE7D6"
             this.ref.markForCheck();
