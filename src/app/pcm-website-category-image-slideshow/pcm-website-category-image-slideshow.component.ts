@@ -10,18 +10,24 @@ import { interval, Subscription } from 'rxjs';
 })
 export class PcmWebsiteCategoryImageSlideshowComponent implements OnInit, OnDestroy, OnChanges {
   @Input() images: string[];
-  currentImageUrl: string;
-  nextImageUrl: string;
   currentIndex: number;
   showError = false;
   observer: Subscription;
+  key: any;
 
   constructor(
     private ref: ChangeDetectorRef
   ) {
+    const result = (Math.random().toString(36).substr(2, 5).toString());
+    this.key = result;
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    setTimeout(() => {
+      this.currentIndex = 0;
+      this.updateImage();
+    }, 120);
+  }
 
   ngOnChanges() {
     if (this.images && this.images.length > 0) {
@@ -35,6 +41,7 @@ export class PcmWebsiteCategoryImageSlideshowComponent implements OnInit, OnDest
       if (this.images.length > 1) {
         const sub = interval(2500);
         this.observer = sub.subscribe(x => {
+          this.updateHideImage();
           if (this.currentIndex < this.images.length - 1) {
             this.currentIndex++;
             this.updateImage();
@@ -56,8 +63,31 @@ export class PcmWebsiteCategoryImageSlideshowComponent implements OnInit, OnDest
     }
   }
 
-  updateImage() {
-    this.currentImageUrl = this.images[this.currentIndex];
-    this.ref.markForCheck();
+  private getElement(id: string): HTMLElement | null {
+    const element = document.getElementById(id);
+    return element ? element : null;
+  }
+
+  private updateImage() {
+    console.log('updateImage() -- ' + this.key);
+    try {
+      this.getElement(`image-${this.key}-${this.currentIndex}`).style.display = 'block';
+      this.ref.markForCheck();
+    } catch {
+
+    }
+  }
+
+  private updateHideImage() {
+    try {
+      this.images.forEach((_, i) => {
+        this.getElement(`image-${this.key}-${i}`).style.display = 'none';
+      });
+      this.ref.markForCheck();
+    } catch { }
+  }
+
+  ImageId(index: number) {
+    return `image-${this.key}-${index}`;
   }
 }

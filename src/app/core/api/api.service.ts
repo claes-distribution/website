@@ -34,8 +34,8 @@ export class ApiService {
     return this.http.get<Category>(`${this.url}distribution/webshop/data/productcategories/${id}/detail`);
   }
 
-  getPcmImagesList(id: number): Observable<any> {
-    return this.http.get(`${this.pcm_url}api/eshop/service/list/dis/website/category-image/${id}/nl/url`);
+  getPcmImagesList(id: number): Observable<PcmImagesList> {
+    return this.http.get<PcmImagesList>(`${this.pcm_url}content/image-list/dis/website/category-image/${id}`);
   }
 
   sendContactQuestion(question: ContactQuestion): Observable<string> {
@@ -74,6 +74,13 @@ export interface SecondhandAppliance {
   Price: string;
   SalItem: string;
   Company: string;
+}
+
+export interface PcmImagesList {
+  images: {
+    name: string;
+    guid: string;
+  }[];
 }
 
 export interface Category {
