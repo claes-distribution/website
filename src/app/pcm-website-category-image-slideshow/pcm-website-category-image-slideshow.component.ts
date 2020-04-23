@@ -10,7 +10,7 @@ import { interval, Subscription } from 'rxjs';
 })
 export class PcmWebsiteCategoryImageSlideshowComponent implements OnInit, OnDestroy, OnChanges {
   @Input() images: string[];
-  currentIndex: number;
+  currentIndex = 0;
   showError = false;
   observer: Subscription;
   key: any;
@@ -35,8 +35,11 @@ export class PcmWebsiteCategoryImageSlideshowComponent implements OnInit, OnDest
       if (this.observer) {
         this.observer.unsubscribe();
       }
-      this.currentIndex = 0;
-      this.updateImage();
+
+      setTimeout(() => {
+        this.currentIndex = 0;
+        this.updateImage();
+      }, 120);
 
       if (this.images.length > 1) {
         const sub = interval(2500);
@@ -69,7 +72,7 @@ export class PcmWebsiteCategoryImageSlideshowComponent implements OnInit, OnDest
   }
 
   private updateImage() {
-    console.log('updateImage() -- ' + this.key);
+    // console.log('updateImage() -- ' + this.key);
     try {
       this.getElement(`image-${this.key}-${this.currentIndex}`).style.display = 'block';
       this.ref.markForCheck();
@@ -82,8 +85,8 @@ export class PcmWebsiteCategoryImageSlideshowComponent implements OnInit, OnDest
     try {
       this.images.forEach((_, i) => {
         this.getElement(`image-${this.key}-${i}`).style.display = 'none';
+        this.ref.markForCheck();
       });
-      this.ref.markForCheck();
     } catch { }
   }
 
