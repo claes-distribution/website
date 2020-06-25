@@ -9,11 +9,8 @@ export class ApiService {
   constructor(@Inject(HttpClient) private http: HttpClient) {
   }
 
-  getNewsList(company: string, items?: number | null): Observable<NewsItem[]> {
-    if (items) {
-
-    }
-    return this.http.get<NewsItem[]>(`${this.url}news?company=${company}&numItems=${items}`);
+  getNewsList(company: string, items?: number | null): Observable<IGetBlogsResponse> {
+    return this.http.get<IGetBlogsResponse>(`${this.url}blogs/list?company=${company}&items=${items}`);
   }
 
   getCategories(list: CategoryList = 'all', id?: number): Observable<Category[]> {
@@ -53,15 +50,28 @@ export class ApiService {
 
 export type CategoryList = 'top' | 'all';
 
-export interface NewsItem {
+export interface IGetBlogsResponse {
+  blogposts: IBlogPreview[];
+}
+
+export interface IBlogPreview {
   id: number;
-  titleNL: string;
-  titleFR: string;
-  date: Date;
-  summaryNL: string;
-  summaryFR: string;
-  banner: string;
+  title: {
+    nl: string;
+    fr: string;
+  };
+  description: {
+    nl: string;
+    fr: string;
+  };
+  ctaText: {
+    nl: string;
+    fr: string;
+  };
   company: string;
+  image: string;
+  ctaHref: string;
+  icon: string;
 }
 
 export interface SecondhandAppliance {

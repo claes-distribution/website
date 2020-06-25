@@ -1,9 +1,9 @@
 <article class="newsitem" (click)="openDetail()">
   <figure class="news-banner" [style]="safeBanner"></figure>
-  <header class="news-title" [ngClass]="'news-title ' + content.company + '-color'">
-    <h4 [innerText]="content['title' + (culture | uppercase)]"></h4>
+  <header class="news-title">
+    <h4 [innerText]="content.title[culture]"></h4>
   </header>
   <main class="news-content">
-    <p [innerText]="content['summary' + (culture | uppercase)]"></p>
+    <p [innerText]="content.description[culture]"></p>
   </main>
 </article>
