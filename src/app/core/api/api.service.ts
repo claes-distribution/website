@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { Inject } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs';
 import { SafeUrl } from '@angular/platform-browser';
 
+@Injectable()
 export class ApiService {
 
   constructor(@Inject(HttpClient) private http: HttpClient) {
