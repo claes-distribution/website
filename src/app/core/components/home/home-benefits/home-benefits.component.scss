@@ -1,0 +1,20 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+
+  div.benefit {
+    flex: 1 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    div.benefit {
+      flex: 1 50%;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    div.benefit {
+      flex: 1 25%;
+    }
+  }
+}

@@ -7,6 +7,38 @@
       "inspire": "Inspiratie",
       "about": "Over ons",
       "contact": "Contact"
+    },
+    "home-text": {
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    "home-products-order": {
+      "block-products": {
+        "title": "Lorem ipsum",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      "block-order": {
+        "title": "Lorem ipsum",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    },
+    "home-benefits": {
+      "block-1": {
+        "title": "Lorem ipsum",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      "block-2": {
+        "title": "Lorem ipsum",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      "block-3": {
+        "title": "Lorem ipsum",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      "block-4": {
+        "title": "Lorem ipsum",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
     }
   },
 

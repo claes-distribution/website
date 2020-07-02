@@ -1,1 +1,22 @@
-<p>home-recipes-news works!</p>
+<div class="recipes-news-grid">
+  <div class="recipes">
+    <h2 translate="components.home-recipes-news.block-recipes.title"></h2>
+    <p translate="components.home-recipes-news.block-recipes.text"></p>
+    <a [routerLink]="['/recipes']" [title]="'components.home-recipes-news.block-recipes.button' | translate">
+      <button color="primary">
+        <i class="fal fa-fw fa-mouse-pointer"></i>&nbsp;
+        <span translate="components.home-recipes-news.block-recipes.button"></span>
+      </button>
+    </a>
+  </div>
+  <div class="news">
+    <h2 translate="components.home-recipes-news.block-news.title"></h2>
+    <p translate="components.home-recipes-news.block-news.text"></p>
+    <a [routerLink]="['/news']" [title]="'components.home-recipes-news.block-news.button' | translate">
+      <button color="primary">
+        <i class="fal fa-fw fa-tools"></i>&nbsp;
+        <span translate="components.home-recipes-news.block-news.button"></span>
+      </button>
+    </a>
+  </div>
+</div>
