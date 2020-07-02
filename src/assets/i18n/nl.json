@@ -1,4 +1,15 @@
 {
+  "components": {
+    "menu": {
+      "home": "Homepagina",
+      "products": "Producten",
+      "order": "Bestellen",
+      "inspire": "Inspiratie",
+      "about": "Over ons",
+      "contact": "Contact"
+    }
+  },
+
   "menuHome": "Start",
   "menuOrder": "Bestellen",
   "menuVacancies": "Jobs",

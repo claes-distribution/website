@@ -9,37 +9,42 @@
   <div class="grid-m">
     <a class="menu-link-button" routerLink="" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
       <i class="fal fa-fw fa-lg fa-home"></i>
-      <!-- <span class="title" translate="dis"></span> -->
+    </a>
+    <a class="menu-link-button" routerLink="products" routerLinkActive="active">
+      <span translate="components.menu.products"></span>
     </a>
     <a class="menu-link-button" routerLink="order" routerLinkActive="active">
-      <span translate="menuOrder"></span>
+      <span translate="components.menu.order"></span>
     </a>
-    <a class="menu-link-button" href="https://www.groupclaes.be/vacancy" target="_blank">
-      <span translate="menuVacancies"></span>
+    <a class="menu-link-button" routerLink="inspire" routerLinkActive="active">
+      <span translate="components.menu.inspire"></span>
     </a>
     <a class="menu-link-button" routerLink="about" routerLinkActive="active">
-      <span translate="menuAbout"></span>
+      <span translate="components.menu.about"></span>
     </a>
     <a class="menu-link-button" routerLink="contact" routerLinkActive="active">
-      <span translate="menuContact"></span>
+      <span translate="components.menu.contact"></span>
     </a>
   </div>
 </mat-toolbar>
 <div class="spacer"></div>
 <mat-menu #mobileMenu="matMenu" [overlapTrigger]="false">
   <button mat-menu-item routerLink="" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
-    <span translate="menuHome"></span>
+    <span translate="components.menu.home"></span>
+  </button>
+  <button mat-menu-item routerLink="products" routerLinkActive="active">
+    <span translate="components.menu.products"></span>
   </button>
   <button mat-menu-item routerLink="order" routerLinkActive="active">
-    <span translate="menuOrder"></span>
+    <span translate="components.menu.order"></span>
   </button>
-  <button mat-menu-item href="https://www.groupclaes.be/vacancy" target="_blank">
-    <span translate="menuVacancies"></span>
+  <button mat-menu-item routerLink="inspire" routerLinkActive="active">
+    <span translate="components.menu.inspire"></span>
   </button>
   <button mat-menu-item routerLink="about" routerLinkActive="active">
-    <span translate="menuAbout"></span>
+    <span translate="components.menu.about"></span>
   </button>
   <button mat-menu-item routerLink="contact" routerLinkActive="active">
-    <span translate="menuContact"></span>
+    <span translate="components.menu.contact"></span>
   </button>
 </mat-menu>

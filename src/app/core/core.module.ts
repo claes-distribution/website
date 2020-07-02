@@ -2,6 +2,9 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { MatButtonModule, MatToolbarModule, MatMenuModule } from '@angular/material';
+import { RouterModule } from '@angular/router';
 
 import { ApiService } from './api/api.service';
 import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
@@ -11,12 +14,24 @@ import { HomeBenefitsComponent } from './components/home/home-benefits/home-bene
 import { HomeLeafletComponent } from './components/home/home-leaflet/home-leaflet.component';
 import { HomeRecipesNewsComponent } from './components/home/home-recipes-news/home-recipes-news.component';
 import { HomeSpotlightProductsComponent } from './components/home/home-spotlight-products/home-spotlight-products.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { PcmWebsiteLogoComponent } from '../pcm-website-logo/pcm-website-logo.component';
+import { PcmWebsiteBannerComponent } from '../pcm-website-banner/pcm-website-banner.component';
+import { PcmWebsiteCategoryImageComponent } from '../pcm-website-category-image/pcm-website-category-image.component';
+import { PcmWebsiteCategoryImageSlideshowComponent } from '../pcm-website-category-image-slideshow/pcm-website-category-image-slideshow.component';
+
+
 
 @NgModule({
   imports: [
     CommonModule,
+    RouterModule,
     HttpClientModule,
-    TranslateModule
+    BrowserModule,
+    TranslateModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatMenuModule
   ],
   declarations: [
     ImageCarouselComponent,
@@ -25,7 +40,13 @@ import { HomeSpotlightProductsComponent } from './components/home/home-spotlight
     HomeBenefitsComponent,
     HomeLeafletComponent,
     HomeRecipesNewsComponent,
-    HomeSpotlightProductsComponent
+    HomeSpotlightProductsComponent,
+    MenuComponent,
+
+    PcmWebsiteLogoComponent,
+    PcmWebsiteBannerComponent,
+    PcmWebsiteCategoryImageComponent,
+    PcmWebsiteCategoryImageSlideshowComponent
   ],
   exports: [
     ImageCarouselComponent,
@@ -34,7 +55,13 @@ import { HomeSpotlightProductsComponent } from './components/home/home-spotlight
     HomeBenefitsComponent,
     HomeLeafletComponent,
     HomeRecipesNewsComponent,
-    HomeSpotlightProductsComponent
+    HomeSpotlightProductsComponent,
+    MenuComponent,
+
+    PcmWebsiteLogoComponent,
+    PcmWebsiteBannerComponent,
+    PcmWebsiteCategoryImageComponent,
+    PcmWebsiteCategoryImageSlideshowComponent
   ],
   providers: [
     ApiService

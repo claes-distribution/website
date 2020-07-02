@@ -21,8 +21,6 @@ import {
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PcmWebsiteBannerComponent } from './pcm-website-banner/pcm-website-banner.component';
-import { PcmWebsiteLogoComponent } from './pcm-website-logo/pcm-website-logo.component';
 import { FooterComponent } from './footer/footer.component';
 import { CoreModule } from './core/core.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -44,10 +42,7 @@ import { AboutHistoryComponent } from './about-history/about-history.component';
 import { AboutMissionComponent } from './about-mission/about-mission.component';
 import { AboutStrategyComponent } from './about-strategy/about-strategy.component';
 import { AboutOurAssetsComponent } from './about-our-assets/about-our-assets.component';
-import { MenuComponent } from './menu/menu.component';
 import { OrderComponent } from './order/order.component';
-import { PcmWebsiteCategoryImageSlideshowComponent } from './pcm-website-category-image-slideshow/pcm-website-category-image-slideshow.component';
-import { PcmWebsiteCategoryImageComponent } from './pcm-website-category-image/pcm-website-category-image.component';
 import { EmailDisclaimerComponent } from './email-disclaimer/email-disclaimer.component';
 import { PagesModule } from './pages/pages.module';
 
@@ -58,10 +53,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
     FooterComponent,
-    PcmWebsiteBannerComponent,
-    PcmWebsiteLogoComponent,
     HomeComponent,
     AboutComponent,
     AboutCompanyComponent,
@@ -76,9 +68,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactOpeningComponent,
     ContactInfoComponent,
     OrderComponent,
-    EmailDisclaimerComponent,
-    PcmWebsiteCategoryImageSlideshowComponent,
-    PcmWebsiteCategoryImageComponent
+    EmailDisclaimerComponent
   ],
   imports: [
     BrowserModule,

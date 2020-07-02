@@ -5,7 +5,7 @@
     left: 0;
     z-index: 2;
     height: 64px;
-    
+
     a.menu-button {
       display: block;
       padding: 0 1em;
@@ -44,7 +44,7 @@
         grid-column: 1;
         grid-row: 1;
         height: inherit;
-  
+
         pcm-website-logo {
           height: inherit;
         }
@@ -54,7 +54,7 @@
         grid-column: 3;
         grid-row: 1;
         display: grid;
-        grid-template-columns: repeat(5, auto);
+        grid-template-columns: repeat(6, auto);
 
         a.menu-link-button {
           display: block;
