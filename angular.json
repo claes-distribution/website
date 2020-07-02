@@ -34,10 +34,12 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [{
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.prod.ts"
-              }],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -123,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "claesdistribution-website"
+  "defaultProject": "claesdistribution-website",
+  "cli": {
+    "analytics": "c5818fb2-8dc1-4bab-8e5b-ed660bace108"
+  }
 }
