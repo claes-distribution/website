@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
-import { I18nService } from '../core/i18n.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'dis-footer',
@@ -11,7 +11,7 @@ export class FooterComponent implements OnInit {
   today: Date = new Date();
 
   constructor(
-    private i18nService: I18nService,
+    private translate: TranslateService,
     private ref: ChangeDetectorRef
   ) { }
 
@@ -20,16 +20,15 @@ export class FooterComponent implements OnInit {
   }
 
   lang(language: string): void {
-    setTimeout(() => {
-      this.i18nService.language = language;
-    }, 80);
+    this.translate.use(language);
+    localStorage.setItem('language', language);
   }
 
-  get currentLanguage(): string {
-    return this.i18nService.language;
+  get culture(): string {
+    return this.translate.currentLang;
   }
 
   get languages(): string[] {
-    return this.i18nService.supportedLanguages;
+    return this.translate.langs;
   }
 }

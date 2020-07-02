@@ -4,12 +4,12 @@
 
 export const environment = {
   production: false,
-  defaultLanguage: 'nl-BE',
+  defaultLanguage: 'nl',
   api_url: 'https://api.groupclaes.be/test/',
   pcm_url: 'https://pcm.groupclaes.be/test/',
   supportedLanguages: [
-    'nl-BE',
-    'fr-BE'
+    'nl',
+    'fr'
   ]
 };
 

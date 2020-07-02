@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { ApiService } from '../core/api/api.service';
-import { I18nService } from '../core/i18n.service';
 import { DomSanitizer } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'dis-home',
@@ -15,8 +15,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private api: ApiService,
     private ref: ChangeDetectorRef,
-    private i18nService: I18nService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private translate: TranslateService
   ) { }
 
   ngOnInit() {
@@ -45,6 +45,6 @@ export class HomeComponent implements OnInit {
   }
 
   get culture(): string {
-    return this.i18nService.language.split('-')[0];
+    return this.translate.currentLang;
   }
 }

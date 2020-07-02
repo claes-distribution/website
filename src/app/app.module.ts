@@ -23,12 +23,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PcmWebsiteBannerComponent } from './pcm-website-banner/pcm-website-banner.component';
 import { PcmWebsiteLogoComponent } from './pcm-website-logo/pcm-website-logo.component';
-// import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { CoreModule } from './core/core.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
 
 import { NewsListComponent } from './news-list/news-list.component';
 import { NewsItemComponent } from './news-item/news-item.component';
@@ -48,6 +49,11 @@ import { OrderComponent } from './order/order.component';
 import { PcmWebsiteCategoryImageSlideshowComponent } from './pcm-website-category-image-slideshow/pcm-website-category-image-slideshow.component';
 import { PcmWebsiteCategoryImageComponent } from './pcm-website-category-image/pcm-website-category-image.component';
 import { EmailDisclaimerComponent } from './email-disclaimer/email-disclaimer.component';
+import { PagesModule } from './pages/pages.module';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -80,7 +86,14 @@ import { EmailDisclaimerComponent } from './email-disclaimer/email-disclaimer.co
     ReactiveFormsModule,
     BrowserAnimationsModule,
     RouterModule,
-    TranslateModule.forRoot(),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory, // exported factory function needed for AoT compilation
+        deps: [HttpClient]
+      }
+    }),
+    PagesModule,
     CoreModule,
     AppRoutingModule,
     MatToolbarModule,

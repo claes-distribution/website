@@ -5,10 +5,11 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { OrderComponent } from './order/order.component';
 import { EmailDisclaimerComponent } from './email-disclaimer/email-disclaimer.component';
+import { HomePageComponent } from './pages/home/home.component';
 
 
 const routes: Routes = [{
-  path: '', component: HomeComponent
+  path: '', component: HomePageComponent
 }, {
   path: 'order', component: OrderComponent
 }, {

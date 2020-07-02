@@ -1,10 +1,8 @@
 import { Component, OnInit, Input, ChangeDetectorRef, ChangeDetectionStrategy, ElementRef } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
-import { I18nService } from '../core/i18n.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  // tslint:disable-next-line: component-selector
   selector: 'pcm-website-banner',
   templateUrl: './pcm-website-banner.component.html',
   styleUrls: ['./pcm-website-banner.component.scss'],
@@ -19,7 +17,6 @@ export class PcmWebsiteBannerComponent implements OnInit {
     private ref: ChangeDetectorRef,
     private sanitizer: DomSanitizer,
     private element: ElementRef,
-    private i18nService: I18nService,
     private translate: TranslateService
   ) {
   }
@@ -40,24 +37,24 @@ export class PcmWebsiteBannerComponent implements OnInit {
   onResize(force?: boolean) {
     if (this.company) {
       if (this.element.nativeElement.offsetWidth < 760 && (this.currentSize !== 'small' || force)) {
-        // console.log('small');
         this.css = this.sanitizer.bypassSecurityTrustStyle(
-          `background-image:url('https://pcm.groupclaes.be/v2/content/${this.company}/website/banner-image/100/${this.culture}?size=small');`
+          // tslint:disable-next-line: max-line-length
+          `background-image:url('https://pcm.groupclaes.be/v3/content/${this.company}/website/banner-image/100/${this.culture}?size=small');`
         );
         this.currentSize = 'small';
         this.ref.markForCheck();
         // tslint:disable-next-line: max-line-length
       } else if (this.element.nativeElement.offsetWidth >= 760 && this.element.nativeElement.offsetWidth < 1140 && (this.currentSize !== 'medium' || force)) {
-        // console.log('medium');
         this.css = this.sanitizer.bypassSecurityTrustStyle(
-          `background-image:url('https://pcm.groupclaes.be/v2/content/${this.company}/website/banner-image/100/${this.culture}?size=medium');`
+          // tslint:disable-next-line: max-line-length
+          `background-image:url('https://pcm.groupclaes.be/v3/content/${this.company}/website/banner-image/100/${this.culture}?size=medium');`
         );
         this.currentSize = 'medium';
         this.ref.markForCheck();
       } else if (this.element.nativeElement.offsetWidth >= 1140 && (this.currentSize !== 'large' || force)) {
-        // console.log('large');
         this.css = this.sanitizer.bypassSecurityTrustStyle(
-          `background-image:url('https://pcm.groupclaes.be/v2/content/${this.company}/website/banner-image/100/${this.culture}?size=large');`
+          // tslint:disable-next-line: max-line-length
+          `background-image:url('https://pcm.groupclaes.be/v3/content/${this.company}/website/banner-image/100/${this.culture}?size=large');`
         );
         this.currentSize = 'large';
         this.ref.markForCheck();
@@ -66,6 +63,6 @@ export class PcmWebsiteBannerComponent implements OnInit {
   }
 
   get culture(): string {
-    return this.i18nService.language.split('-')[0];
+    return this.translate.currentLang;
   }
 }

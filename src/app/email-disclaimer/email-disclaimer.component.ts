@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { I18nService } from '../core/i18n.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'dis-email-disclaimer',
@@ -12,7 +12,7 @@ export class EmailDisclaimerComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private i18nService: I18nService,
+    private translate: TranslateService,
     private ref: ChangeDetectorRef
   ) { }
 
@@ -25,7 +25,7 @@ export class EmailDisclaimerComponent implements OnInit {
   }
 
   lang(language: string): void {
-    this.i18nService.language = language;
+    this.translate.use(language);
     this.ref.markForCheck();
   }
 }

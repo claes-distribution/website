@@ -1,7 +1,6 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy, ChangeDetectorRef, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { IBlogPreview } from '../core/api/api.service';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
-import { I18nService } from '../core/i18n.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -18,8 +17,7 @@ export class NewsItemComponent implements OnInit {
   constructor(
     private ref: ChangeDetectorRef,
     private sanitize: DomSanitizer,
-    private i18nService: I18nService,
-    translate: TranslateService
+    private translate: TranslateService
   ) {
     translate.onLangChange.subscribe(($event) => {
       if (this.content) {
@@ -41,6 +39,6 @@ export class NewsItemComponent implements OnInit {
   }
 
   get culture(): string {
-    return this.i18nService.language.split('-')[0];
+    return this.translate.currentLang;
   }
 }

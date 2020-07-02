@@ -1,31 +1,43 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouteReuseStrategy, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
-import { FormsModule } from '@angular/forms';
 
-import { RouteReusableStrategy } from './route-reusable-strategy';
-import { I18nService } from './i18n.service';
 import { ApiService } from './api/api.service';
-// import { CoreComponentsModule } from '../core-components/core-components.module';
+import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
+import { HomeTextComponent } from './components/home/home-text/home-text.component';
+import { HomeProductsOrderComponent } from './components/home/home-products-order/home-products-order.component';
+import { HomeBenefitsComponent } from './components/home/home-benefits/home-benefits.component';
+import { HomeLeafletComponent } from './components/home/home-leaflet/home-leaflet.component';
+import { HomeRecipesNewsComponent } from './components/home/home-recipes-news/home-recipes-news.component';
+import { HomeSpotlightProductsComponent } from './components/home/home-spotlight-products/home-spotlight-products.component';
 
 @NgModule({
   imports: [
     CommonModule,
     HttpClientModule,
-    TranslateModule,
-    RouterModule,
-    FormsModule
+    TranslateModule
   ],
-  declarations: [],
+  declarations: [
+    ImageCarouselComponent,
+    HomeTextComponent,
+    HomeProductsOrderComponent,
+    HomeBenefitsComponent,
+    HomeLeafletComponent,
+    HomeRecipesNewsComponent,
+    HomeSpotlightProductsComponent
+  ],
+  exports: [
+    ImageCarouselComponent,
+    HomeTextComponent,
+    HomeProductsOrderComponent,
+    HomeBenefitsComponent,
+    HomeLeafletComponent,
+    HomeRecipesNewsComponent,
+    HomeSpotlightProductsComponent
+  ],
   providers: [
-    ApiService,
-    I18nService,
-    {
-      provide: RouteReuseStrategy,
-      useClass: RouteReusableStrategy
-    }
+    ApiService
   ]
 })
 export class CoreModule {

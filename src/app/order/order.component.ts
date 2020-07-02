@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
-import { I18nService } from '../core/i18n.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'dis-order',
@@ -11,7 +11,7 @@ export class OrderComponent implements OnInit {
 
   constructor(
     private ref: ChangeDetectorRef,
-    private i18nService: I18nService
+    private translate: TranslateService
   ) { }
 
   ngOnInit() {
@@ -19,6 +19,6 @@ export class OrderComponent implements OnInit {
   }
 
   get culture(): string {
-    return this.i18nService.language.split('-')[0];
+    return this.translate.currentLang;
   }
 }

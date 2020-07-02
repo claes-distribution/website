@@ -51,7 +51,7 @@
     <div class="container">
       <div class="select-language">
         <button mat-button #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="languageMenu">
-          <i class="fas fa-globe-europe fa-lg"></i>&nbsp; <span [textContent]="currentLanguage" translate></span>
+          <i class="fas fa-globe-europe fa-lg"></i>&nbsp; <span [textContent]="culture" translate></span>
         </button>
         <mat-menu #languageMenu="matMenu" [overlapTrigger]="false">
           <button mat-menu-item *ngFor="let language of languages" (click)="menuTrigger.closeMenu();lang(language)">
