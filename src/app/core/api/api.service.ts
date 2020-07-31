@@ -7,8 +7,7 @@ import { SafeUrl } from '@angular/platform-browser';
 @Injectable()
 export class ApiService {
 
-  constructor(@Inject(HttpClient) private http: HttpClient) {
-  }
+  constructor(@Inject(HttpClient) private http: HttpClient) { }
 
   getNewsList(company: string, items?: number | null): Observable<IGetBlogsResponse> {
     return this.http.get<IGetBlogsResponse>(`${this.url}blogs/list?company=${company}&items=${items}`);

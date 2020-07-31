@@ -1,0 +1,4 @@
+<div class="container" (click)="$event.stopPropagation()" *ngIf="blog">
+  <h2 class="close" (click)="close()"><i class="fal fa-fw fa-times"></i></h2>
+  <iframe [src]="resourceUrl" frameborder="0"></iframe>
+</div>

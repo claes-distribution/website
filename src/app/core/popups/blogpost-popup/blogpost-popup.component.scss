@@ -1,0 +1,60 @@
+:host {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(40, 40, 40, .65);
+  z-index: 3;
+  top: 0;
+  left: 0;
+
+  div.container {
+    border-radius: 4px;
+    background-color: white;
+    margin: 80px auto 40px;
+    width: 280px;
+    min-height: 800px;
+    height: auto;
+    position: relative;
+
+    h2.close {
+      position: absolute;
+      display: block;
+      top: -30px;
+      right: 0px;
+      height: 48px;
+      width: 48px;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #eee;
+      }
+    }
+
+    iframe {
+      height: calc(100vh - 240px);
+      height: -webkit-fill-available;
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 601px) {
+    div.container {
+      width: 80%;
+      max-width: 1140px;
+      height: auto;
+    }
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    div.container {
+      background-color: black;
+
+      h2.close {
+        &:hover {
+          background-color: black;
+        }
+      }
+    }
+  }
+}

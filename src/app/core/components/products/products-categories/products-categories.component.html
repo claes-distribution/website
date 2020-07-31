@@ -1,0 +1,13 @@
+<h3 *ngIf="showTitle" translate="components.products.products-categories.title"></h3>
+<i class="fal fa-fw fa-2x fa-circle-notch fa-spin" *ngIf="!categories" style="margin:0 auto 1em;display:block;"></i>
+<div class="placeholder">
+  <div class="categories-list">
+    <a *ngFor="let category of categories" class="container">
+      <div class="content" [style]="category.css">
+        <div class="category-label dis-color">
+          <h4 [innerText]="category.name[culture]"></h4>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

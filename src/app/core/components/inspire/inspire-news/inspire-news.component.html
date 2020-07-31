@@ -1,0 +1,31 @@
+<div>
+  <h3 translate="components.news.title"></h3>
+  <div class="news-grid" *ngIf="newsList">
+    <article *ngIf="newsList.length == 1"></article>
+    <article *ngFor="let news of newsList; let i = index" [ngClass]="'newsitem-' + i">
+      <img [src]="news.image" [alt]="news.title[culture]">
+      <h4 [innerText]="news.title[culture]"></h4>
+      <p>
+        <i [innerText]="news.description[culture]"></i>
+      </p>
+      <a href="#" (click)="open(news, $event)" [title]="news.ctaText[culture]" *ngIf="!news.ctaHref">
+        <button color="primary">
+          <i class="fal fa-fw" [ngClass]="news.icon"></i>&nbsp;
+          <span [innerText]="news.ctaText[culture]"></span>
+        </button>
+      </a>
+      <a [href]="newsHref(news.ctaHref)" target="_blank" [title]="news.ctaText[culture]" *ngIf="news.ctaHref">
+        <button color="primary">
+          <i class="fal fa-fw" [ngClass]="news.icon"></i>&nbsp;
+          <span [innerText]="news.ctaText[culture]"></span>
+        </button>
+      </a>
+    </article>
+    <article *ngIf="newsList.length == 2 || newsList.length == 1"></article>
+  </div>
+  <div *ngIf="!newsList" style="text-align:center">
+    <i class="fal fa-fw fa-2x fa-circle-notch fa-spin"></i>
+  </div>
+</div>
+
+<dis-blogpost-popup [blog]="currentBlog" (closed)="close()" *ngIf="currentBlog"></dis-blogpost-popup>

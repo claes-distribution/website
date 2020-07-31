@@ -8,36 +8,135 @@
       "about": "Over ons",
       "contact": "Contact"
     },
-    "home-text": {
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    "home-products-order": {
-      "block-products": {
-        "title": "Lorem ipsum",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      },
-      "block-order": {
-        "title": "Lorem ipsum",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    "contact": {
+      "contact-footer": {
+        "title": "Een vraag? Interesse? Hulp nodig?",
+        "text": "Mail ons, bel ons of kom langs in onze showroom. Wil je zeker zijn dat de juiste expert aanwezig is om je met kennis van zaken verder te helpen tijdens je bezoek aan onze winkel? Vraag op voorhand een afspraak aan.",
+        "alt-text": "Mail of bel ons! <ul><li>Tijdens de kantooruren zijn we bereikbaar tussen 8:00 en 12:00 en tussen 13:00 en 17:00 (op vrijdag tot 16:00).</li><li>Ook op zaterdagvoormiddag staat ons team paraat voor dringende interventies tussen 8:00 en 12:00. Op zondagen, brugdagen en feestdagen voeren we geen prestaties uit.</li><li>Nood aan een dringende interventie buiten de normale werkuren? Spreek een boodschap in op ons antwoordapparaat en wij behandelen je aanvraag de eerstvolgende werkdag (op zaterdag worden aanvragen tot 12:00 de dag zelf nog behandeld).</li></ul>",
+        "button": "Contacteer ons"
       }
     },
-    "home-benefits": {
-      "block-1": {
+    "home": {
+      "home-text": {
         "title": "Lorem ipsum",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
       },
-      "block-2": {
-        "title": "Lorem ipsum",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "home-products-order": {
+        "block-products": {
+          "title": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "button": "Lorem ipsum"
+        },
+        "block-order": {
+          "title": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "button": "Lorem ipsum"
+        }
       },
-      "block-3": {
-        "title": "Lorem ipsum",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "home-benefits": {
+        "block-1": {
+          "title": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        "block-2": {
+          "title": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        "block-3": {
+          "title": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        "block-4": {
+          "title": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
       },
-      "block-4": {
+      "home-leaflet": {
         "title": "Lorem ipsum",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      "home-recipes-news": {
+        "block-recipes": {
+          "title": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "button": "Lorem ipsum"
+        },
+        "block-news": {
+          "title": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "button": "Lorem ipsum"
+        }
+      },
+      "home-spotlight-products": {
+        "title": "Producten in de kijker",
+        "button": " Bekijk meer"
+      }
+    },
+    "products": {
+      "products-text": {
+        "title": "Lorem ipsum",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      },
+      "products-categories": {
+        "title": "Lorem ipsum dolor sit amet"
+      },
+      "products-search": {
+        "title": "Lorem ipsum",
+        "text": "Lorem ipsum dolor sit amet"
+      }
+    },
+    "order": {
+      "order-text": {
+        "title": "Lorem ipsum",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      },
+      "order-methods": {
+        "order-method-shop": {
+          "title": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "button-1": "Lorem ipsum",
+          "button-2": "Lorem ipsum",
+          "button-3": "Lorem ipsum"
+        },
+        "order-method-app": {
+          "title": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "button-1": "Lorem ipsum"
+        },
+        "order-method-showroom": {
+          "title": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "button-1": "Lorem ipsum"
+        },
+        "order-method-agent": {
+          "title": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "button-1": "Lorem ipsum"
+        },
+        "order-method-support": {
+          "title": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "button-1": "Lorem ipsum"
+        },
+        "order-method-edi": {
+          "title": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "button-1": "Lorem ipsum"
+        }
+      }
+    },
+    "inspire": {
+      "inspire-recipes-leaflet": {
+        "block-recipes": {
+          "title": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "button": "Lorem ipsum"
+        },
+        "block-leaflet": {
+          "title": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "button": "Lorem ipsum"
+        }
       }
     }
   },

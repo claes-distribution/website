@@ -1,0 +1,24 @@
+<div class="recipes-leaflet-grid">
+  <div class="recipes">
+    <h2 translate="components.inspire.inspire-recipes-leaflet.block-recipes.title"></h2>
+    <p translate="components.inspire.inspire-recipes-leaflet.block-recipes.text"></p>
+    <a [routerLink]="['/recipes']"
+      [title]="'components.inspire.inspire-recipes-leaflet.block-recipes.button' | translate">
+      <button color="primary">
+        <i class="fal fa-fw fa-hat-chef"></i>&nbsp;
+        <span translate="components.inspire.inspire-recipes-leaflet.block-recipes.button"></span>
+      </button>
+    </a>
+  </div>
+  <div class="leaflet">
+    <h2 translate="components.inspire.inspire-recipes-leaflet.block-leaflet.title"></h2>
+    <p translate="components.inspire.inspire-recipes-leaflet.block-leaflet.text"></p>
+    <a [routerLink]="['/leaflet']"
+      [title]="'components.inspire.inspire-recipes-leaflet.block-leaflet.button' | translate">
+      <button color="primary">
+        <i class="fal fa-fw fa-badge-percent"></i>&nbsp;
+        <span translate="components.inspire.inspire-recipes-leaflet.block-leaflet.button"></span>
+      </button>
+    </a>
+  </div>
+</div>
