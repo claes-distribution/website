@@ -1,7 +1,36 @@
-<div class="container">
+<div>
   <h3 translate="newsList"></h3>
-  <i class="fas fa-fw fa-2x fa-spinner fa-pulse" *ngIf="!newsItems" style="margin:0 auto 1em;display:block;"></i>
-  <div class="placeholder">
-    <news-item *ngFor="let newsItem of newsItems" [content]="newsItem"></news-item>
+  <i class="fas fa-fw fa-2x fa-spinner fa-pulse" *ngIf="!newsList" style="margin:0 auto 1em;display:block;"></i>
+  <div class="news-grid" *ngIf="newsList">
+    <button class="icon-button" color="primary" (click)="previous()" [disabled]="!previousEnabled"
+      *ngIf="newsList.length >= 3">
+      <i class="fal fa-fw fa-2x fa-angle-left"></i>
+    </button>
+    <article *ngIf="newsList.length == 1"></article>
+    <article *ngFor="let news of newsList | slice:currentIndex:currentIndex+3; let i = index"
+      [ngClass]="'newsitem-' + i">
+      <img [src]="news.image" [alt]="news.title[culture]">
+      <h4 [innerText]="news.title[culture]"></h4>
+      <p>
+        <i [innerText]="news.description[culture]"></i>
+      </p>
+      <!-- <a href="#" (click)="open(news, $event)" [title]="news.ctaText[culture]" *ngIf="!news.ctaHref">
+        <button color="primary">
+          <i class="fal fa-fw" [ngClass]="news.icon"></i>&nbsp;
+          <span [innerText]="news.ctaText[culture]"></span>
+        </button>
+      </a> -->
+      <a [href]="newsHref(news)" target="_blank" [title]="news.ctaText[culture]">
+        <!--  *ngIf="news.ctaHref" -->
+        <button color="primary">
+          <i class="fal fa-fw" [ngClass]="news.icon"></i>&nbsp;
+          <span [innerText]="news.ctaText[culture]"></span>
+        </button>
+      </a>
+    </article>
+    <article *ngIf="newsList.length == 2 || newsList.length == 1"></article>
+    <button class="icon-button" color="primary" (click)="next()" [disabled]="!nextEnabled" *ngIf="newsList.length >= 3">
+      <i class="fal fa-fw fa-2x fa-angle-right"></i>
+    </button>
   </div>
 </div>

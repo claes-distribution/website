@@ -1,22 +1,91 @@
 :host {
-  div.container {
-    margin-top: 2em;
+  display: block;
 
-    div.placeholder {
-      display: grid;
-      grid-template-columns: 1fr;
+  div {
+    h3 {
+      margin: 0 0 1em 0;
+    }
 
-      @media screen and (min-width: 760px) {
-        grid-template-columns: 1fr 1fr;
+    div.news-grid {
+      article {
+        padding: 15px 0;
+
+        img {
+          height: 240px;
+          object-fit: cover;
+          object-position: center center;
+          margin: 0 auto;
+          display: block;
+        }
+
+        h4 {
+          font-weight: bold;
+          margin: 12px 0;
+          font-size: 20px;
+          height: 60px;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+
+        p {
+          height: 60px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          width: 66.6666666667%;
+          margin-left: 16.6666666667%;
+          // text-align: justify;
+        }
+
+        a button {
+          display: block;
+          margin: 0 auto;
+        }
       }
 
-      @media screen and (min-width: 1140px) {
-        grid-template-columns: 1fr 1fr 1fr;
+      article+article {
+        border-top: 1px solid #ccc;
       }
+    }
+  }
+}
 
-      news-item {
-        display: block;
-        padding: 0 .5em;
+@media screen and (min-width: 768px) {
+  :host {
+    div {
+      div.news-grid {
+        display: flex;
+
+        article {
+          flex: 1 33.3333%;
+          padding: 0;
+          margin: 0 7.5px;
+
+          p {
+            width: 100%;
+            margin-left: initial;
+          }
+
+          a button {
+            margin: 0;
+          }
+        }
+
+        article:first-child {
+          margin-left: 0px;
+        }
+
+        article:last-child {
+          margin-right: 0px;
+        }
+
+        article+article {
+          border-top: none;
+        }
       }
     }
   }

@@ -23,7 +23,9 @@
   </div>
 </section>
 <section>
-  <news-list company="dis"></news-list>
+  <div class="container">
+    <news-list company="dis"></news-list>
+  </div>
 </section>
 <section>
   <div class="container top-categories">
@@ -37,7 +39,7 @@
           <pcm-website-category-image-slideshow [images]="category.images"></pcm-website-category-image-slideshow>
         </a>
         <a [href]="subCategory.url" target="_blank" *ngFor="let subCategory of category.Categories">
-          <div class="category-button dis-bgcolor" [innerText]="subCategory.Name[culture]"></div>
+          <button color="primary" [innerText]="subCategory.Name[culture]"></button>
         </a>
       </div>
     </div>

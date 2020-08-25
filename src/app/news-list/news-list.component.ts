@@ -11,7 +11,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NewsListComponent implements OnInit {
   @Input() company: string;
-  newsItems: IBlogPreview[];
+  newsList: IBlogPreview[] = [];
+  currentIndex = 0;
 
   constructor(
     private api: ApiService,
@@ -20,7 +21,7 @@ export class NewsListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.api.getNewsList(this.company, 3).subscribe(r => {
+    this.api.getNewsList(this.company, 10).subscribe(r => {
       r.blogposts.forEach(blog => {
         blog.image = blog.image.replace('{lang}', this.culture);
         if (blog.ctaText.nl === '') {
@@ -30,12 +31,42 @@ export class NewsListComponent implements OnInit {
           blog.ctaText.fr = 'Lire plus';
         }
       });
-      this.newsItems = r.blogposts;
+      this.newsList = r.blogposts;
       this.ref.markForCheck();
     });
   }
 
+  newsHref(news: IBlogPreview): string {
+    if (news.ctaHref) {
+      return news.ctaHref.replace('{lang}', this.culture);
+    } else {
+      return `https://news.groupclaes.be/${news.title[this.culture]}/${news.id}`;
+    }
+  }
+
   get culture(): string {
     return this.translate.currentLang.split('-')[0];
+  }
+
+  previous() {
+    if (this.currentIndex >= 1) {
+      this.currentIndex--;
+      this.ref.markForCheck();
+    }
+  }
+
+  next() {
+    if (this.currentIndex < this.newsList.length - 3) {
+      this.currentIndex++;
+      this.ref.markForCheck();
+    }
+  }
+
+  get previousEnabled(): boolean {
+    return this.newsList && this.currentIndex > 0;
+  }
+
+  get nextEnabled(): boolean {
+    return this.newsList && this.currentIndex < this.newsList.length - 3;
   }
 }

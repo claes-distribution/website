@@ -127,8 +127,18 @@ button,
     background-color: #40ab86;
     color: white;
 
+    &.icon-button {
+      background-color: transparent;
+      border: none;
+      color: #40ab86;
+    }
+
     &:hover {
       background-color: #24704C;
+
+      &.icon-button {
+        background-color: #ddd;
+      }
     }
   }
 

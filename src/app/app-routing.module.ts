@@ -7,14 +7,16 @@ import { HomePageComponent } from './pages/home/home.component';
 import { ProductsPageComponent } from './pages/products/products.component';
 import { OrderPageComponent } from './pages/order/order.component';
 import { InspirePageComponent } from './pages/inspire/inspire.component';
+import { HomeComponent } from './home/home.component';
+import { OrderComponent } from './order/order.component';
 
 
 const routes: Routes = [{
-  path: '', component: HomePageComponent
+  path: '', component: HomeComponent
 }, {
   path: 'products', component: ProductsPageComponent
 }, {
-  path: 'order', component: OrderPageComponent
+  path: 'order', component: OrderComponent
 }, {
   path: 'inspire', component: InspirePageComponent
 }, {

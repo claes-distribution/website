@@ -15,16 +15,6 @@
         color: White;
         transition: 180ms ease-in-out all;
         margin-top: 1px;
-
-        &:hover {
-          transform: scale(1.2);
-          margin-top: 0;
-          border: 1px solid rgba(0, 0, 0, 0.8);
-
-          @media screen and (prefers-color-scheme: dark) {
-            border: 1px solid rgba(255, 255, 255, 0.8);
-          }
-        }
       }
     }
 
