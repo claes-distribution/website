@@ -7,6 +7,8 @@
     }
 
     div.news-grid {
+      position: relative;
+
       article {
         padding: 15px 0;
 
@@ -50,6 +52,18 @@
       article+article {
         border-top: 1px solid #ccc;
       }
+
+      .previous-item {
+        position: absolute;
+        left: -66px;
+        height: 100%;
+      }
+
+      .next-item {
+        position: absolute;
+        right: -66px;
+        height: 100%;
+      }
     }
   }
 }
@@ -70,9 +84,9 @@
             margin-left: initial;
           }
 
-          a button {
-            margin: 0;
-          }
+          // a button {
+          //   margin: 0;
+          // }
         }
 
         article:first-child {
