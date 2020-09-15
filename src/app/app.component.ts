@@ -6,6 +6,8 @@ import { map, filter, mergeMap } from 'rxjs/operators';
 
 import { environment } from '../environments/environment';
 import { merge } from 'rxjs';
+import { nl } from '../assets/i18n/nl';
+import { fr } from '../assets/i18n/fr';
 
 @Component({
   selector: 'dis-root',
@@ -21,6 +23,8 @@ export class AppComponent implements OnInit {
     private translate: TranslateService
   ) {
     // Setup translations
+    translate.setTranslation('fr', fr);
+    translate.setTranslation('nl', nl);
     translate.setDefaultLang(environment.defaultLanguage);
     translate.addLangs(environment.supportedLanguages);
     const browserLang: string = translate.getBrowserLang();

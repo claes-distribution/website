@@ -10,25 +10,25 @@ export class HomePageComponent implements OnInit {
   slides = [{
     url: 'https://pcm.groupclaes.be/v3/content/gro/website/banner-image',
     title: {
-      nl: 'Betrouwbare toeleverancier van topmerken',
+      nl: 'Totaalleverancier voor beenhouwers en andere versspecialisten',
       fr: 'Fournisseur fiable de grandes marques'
     }
   }, {
     url: 'https://pcm.groupclaes.be/v3/content/mac/website/banner-image/1200',
     title: {
-      nl: 'Ook welkom in onze winkel',
+      nl: 'Welkom in onze winkel!',
       fr: 'Bienvenue également dans notre salle d\'exposition'
     }
   }, {
     url: 'https://pcm.groupclaes.be/v3/content/mac/website/banner-image/1300',
     title: {
-      nl: 'Goed geschoolde techniekers',
+      nl: 'Uitgebreide keuze aan topproducten',
       fr: 'Techniciens bien formés'
     }
   }, {
     url: 'https://pcm.groupclaes.be/v3/content/mac/website/banner-image/1400',
     title: {
-      nl: 'Eigen servicedienst voor interventie',
+      nl: 'Eigen vrachtwagens voor snelle levering',
       fr: 'Propre service d\'intervention'
     }
   }];

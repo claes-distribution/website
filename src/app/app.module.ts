@@ -44,10 +44,6 @@ import { OrderComponent } from './order/order.component';
 import { EmailDisclaimerComponent } from './email-disclaimer/email-disclaimer.component';
 import { PagesModule } from './pages/pages.module';
 
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,13 +70,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReactiveFormsModule,
     BrowserAnimationsModule,
     RouterModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory, // exported factory function needed for AoT compilation
-        deps: [HttpClient]
-      }
-    }),
+    TranslateModule.forRoot(),
     PagesModule,
     CoreModule,
     AppRoutingModule,

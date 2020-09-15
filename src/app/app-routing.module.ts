@@ -12,11 +12,11 @@ import { OrderComponent } from './order/order.component';
 
 
 const routes: Routes = [{
-  path: '', component: HomeComponent
+  path: '', component: HomePageComponent
 }, {
   path: 'products', component: ProductsPageComponent
 }, {
-  path: 'order', component: OrderComponent
+  path: 'order', component: OrderPageComponent
 }, {
   path: 'inspire', component: InspirePageComponent
 }, {
