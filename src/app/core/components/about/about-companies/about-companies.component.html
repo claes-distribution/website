@@ -1,0 +1,38 @@
+<h2 translate="components.about.about-companies.title"></h2>
+<div class="placeholder">
+  <p [innerHtml]="'components.about.about-companies.text' | translate"></p>
+</div>
+<div class="companies-grid">
+  <div class="dis">
+    <h2 class="dis-color" translate="companies.dis"></h2>
+    <p translate="components.about.about-companies.block-dis.text"></p>
+    <a href="//www.claes-distribution.be" targe="_blank"
+      [title]="'components.about.about-companies.block-dis.button' | translate">
+      <button color="primary">
+        <i class="fal fa-fw fa-water"></i>&nbsp;
+        <span translate="components.about.about-companies.block-dis.button"></span>
+      </button>
+    </a>
+  </div>
+  <div class="mac">
+    <h2 class="mac-color" translate="companies.mac"></h2>
+    <p translate="components.about.about-companies.block-mac.text"></p>
+    <a [routerLink]="['/']" [title]="'components.about.about-companies.block-mac.button' | translate">
+      <button color="primary">
+        <i class="fal fa-fw fa-mouse-pointer"></i>&nbsp;
+        <span translate="components.about.about-companies.block-mac.button"></span>
+      </button>
+    </a>
+  </div>
+  <div class="gro">
+    <h2 class="gro-color" translate="companies.gro"></h2>
+    <p translate="components.about.about-companies.block-gro.text"></p>
+    <a href="//www.groupclaes.be" targe="_blank"
+      [title]="'components.about.about-companies.block-gro.button' | translate">
+      <button color="primary">
+        <i class="fal fa-fw fa-check"></i>&nbsp;
+        <span translate="components.about.about-companies.block-gro.button"></span>
+      </button>
+    </a>
+  </div>
+</div>

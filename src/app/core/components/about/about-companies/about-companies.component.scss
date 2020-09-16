@@ -1,0 +1,92 @@
+:host {
+  display: block;
+
+  h2 {
+    font-size: 30px;
+    margin: .5em 0 .3em;
+  }
+
+  div.placeholder {
+    width: 66.6666666667%;
+    margin-left: 16.6666666667%;
+    padding-bottom: 16px;
+
+    p {
+      display: block;
+      text-align: justify;
+    }
+  }
+
+  div.companies-grid {
+    div {
+      h2 {
+        font-size: 30px;
+        margin: .5em 0 .3em;
+        text-align: center;
+      }
+
+      p {
+        display: block;
+        text-align: justify;
+        width: 66.6666666667%;
+        margin-left: 16.6666666667%;
+      }
+
+      a button {
+        display: block;
+        margin: 30px auto 0;
+      }
+    }
+
+    div.dis,
+    div.gro {
+      padding-top: 40px
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :host {
+    div.companies-grid {
+      display: flex;
+
+      div {
+        width: auto;
+        margin: 0 15px;
+        flex: 1 33.333333%;
+        font-size: 16px;
+        position: relative;
+        padding-bottom: 36px;
+
+        // h2 {
+        //   text-align: left;
+        // }
+
+        p {
+          width: initial;
+          margin-left: initial;
+        }
+
+        a button {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+        }
+      }
+
+      div.dis,
+      div.gro {
+        padding-top: 0px
+      }
+
+      div:first-child {
+        margin-left: 0px;
+      }
+
+      div:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+}

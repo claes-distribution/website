@@ -8,27 +8,27 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class OrderPageComponent implements OnInit {
   slides = [{
-    url: 'https://pcm.groupclaes.be/v3/content/gro/website/banner-image',
+    url: 'https://pcm.groupclaes.be/v3/content/dis/website/banner-image/900',
     title: {
-      nl: 'Betrouwbare toeleverancier van topmerken',
+      nl: 'Bestel 24/7 online via onze eShop',
       fr: 'Fournisseur fiable de grandes marques'
     }
   }, {
-    url: 'https://pcm.groupclaes.be/v3/content/mac/website/banner-image/1200',
+    url: 'https://pcm.groupclaes.be/v3/content/dis/website/banner-image/1000',
     title: {
-      nl: 'Ook welkom in onze winkel',
+      nl: 'Installeer onze app op je smartphone of tablet',
       fr: 'Bienvenue également dans notre salle d\'exposition'
     }
   }, {
-    url: 'https://pcm.groupclaes.be/v3/content/mac/website/banner-image/1300',
+    url: 'https://pcm.groupclaes.be/v3/content/dis/website/banner-image/1100',
     title: {
-      nl: 'Goed geschoolde techniekers',
+      nl: 'Ruime keuze in onze toonzaal',
       fr: 'Techniciens bien formés'
     }
   }, {
-    url: 'https://pcm.groupclaes.be/v3/content/mac/website/banner-image/1400',
+    url: 'https://pcm.groupclaes.be/v3/content/dis/website/banner-image/1200',
     title: {
-      nl: 'Eigen servicedienst voor interventie',
+      nl: 'Onze klantendienst denkt graag met je mee',
       fr: 'Propre service d\'intervention'
     }
   }];
@@ -37,5 +37,4 @@ export class OrderPageComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

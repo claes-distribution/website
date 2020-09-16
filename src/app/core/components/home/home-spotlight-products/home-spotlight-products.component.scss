@@ -1,9 +1,14 @@
 section.product-list {
   h3 {
+
     div.lazy-loading {
       border-radius: 14px;
       background-color: #f4F5F7;
       height: 26px;
+    }
+
+    div.loaded-content {
+      text-align: center;
     }
   }
 

@@ -9,6 +9,7 @@ import { InspirePageComponent } from './inspire/inspire.component';
 import { OrderPageComponent } from './order/order.component';
 import { ProductsPageComponent } from './products/products.component';
 import { CoreModule } from '../core/core.module';
+import { EmailDisclaimerPageComponent } from './email-disclaimer/email-disclaimer.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { CoreModule } from '../core/core.module';
     ContactPageComponent,
     InspirePageComponent,
     OrderPageComponent,
-    ProductsPageComponent
+    ProductsPageComponent,
+    EmailDisclaimerPageComponent
   ],
   exports: [
     HomePageComponent,

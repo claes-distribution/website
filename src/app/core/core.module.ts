@@ -40,6 +40,12 @@ import { InspireRecipesLeafletComponent } from './components/inspire/inspire-rec
 import { InspireNewsComponent } from './components/inspire/inspire-news/inspire-news.component';
 import { InspireSpotlightProductsComponent } from './components/inspire/inspire-spotlight-products/inspire-spotlight-products.component';
 import { BlogpostPopupComponent } from './popups/blogpost-popup/blogpost-popup.component';
+import { AboutTextComponent } from './components/about/about-text/about-text.component';
+import { AboutCareerComponent } from './components/about/about-career/about-career.component';
+import { AboutCompaniesComponent } from './components/about/about-companies/about-companies.component';
+import { AboutMissionComponent } from './components/about/about-mission/about-mission.component';
+import { AboutPrideComponent } from './components/about/about-pride/about-pride.component';
+import { CookiePopupComponent } from './components/popups/cookie-popup/cookie-popup.component';
 
 
 
@@ -82,6 +88,12 @@ import { BlogpostPopupComponent } from './popups/blogpost-popup/blogpost-popup.c
     InspireNewsComponent,
     InspireSpotlightProductsComponent,
 
+    AboutTextComponent,
+    AboutCareerComponent,
+    AboutCompaniesComponent,
+    AboutMissionComponent,
+    AboutPrideComponent,
+
     ImageCarouselComponent,
     MenuComponent,
     ContactFooterComponent,
@@ -91,7 +103,8 @@ import { BlogpostPopupComponent } from './popups/blogpost-popup/blogpost-popup.c
     PcmWebsiteCategoryImageComponent,
     PcmWebsiteCategoryImageSlideshowComponent,
     AutoCompleteFilterPipe,
-    BlogpostPopupComponent
+    BlogpostPopupComponent,
+    CookiePopupComponent
   ],
   exports: [
     HomeTextComponent,
@@ -119,6 +132,12 @@ import { BlogpostPopupComponent } from './popups/blogpost-popup/blogpost-popup.c
     InspireNewsComponent,
     InspireSpotlightProductsComponent,
 
+    AboutTextComponent,
+    AboutCareerComponent,
+    AboutCompaniesComponent,
+    AboutMissionComponent,
+    AboutPrideComponent,
+
     ImageCarouselComponent,
     MenuComponent,
     ContactFooterComponent,
@@ -128,7 +147,8 @@ import { BlogpostPopupComponent } from './popups/blogpost-popup/blogpost-popup.c
     PcmWebsiteCategoryImageComponent,
     PcmWebsiteCategoryImageSlideshowComponent,
     AutoCompleteFilterPipe,
-    BlogpostPopupComponent
+    BlogpostPopupComponent,
+    CookiePopupComponent
   ],
   providers: [
     ApiService

@@ -1,0 +1,57 @@
+:host {
+  display: block;
+  position: relative;
+
+  div {
+    width: 66.6666666667%;
+    margin-left: 16.6666666667%;
+
+    h2 {
+      font-size: 30px;
+      margin: .5em 0 .3em;
+    }
+
+    p {
+      display: block;
+      text-align: justify;
+    }
+
+    img {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    div {
+      display: grid;
+      grid-template-columns: auto 1fr;
+
+      h2 {
+        grid-row: 1;
+        grid-column: 1 / 3;
+      }
+
+      img {
+        display: block;
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      p {
+        grid-column: 2;
+        grid-row: 2;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    div {
+      img {
+        display: inline;
+        position: relative;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+}

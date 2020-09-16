@@ -3,3 +3,4 @@
   <router-outlet></router-outlet>
 </div>
 <dis-footer></dis-footer>
+<dis-cookie-popup (requiredChange)="requiredUpdated($event)" *ngIf="showCookiePolicy"></dis-cookie-popup>

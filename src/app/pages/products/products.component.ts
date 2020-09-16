@@ -8,27 +8,27 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class ProductsPageComponent implements OnInit {
   slides = [{
-    url: 'https://pcm.groupclaes.be/v3/content/gro/website/banner-image',
+    url: 'https://pcm.groupclaes.be/v3/content/dis/website/banner-image/500',
     title: {
-      nl: 'Betrouwbare toeleverancier van topmerken',
+      nl: 'Ruim en zeer compleet productassortiment',
       fr: 'Fournisseur fiable de grandes marques'
     }
   }, {
-    url: 'https://pcm.groupclaes.be/v3/content/mac/website/banner-image/1200',
+    url: 'https://pcm.groupclaes.be/v3/content/dis/website/banner-image/600',
     title: {
-      nl: 'Ook welkom in onze winkel',
+      nl: 'Enkel artikelen van de allerbeste kwaliteit',
       fr: 'Bienvenue également dans notre salle d\'exposition'
     }
   }, {
-    url: 'https://pcm.groupclaes.be/v3/content/mac/website/banner-image/1300',
+    url: 'https://pcm.groupclaes.be/v3/content/dis/website/banner-image/700',
     title: {
-      nl: 'Goed geschoolde techniekers',
+      nl: 'Onze klantendienst denkt graag met je mee!',
       fr: 'Techniciens bien formés'
     }
   }, {
-    url: 'https://pcm.groupclaes.be/v3/content/mac/website/banner-image/1400',
+    url: 'https://pcm.groupclaes.be/v3/content/dis/website/banner-image/800',
     title: {
-      nl: 'Eigen servicedienst voor interventie',
+      nl: 'Snelle levering dankzij optimaal voorraadbeheer',
       fr: 'Propre service d\'intervention'
     }
   }];
