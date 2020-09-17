@@ -112,6 +112,8 @@ export interface ContactQuestion {
   Email: string;
   Company: string;
   Department: string;
+  Attachment?: string | null;
+  AttachmentName?: string | null;
   Subject: string;
   Question: string;
 }

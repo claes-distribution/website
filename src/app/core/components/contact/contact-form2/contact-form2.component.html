@@ -1,0 +1,127 @@
+<h3 translate="components.contact.contact-form.title" *ngIf="!predefined"></h3>
+<div class="contact-reason" *ngIf="!predefined">
+  <mat-form-field appearance="outline">
+    <mat-select [placeholder]="'components.contact.contact-form.contactReasons.selectReason' | translate"
+      [(ngModel)]="contactReason" (selectionChange)="reasonChanged($event)">
+      <mat-option [value]="reason" *ngFor="let reason of contactReasons">
+        <span [translate]="'components.contact.contact-form.contactReasons.' + reason"></span>
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div class="forms">
+  <form class="requestOfferForm" [formGroup]="requestOfferForm" *ngIf="requestOfferForm"
+    (submit)="sendFormValues(requestOfferForm.value)">
+    <mat-form-field class="name" appearance="outline">
+      <mat-label>
+        <span translate="components.contact.contact-form.name"></span>
+      </mat-label>
+      <input formControlName="name" autocomplete="name" matInput required>
+    </mat-form-field>
+    <mat-form-field class="subject" appearance="outline">
+      <mat-label>
+        <span translate="components.contact.contact-form.subject"></span>
+      </mat-label>
+      <input formControlName="subject" matInput required>
+    </mat-form-field>
+    <mat-form-field class="email" appearance="outline">
+      <mat-label>
+        <span translate="components.contact.contact-form.email"></span>
+      </mat-label>
+      <input formControlName="email" autocomplete="email" matInput required>
+    </mat-form-field>
+    <mat-form-field class="phone" appearance="outline">
+      <mat-label>
+        <span translate="components.contact.contact-form.phone"></span>
+      </mat-label>
+      <input formControlName="phone" autocomplete="mobile" matInput required>
+    </mat-form-field>
+    <mat-form-field class="zipcode" appearance="outline">
+      <mat-label>
+        <span translate="components.contact.contact-form.zipcode"></span>
+      </mat-label>
+      <input formControlName="zipcode" autocomplete="address-line2" matInput required>
+    </mat-form-field>
+    <mat-form-field class="question full-width" appearance="outline">
+      <mat-label>
+        <span translate="components.contact.contact-form.question"></span>
+      </mat-label>
+      <textarea formControlName="question" matInput rows="6" required></textarea>
+    </mat-form-field>
+    <button color="primary" class="button" [disabled]="requestOfferForm.invalid" type="submit">
+      <span translate="components.contact.contact-form.send"></span>
+    </button>
+  </form>
+  <form class="contactAccountingForm" [formGroup]="contactAccountingForm" *ngIf="contactAccountingForm"
+    (submit)="sendFormValues(contactAccountingForm.value)">
+    <mat-form-field class="name" appearance="outline">
+      <mat-label>
+        <span translate="components.contact.contact-form.name"></span>
+      </mat-label>
+      <input formControlName="name" autocomplete="name" matInput required>
+    </mat-form-field>
+    <mat-form-field class="subject" appearance="outline">
+      <mat-label>
+        <span translate="components.contact.contact-form.subject"></span>
+      </mat-label>
+      <input formControlName="subject" matInput required>
+    </mat-form-field>
+    <mat-form-field class="email" appearance="outline">
+      <mat-label>
+        <span translate="components.contact.contact-form.email"></span>
+      </mat-label>
+      <input formControlName="email" autocomplete="email" matInput required>
+    </mat-form-field>
+    <mat-form-field class="phone" appearance="outline">
+      <mat-label>
+        <span translate="components.contact.contact-form.phone"></span>
+      </mat-label>
+      <input formControlName="phone" autocomplete="mobile" matInput required>
+    </mat-form-field>
+    <mat-form-field class="question full-width" appearance="outline">
+      <mat-label>
+        <span translate="components.contact.contact-form.question"></span>
+      </mat-label>
+      <textarea formControlName="question" matInput rows="6" required></textarea>
+    </mat-form-field>
+    <button color="primary" class="button" [disabled]="contactAccountingForm.invalid" type="submit">
+      <span translate="components.contact.contact-form.send"></span>
+    </button>
+  </form>
+  <form class="contactItForm" [formGroup]="contactItForm" *ngIf="contactItForm"
+    (submit)="sendFormValues(contactItForm.value)">
+    <mat-form-field class="name" appearance="outline">
+      <mat-label>
+        <span translate="components.contact.contact-form.name"></span>
+      </mat-label>
+      <input formControlName="name" autocomplete="name" matInput required>
+    </mat-form-field>
+    <mat-form-field class="subject" appearance="outline">
+      <mat-label>
+        <span translate="components.contact.contact-form.subject"></span>
+      </mat-label>
+      <input formControlName="subject" matInput required>
+    </mat-form-field>
+    <mat-form-field class="email" appearance="outline">
+      <mat-label>
+        <span translate="components.contact.contact-form.email"></span>
+      </mat-label>
+      <input formControlName="email" autocomplete="email" matInput required>
+    </mat-form-field>
+    <mat-form-field class="phone" appearance="outline">
+      <mat-label>
+        <span translate="components.contact.contact-form.phone"></span>
+      </mat-label>
+      <input formControlName="phone" autocomplete="mobile" matInput required>
+    </mat-form-field>
+    <mat-form-field class="question full-width" appearance="outline">
+      <mat-label>
+        <span translate="components.contact.contact-form.question"></span>
+      </mat-label>
+      <textarea formControlName="question" matInput rows="6" required></textarea>
+    </mat-form-field>
+    <button color="primary" class="button" [disabled]="contactItForm.invalid" type="submit">
+      <span translate="components.contact.contact-form.send"></span>
+    </button>
+  </form>
+</div>

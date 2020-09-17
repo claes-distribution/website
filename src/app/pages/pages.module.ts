@@ -10,6 +10,8 @@ import { OrderPageComponent } from './order/order.component';
 import { ProductsPageComponent } from './products/products.component';
 import { CoreModule } from '../core/core.module';
 import { EmailDisclaimerPageComponent } from './email-disclaimer/email-disclaimer.component';
+import { ProductCategoriesPageComponent } from './product-categories/product-categories.component';
+import { PrivacyPolicyPageComponent } from './privacy-policy/privacy-policy.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { EmailDisclaimerPageComponent } from './email-disclaimer/email-disclaime
     InspirePageComponent,
     OrderPageComponent,
     ProductsPageComponent,
-    EmailDisclaimerPageComponent
+    EmailDisclaimerPageComponent,
+    ProductCategoriesPageComponent,
+    PrivacyPolicyPageComponent
   ],
   exports: [
     HomePageComponent,
@@ -34,7 +38,9 @@ import { EmailDisclaimerPageComponent } from './email-disclaimer/email-disclaime
     ContactPageComponent,
     InspirePageComponent,
     OrderPageComponent,
-    ProductsPageComponent
+    ProductsPageComponent,
+    EmailDisclaimerPageComponent,
+    ProductCategoriesPageComponent
   ]
 })
 export class PagesModule {

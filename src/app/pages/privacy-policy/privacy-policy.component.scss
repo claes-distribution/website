@@ -1,0 +1,15 @@
+:host {
+  display: block;
+
+  section {
+    padding: 40px 0px;
+  }
+
+  section:nth-child(even) {
+    background-color: #F4F5F7;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #212223;
+    }
+  }
+}

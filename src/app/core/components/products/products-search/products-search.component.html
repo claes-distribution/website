@@ -4,7 +4,7 @@
     <input type="text" name="query" id="query" [(ngModel)]="query"
       [placeholder]="'components.products.products-search.text' | translate" (focus)="show()" (focusout)="hide()">
     <div [ngClass]="showClassList" class="auto-complete-list">
-      <a [routerLink]="['/products/' + result.name[culture], {id:result.id}]" class="auto-complete-result"
+      <a [routerLink]="['/products', result.name[culture]]" class="auto-complete-result" [queryParams]="{id: result.id}"
         *ngFor="let result of results | autoCompleteFilter:culture:query">
         {{ result.name[culture] }}
       </a>

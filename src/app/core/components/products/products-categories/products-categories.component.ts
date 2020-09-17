@@ -23,6 +23,7 @@ export class ProductsCategoriesComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.parent != null) {
+      this.showTitle = false;
       this.categoriesService.getChildren(this.parent).subscribe((result: IGetCategoriesResult) => {
         this.categories = result.categories.map(e => {
           return {
@@ -44,7 +45,7 @@ export class ProductsCategoriesComponent implements OnInit {
             name: e.name,
             description: e.description,
             css: this.sanitizer.bypassSecurityTrustStyle(
-              `background-image:url('https://pcm.groupclaes.be/v3/content/dis/website/category-image/20');`
+              `background-image:url('https://pcm.groupclaes.be/v3/content/dis/website/category-image/${e.id}');`
             )
           };
         });

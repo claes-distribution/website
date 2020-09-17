@@ -1,0 +1,108 @@
+:host {
+  display: block;
+
+  div.contact-reason mat-form-field {
+    display: block;
+  }
+
+  form button.button {
+    height: 48px;
+  }
+
+  form div.form-field {
+    color: rgba(0, 0, 0, 0.2);
+    border: 1px solid currentColor;
+    border-radius: 5px;
+    padding: 8px .75em;
+    margin-top: 2px;
+    margin-bottom: 1.59375em;
+
+    mat-label {
+      color: #222;
+    }
+
+    input {
+      display: block;
+    }
+  }
+
+  form.requestOfferForm,
+  form.contactAccountingForm,
+  form.contactItForm {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    mat-form-field {
+      grid-column: 1;
+    }
+
+    mat-form-field.name {
+      grid-row: 1;
+    }
+
+    mat-form-field.subject {
+      grid-row: 2;
+    }
+
+    mat-form-field.email {
+      grid-row: 3;
+    }
+
+    mat-form-field.phone {
+      grid-row: 4;
+    }
+
+    mat-form-field.zipcode {
+      grid-row: 5;
+    }
+
+    mat-form-field.question {
+      grid-row: 6;
+    }
+
+    button {
+      grid-row: 7;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    form {
+      mat-form-field.full-width {
+        grid-column: 1 / 3;
+      }
+    }
+
+    form.requestOfferForm,
+    form.contactAccountingForm,
+    form.contactItForm {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+
+      mat-form-field.subject {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      mat-form-field.email {
+        grid-row: 2;
+      }
+
+      mat-form-field.phone {
+        grid-column: 2;
+        grid-row: 2;
+      }
+
+      mat-form-field.zipcode {
+        grid-row: 3;
+      }
+
+      mat-form-field.question {
+        grid-row: 4;
+      }
+
+      button {
+        grid-row: 5;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+<footer>
+  <div class="footer-main">
+    <div class="container">
+      <div class="company-info">
+        <p style="margin-top:0">
+          Beverlosesteenweg 128<br />
+          3583 Paal-Beringen<br />
+          <span translate="belgium"></span>
+        </p>
+        <p>
+          BE 0429.732.170
+        </p>
+        <p>
+          <i class="fal fa-fw fa-phone"></i>&nbsp;<a href="tel:003211456200">+32 11 45 62 00</a><br />
+          <i class="fal fa-fw fa-fax"></i> +32 11 43 26 27<br />
+          <i class="fal fa-fw fa-envelope"></i>&nbsp;<a
+            href="mailto:info@claes-distribution.be">info@claes-distribution.be</a>
+        </p>
+      </div>
+      <div class="company-opening">
+        <span class="title" translate="components.footer.opening-hours.title"></span>
+        <div class="opening-grid">
+          <span class="day" translate="days.short.monday"></span>
+          <span class="period">: 08:00 - 12:00 | 13:00 - 17:00</span>
+          <span class="day" translate="days.short.tuesday"></span>
+          <span class="period">: 08:00 - 12:00 | 13:00 - 17:00</span>
+          <span class="day" translate="days.short.wednesday"></span>
+          <span class="period">: 08:00 - 12:00 | 13:00 - 17:00</span>
+          <span class="day" translate="days.short.thursday"></span>
+          <span class="period">: 08:00 - 12:00 | 13:00 - 17:00</span>
+          <span class="day" translate="days.short.friday"></span>
+          <span class="period">: 08:00 - 12:00 | 13:00 - 16:00</span>
+        </div>
+      </div>
+      <div class="company-list">
+        <a href="https://www.claes-machines.be/" class="mac-color" target="_blank">
+          <span translate="companies.mac"></span>
+          <br />
+          <pcm-website-logo company="mac" style="height: 56px"></pcm-website-logo>
+        </a>
+        <br />
+        <a href="https://www.groupclaes.be/" class="gro-color" target="_blank">
+          <span translate="companies.gro"></span>
+          <br />
+          <pcm-website-logo company="gro" style="height: 56px"></pcm-website-logo>
+        </a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="select-language">
+          <button mat-button #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="languageMenu">
+            <i class="fas fa-globe-europe fa-lg"></i>&nbsp; <span [textContent]="'languages.'+culture" translate></span>
+          </button>
+          <mat-menu #languageMenu="matMenu" [overlapTrigger]="false">
+            <button mat-menu-item *ngFor="let language of languages" (click)="menuTrigger.closeMenu();lang(language)">
+              <span [textContent]="'languages.'+language" translate></span>
+            </button>
+          </mat-menu>
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/claes-food-projects/" target="_blank">
+            <i class="fab fa-fw fa-2x fa-linkedin"></i>
+          </a>
+        </div>
+        <div class="copyright">
+          <a [routerLink]="['/privacy-policy']">Privacy policy</a> -
+          Copyright <i class="fal fa-copyright fa-sm"></i> {{ today | date:'yyyy' }} -
+          <a href="https://www.claes-distribution.be" target="_blank" class="dis-color" translate="companies.dis"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

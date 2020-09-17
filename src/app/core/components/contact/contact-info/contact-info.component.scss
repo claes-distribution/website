@@ -1,0 +1,42 @@
+:host {
+  h3 {
+    font-size: 30px;
+    margin: .5em 0 .3em;
+    text-align: center;
+  }
+
+  div.container {
+    display: grid;
+    grid-column-gap: 1.5em;
+    grid-template-columns: 1fr;
+
+    @media screen and (min-width: 640px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    div.info {
+      text-align: center;
+
+      @media screen and (min-width: 640px) {
+        text-align: left;
+
+        &.address-info {
+          text-align: right;
+        }
+
+        &.phone-info {
+          text-align: right;
+        }
+      }
+
+      h5 {
+        text-align: inherit;
+        margin: .5em 0 .3em 0;
+      }
+
+      p.content {
+        margin-top: 0;
+      }
+    }
+  }
+}

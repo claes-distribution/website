@@ -1,0 +1,20 @@
+<section>
+  <div class="container">
+    <dis-privacy-policy-title></dis-privacy-policy-title>
+    <dis-privacy-policy-block section="intellectual-rights"></dis-privacy-policy-block>
+    <dis-privacy-policy-block section="liability"></dis-privacy-policy-block>
+    <dis-privacy-policy-block section="applicable-law"></dis-privacy-policy-block>
+    <dis-privacy-policy-block section="data-collection"></dis-privacy-policy-block>
+    <dis-privacy-policy-block section="security"></dis-privacy-policy-block>
+    <dis-privacy-policy-block section="storage"></dis-privacy-policy-block>
+    <dis-privacy-policy-block section="sharing"></dis-privacy-policy-block>
+    <dis-privacy-policy-block section="personal-data"></dis-privacy-policy-block>
+    <dis-privacy-policy-block section="cookie-statment"></dis-privacy-policy-block>
+    <dis-privacy-policy-block section="google-analytics"></dis-privacy-policy-block>
+    <dis-privacy-policy-block section="contact"></dis-privacy-policy-block>
+  </div>
+  <div class="container">
+    <button *ngIf="policyRequired" color="primary" (click)="acceptPolicy()"
+      translate="components.cookie-popup.button"></button>
+  </div>
+</section>

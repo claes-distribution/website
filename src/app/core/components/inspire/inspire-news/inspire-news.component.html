@@ -1,8 +1,13 @@
 <div>
   <h3 translate="components.news.title"></h3>
   <div class="news-grid" *ngIf="newsList">
+    <button class="icon-button previous-item" color="primary" (click)="previous()" [disabled]="!previousEnabled"
+      *ngIf="newsList.length >= 3">
+      <i class="fal fa-fw fa-2x fa-angle-left"></i>
+    </button>
     <article *ngIf="newsList.length == 1"></article>
-    <article *ngFor="let news of newsList; let i = index" [ngClass]="'newsitem-' + i">
+    <article *ngFor="let news of newsList | slice:currentIndex:currentIndex+3; let i = index"
+      [ngClass]="'newsitem-' + i">
       <img [src]="news.image" [alt]="news.title[culture]">
       <h4 [innerText]="news.title[culture]"></h4>
       <p>
@@ -22,6 +27,10 @@
       </a>
     </article>
     <article *ngIf="newsList.length == 2 || newsList.length == 1"></article>
+    <button class="icon-button next-item" color="primary" (click)="next()" [disabled]="!nextEnabled"
+      *ngIf="newsList.length >= 3">
+      <i class="fal fa-fw fa-2x fa-angle-right"></i>
+    </button>
   </div>
   <div *ngIf="!newsList" style="text-align:center">
     <i class="fal fa-fw fa-2x fa-circle-notch fa-spin"></i>

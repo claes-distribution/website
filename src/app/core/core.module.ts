@@ -39,13 +39,23 @@ import { InspireTextComponent } from './components/inspire/inspire-text/inspire-
 import { InspireRecipesLeafletComponent } from './components/inspire/inspire-recipes-leaflet/inspire-recipes-leaflet.component';
 import { InspireNewsComponent } from './components/inspire/inspire-news/inspire-news.component';
 import { InspireSpotlightProductsComponent } from './components/inspire/inspire-spotlight-products/inspire-spotlight-products.component';
-import { BlogpostPopupComponent } from './popups/blogpost-popup/blogpost-popup.component';
+import { BlogpostPopupComponent } from './components/popups/blogpost-popup/blogpost-popup.component';
 import { AboutTextComponent } from './components/about/about-text/about-text.component';
 import { AboutCareerComponent } from './components/about/about-career/about-career.component';
 import { AboutCompaniesComponent } from './components/about/about-companies/about-companies.component';
 import { AboutMissionComponent } from './components/about/about-mission/about-mission.component';
 import { AboutPrideComponent } from './components/about/about-pride/about-pride.component';
 import { CookiePopupComponent } from './components/popups/cookie-popup/cookie-popup.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ContactInfoComponent } from './components/contact/contact-info/contact-info.component';
+import { ContactOpeningHoursComponent } from './components/contact/contact-opening-hours/contact-opening-hours.component';
+import { ContactForm2Component } from './components/contact/contact-form2/contact-form2.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { PrivacyPolicyTitleComponent } from './components/privacy-policy/privacy-policy-title/privacy-policy-title.component';
+import { PrivacyPolicyBlockComponent } from './components/privacy-policy/privacy-policy-block/privacy-policy-block.component';
 
 
 
@@ -55,12 +65,16 @@ import { CookiePopupComponent } from './components/popups/cookie-popup/cookie-po
     RouterModule,
     HttpClientModule,
     BrowserModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatOptionModule,
+    MatSelectModule,
     FormsModule,
     ReactiveFormsModule,
     TranslateModule.forChild(),
-    MatButtonModule,
-    MatToolbarModule,
-    MatMenuModule
+    MatButtonModule
   ],
   declarations: [
     HomeTextComponent,
@@ -97,6 +111,9 @@ import { CookiePopupComponent } from './components/popups/cookie-popup/cookie-po
     ImageCarouselComponent,
     MenuComponent,
     ContactFooterComponent,
+    ContactInfoComponent,
+    ContactOpeningHoursComponent,
+    ContactForm2Component,
 
     PcmWebsiteLogoComponent,
     PcmWebsiteBannerComponent,
@@ -104,7 +121,10 @@ import { CookiePopupComponent } from './components/popups/cookie-popup/cookie-po
     PcmWebsiteCategoryImageSlideshowComponent,
     AutoCompleteFilterPipe,
     BlogpostPopupComponent,
-    CookiePopupComponent
+    CookiePopupComponent,
+    FooterComponent,
+    PrivacyPolicyTitleComponent,
+    PrivacyPolicyBlockComponent
   ],
   exports: [
     HomeTextComponent,
@@ -141,6 +161,9 @@ import { CookiePopupComponent } from './components/popups/cookie-popup/cookie-po
     ImageCarouselComponent,
     MenuComponent,
     ContactFooterComponent,
+    ContactInfoComponent,
+    ContactOpeningHoursComponent,
+    ContactForm2Component,
 
     PcmWebsiteLogoComponent,
     PcmWebsiteBannerComponent,
@@ -148,7 +171,10 @@ import { CookiePopupComponent } from './components/popups/cookie-popup/cookie-po
     PcmWebsiteCategoryImageSlideshowComponent,
     AutoCompleteFilterPipe,
     BlogpostPopupComponent,
-    CookiePopupComponent
+    CookiePopupComponent,
+    FooterComponent,
+    PrivacyPolicyTitleComponent,
+    PrivacyPolicyBlockComponent
   ],
   providers: [
     ApiService

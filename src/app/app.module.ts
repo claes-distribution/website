@@ -19,7 +19,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './footer/footer.component';
 import { CoreModule } from './core/core.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -27,22 +26,13 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { NewsListComponent } from './news-list/news-list.component';
 import { NewsItemComponent } from './news-item/news-item.component';
-import { ContactComponent } from './contact/contact.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
-import { ContactOpeningComponent } from './contact-opening/contact-opening.component';
-import { ContactInfoComponent } from './contact-info/contact-info.component';
 import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
     NewsListComponent,
-    NewsItemComponent,
-    ContactComponent,
-    ContactFormComponent,
-    ContactOpeningComponent,
-    ContactInfoComponent,
+    NewsItemComponent
   ],
   imports: [
     BrowserModule,

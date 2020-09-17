@@ -11,6 +11,7 @@ import { BlogpostsService, IBlogPreview } from 'src/app/core/data/blogposts.serv
 export class InspireNewsComponent implements OnInit {
   newsList: IBlogPreview[];
   currentBlog: IBlogPreview;
+  currentIndex = 0;
 
   constructor(
     private translate: TranslateService,
@@ -53,6 +54,28 @@ export class InspireNewsComponent implements OnInit {
     this.currentBlog = undefined;
     this.ref.markForCheck();
     document.body.style.overflow = 'initial';
+  }
+
+  previous() {
+    if (this.currentIndex >= 1) {
+      this.currentIndex--;
+      this.ref.markForCheck();
+    }
+  }
+
+  next() {
+    if (this.currentIndex < this.newsList.length - 3) {
+      this.currentIndex++;
+      this.ref.markForCheck();
+    }
+  }
+
+  get previousEnabled(): boolean {
+    return this.newsList && this.currentIndex > 0;
+  }
+
+  get nextEnabled(): boolean {
+    return this.newsList && this.currentIndex < this.newsList.length - 3;
   }
 
   get culture(): string {

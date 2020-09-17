@@ -8,7 +8,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class AboutPageComponent implements OnInit {
   slides = [{
-    url: 'https://pcm.groupclaes.be/v3/content/dis/website/banner-image/1700',
+    url: 'https://pcm.groupclaes.be/v3/content/gro/website/banner-image',
     title: {
       nl: 'Groots in z’n kleinschaligheid ',
       fr: 'Fournisseur fiable de grandes marques'

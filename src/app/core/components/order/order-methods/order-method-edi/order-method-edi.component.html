@@ -1,9 +1,9 @@
 <h3 translate="components.order.order-methods.order-method-edi.title"></h3>
 <div class="placeholder">
-  <p translate="components.order.order-methods.order-method-edi.text"></p>
+  <p [innerHtml]="'components.order.order-methods.order-method-edi.text' | translate"></p>
 </div>
 
-<a href="https://shop.claes-distribution.be/login?action=signin">
+<a [routerLink]="['/contact']">
   <button color="primary">
     <i class="fal fa-fw fa-info-circle"></i>&nbsp;
     <span translate="components.order.order-methods.order-method-edi.button-1"></span>
