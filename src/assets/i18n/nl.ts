@@ -410,7 +410,6 @@ export const nl = {
     },
 
     newsList: 'Nieuws',
-    contactUs: 'Contacteer ons',
 
     belgium: 'België',
 

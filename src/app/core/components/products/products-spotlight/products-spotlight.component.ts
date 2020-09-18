@@ -1,13 +1,14 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { SpotlightService, ISpotlightProduct } from '../../../data/spotlight.service';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { ISpotlightProduct, SpotlightService } from 'src/app/core/data/spotlight.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'dis-home-spotlight-products',
-  templateUrl: './home-spotlight-products.component.html',
-  styleUrls: ['./home-spotlight-products.component.scss']
+  selector: 'dis-products-spotlight',
+  templateUrl: './products-spotlight.component.html',
+  styleUrls: ['./products-spotlight.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomeSpotlightProductsComponent implements OnInit {
+export class ProductsSpotlightComponent implements OnInit {
   spotlightProducts: ISpotlightProduct[];
 
   constructor(

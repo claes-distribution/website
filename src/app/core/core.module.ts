@@ -15,12 +15,9 @@ import { HomeProductsOrderComponent } from './components/home/home-products-orde
 import { HomeBenefitsComponent } from './components/home/home-benefits/home-benefits.component';
 import { HomeLeafletComponent } from './components/home/home-leaflet/home-leaflet.component';
 import { HomeRecipesNewsComponent } from './components/home/home-recipes-news/home-recipes-news.component';
-import { HomeSpotlightProductsComponent } from './components/home/home-spotlight-products/home-spotlight-products.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { PcmWebsiteLogoComponent } from '../pcm-website-logo/pcm-website-logo.component';
 import { PcmWebsiteBannerComponent } from '../pcm-website-banner/pcm-website-banner.component';
-import { PcmWebsiteCategoryImageComponent } from '../pcm-website-category-image/pcm-website-category-image.component';
-import { PcmWebsiteCategoryImageSlideshowComponent } from '../pcm-website-category-image-slideshow/pcm-website-category-image-slideshow.component';
 import { ContactFooterComponent } from './components/contact/contact-footer/contact-footer.component';
 import { ProductsTextComponent } from './components/products/products-text/products-text.component';
 import { ProductsSearchComponent } from './components/products/products-search/products-search.component';
@@ -38,7 +35,6 @@ import { OrderMethodSupportComponent } from './components/order/order-methods/or
 import { InspireTextComponent } from './components/inspire/inspire-text/inspire-text.component';
 import { InspireRecipesLeafletComponent } from './components/inspire/inspire-recipes-leaflet/inspire-recipes-leaflet.component';
 import { InspireNewsComponent } from './components/inspire/inspire-news/inspire-news.component';
-import { InspireSpotlightProductsComponent } from './components/inspire/inspire-spotlight-products/inspire-spotlight-products.component';
 import { BlogpostPopupComponent } from './components/popups/blogpost-popup/blogpost-popup.component';
 import { AboutTextComponent } from './components/about/about-text/about-text.component';
 import { AboutCareerComponent } from './components/about/about-career/about-career.component';
@@ -56,8 +52,7 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { PrivacyPolicyTitleComponent } from './components/privacy-policy/privacy-policy-title/privacy-policy-title.component';
 import { PrivacyPolicyBlockComponent } from './components/privacy-policy/privacy-policy-block/privacy-policy-block.component';
-
-
+import { ProductsSpotlightComponent } from './components/products/products-spotlight/products-spotlight.component';
 
 @NgModule({
   imports: [
@@ -82,11 +77,11 @@ import { PrivacyPolicyBlockComponent } from './components/privacy-policy/privacy
     HomeBenefitsComponent,
     HomeLeafletComponent,
     HomeRecipesNewsComponent,
-    HomeSpotlightProductsComponent,
 
     ProductsTextComponent,
     ProductsSearchComponent,
     ProductsCategoriesComponent,
+    ProductsSpotlightComponent,
 
     OrderTextComponent,
     OrderMethodsComponent,
@@ -100,7 +95,6 @@ import { PrivacyPolicyBlockComponent } from './components/privacy-policy/privacy
     InspireTextComponent,
     InspireRecipesLeafletComponent,
     InspireNewsComponent,
-    InspireSpotlightProductsComponent,
 
     AboutTextComponent,
     AboutCareerComponent,
@@ -108,23 +102,22 @@ import { PrivacyPolicyBlockComponent } from './components/privacy-policy/privacy
     AboutMissionComponent,
     AboutPrideComponent,
 
-    ImageCarouselComponent,
-    MenuComponent,
     ContactFooterComponent,
     ContactInfoComponent,
     ContactOpeningHoursComponent,
     ContactForm2Component,
 
+    PrivacyPolicyTitleComponent,
+    PrivacyPolicyBlockComponent,
+
     PcmWebsiteLogoComponent,
     PcmWebsiteBannerComponent,
-    PcmWebsiteCategoryImageComponent,
-    PcmWebsiteCategoryImageSlideshowComponent,
     AutoCompleteFilterPipe,
     BlogpostPopupComponent,
     CookiePopupComponent,
     FooterComponent,
-    PrivacyPolicyTitleComponent,
-    PrivacyPolicyBlockComponent
+    ImageCarouselComponent,
+    MenuComponent
   ],
   exports: [
     HomeTextComponent,
@@ -132,11 +125,11 @@ import { PrivacyPolicyBlockComponent } from './components/privacy-policy/privacy
     HomeBenefitsComponent,
     HomeLeafletComponent,
     HomeRecipesNewsComponent,
-    HomeSpotlightProductsComponent,
 
     ProductsTextComponent,
     ProductsSearchComponent,
     ProductsCategoriesComponent,
+    ProductsSpotlightComponent,
 
     OrderTextComponent,
     OrderMethodsComponent,
@@ -150,31 +143,29 @@ import { PrivacyPolicyBlockComponent } from './components/privacy-policy/privacy
     InspireTextComponent,
     InspireRecipesLeafletComponent,
     InspireNewsComponent,
-    InspireSpotlightProductsComponent,
 
     AboutTextComponent,
     AboutCareerComponent,
     AboutCompaniesComponent,
     AboutMissionComponent,
     AboutPrideComponent,
-
-    ImageCarouselComponent,
-    MenuComponent,
     ContactFooterComponent,
     ContactInfoComponent,
     ContactOpeningHoursComponent,
     ContactForm2Component,
 
+    PrivacyPolicyTitleComponent,
+    PrivacyPolicyBlockComponent,
+
     PcmWebsiteLogoComponent,
     PcmWebsiteBannerComponent,
-    PcmWebsiteCategoryImageComponent,
-    PcmWebsiteCategoryImageSlideshowComponent,
+
+    ImageCarouselComponent,
+    MenuComponent,
     AutoCompleteFilterPipe,
     BlogpostPopupComponent,
     CookiePopupComponent,
-    FooterComponent,
-    PrivacyPolicyTitleComponent,
-    PrivacyPolicyBlockComponent
+    FooterComponent
   ],
   providers: [
     ApiService

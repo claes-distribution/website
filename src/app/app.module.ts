@@ -24,15 +24,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { NewsListComponent } from './news-list/news-list.component';
-import { NewsItemComponent } from './news-item/news-item.component';
 import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NewsListComponent,
-    NewsItemComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
