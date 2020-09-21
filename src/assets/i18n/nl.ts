@@ -136,7 +136,7 @@ export const nl = {
                 },
                 'block-4': {
                     title: 'Betrouwbaarheid',
-                    text: 'Ons distributiecentrum is uitgerust met de meest moderne installaties en zet sterk in op de automatisering van voorraadbeheer en orderverwerking. Goederenontvangst gebeurt via scanning, orderpicking via RF en gekoeld transport met temperatuurregistratie en intelligente boordcomputers. Met ‘track & trace’ kunnen we de status van je bestelling op de voet volgen en bij het minste probleem ook meteen een efficiënte recall uitvoeren.'
+                    text: 'Ons distributiecentrum is uitgerust met de meest moderne installaties en zet sterk in op de automatisering van voorraadbeheer en orderverwerking. Goederenontvangst gebeurt via scanning, orderpicking via RF en gekoeld transport met temperatuurregistratie en intelligente boordcomputers. Met ‘track & trace’ kunnen we de status van je bestelling op de voet volgen en bij het minste probleem een efficiënte recall uitvoeren.'
                 }
             },
             'home-leaflet': {

@@ -54,11 +54,9 @@ section.product-list {
         button {
           grid-column: 2;
           grid-row: 3;
-          height: 28px;
-          line-height: 28px;
           width: 148px;
-          font-size: initial;
-          padding: 0;
+          margin: 0 auto;
+          display: block;
 
           i {
             vertical-align: -.1em;
