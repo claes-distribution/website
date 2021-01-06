@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PrivacyPolicyBlockComponent } from './privacy-policy-block.component';
 
@@ -6,7 +6,7 @@ describe('PrivacyPolicyBlockComponent', () => {
   let component: PrivacyPolicyBlockComponent;
   let fixture: ComponentFixture<PrivacyPolicyBlockComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PrivacyPolicyBlockComponent ]
     })

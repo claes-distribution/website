@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { EmailDisclaimerPageComponent } from './email-disclaimer.component';
 
@@ -6,7 +6,7 @@ describe('EmailDisclaimerComponent', () => {
   let component: EmailDisclaimerPageComponent;
   let fixture: ComponentFixture<EmailDisclaimerPageComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [EmailDisclaimerPageComponent]
     })

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { InspireRecipesLeafletComponent } from './inspire-recipes-leaflet.component';
 
@@ -6,7 +6,7 @@ describe('InspireRecipesLeafletComponent', () => {
   let component: InspireRecipesLeafletComponent;
   let fixture: ComponentFixture<InspireRecipesLeafletComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ InspireRecipesLeafletComponent ]
     })

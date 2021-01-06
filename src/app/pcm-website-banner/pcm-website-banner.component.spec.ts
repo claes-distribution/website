@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PcmWebsiteBannerComponent } from './pcm-website-banner.component';
 
@@ -6,7 +6,7 @@ describe('PcmWebsiteBannerComponent', () => {
   let component: PcmWebsiteBannerComponent;
   let fixture: ComponentFixture<PcmWebsiteBannerComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PcmWebsiteBannerComponent ]
     })
