@@ -74,3 +74,42 @@ $custom-typography: mat-typography-config($font-family: 'Nunito'
 // Using the $theme variable from the pre-built theme you can call the theming function
 // @include shell-theme($app-theme);
 // @include login-theme($app-theme);
+
+
+* {
+  --background-color: #ffffff;
+  --color: #222222;
+
+  --list-seperator-border: 1px solid #d4d4d4;
+  --list-seperator-border-color: #d4d4d4;
+
+  --control-background-color: #ffffff;
+  --control-color: #333333;
+  --control-hover-background-color: #e9e9e9;
+  --control-hover-color: #222222;
+  --control-border: 1px solid rgba(0, 0, 0, 0.1);
+
+  --company-distribution-color: #01633a;
+  --company-machines-color: #283480;
+  --company-groupclaes-color: #49545C;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  * {
+    --background-color: #000000;
+    --color: #dddddd;
+
+    --list-seperator-border: 1px solid #454545;
+    --list-seperator-border-color: #454545;
+
+    --control-background-color: #000000;
+    --control-color: #dddddd;
+    --control-hover-background-color: #333333;
+    --control-hover-color: #ffffff;
+    --control-border: 1px solid rgba(255, 255, 255, 0.2);
+
+    --company-distribution-color: #0b8a55;
+    --company-machines-color: #5165ec;
+    --company-groupclaes-color: #777e83;
+  }
+}

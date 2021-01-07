@@ -10,7 +10,7 @@
       position: relative;
 
       input {
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        border: var(--control-border);
         border-radius: 4px;
         padding: 8px 14px;
         position: relative;
@@ -24,7 +24,7 @@
         &:focus,
         &:active,
         &:hover {
-          border: 1px solid #283480;
+          border: 1px solid var(--company-distribution-color);
         }
       }
 
@@ -35,8 +35,8 @@
         position: absolute;
         top: 42px;
         left: 0;
-        background-color: #FFF;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: var(--control-background-color);
+        border: var(--control-border);
         border-radius: 4px;
         font-size: 18px;
         line-height: 24px;
@@ -55,8 +55,8 @@
           display: block;
           padding: 0 12px;
           cursor: pointer;
-          background-color: #fff;
-          color: #333;
+          background-color: var(--control-background-color);
+          color: var(--control-color);
           height: 42px;
           line-height: 42px;
           font-size: initial;
@@ -65,7 +65,8 @@
         }
 
         .auto-complete-result:hover {
-          background-color: #e9e9e9;
+          background-color: var(--control-hover-background-color);
+          color: var(--control-hover-color);
         }
 
         .auto-complete-result:first-child {
@@ -79,7 +80,7 @@
         }
 
         .auto-complete-result+.auto-complete-result {
-          border-top: 1px solid #d4d4d4;
+          border-top: var(--list-seperator-border)
         }
       }
     }

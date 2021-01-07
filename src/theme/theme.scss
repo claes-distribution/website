@@ -11,8 +11,8 @@ body {
   height: 100%;
   font-family: 'Nunito', sans-serif;
   font-weight: 300;
-  background-color: white;
-  color: #222;
+  background-color: var(--background-color);
+  color: var(--color);
 }
 
 h1,
@@ -81,27 +81,27 @@ span.text-capitalize {
 }
 
 .dis-color {
-  color: #01633a;
+  color: var(--company-distribution-color);
 }
 
 .mac-color {
-  color: #283480;
+  color: var(--company-machines-color);
 }
 
 .gro-color {
-  color: #49545C;
+  color: var(--company-groupclaes-color);
 }
 
 .dis-bgcolor {
-  background-color: #01633a;
+  background-color: var(--company-distribution-color);
 }
 
 .mac-bgcolor {
-  background-color: #283480;
+  background-color: var(--company-machines-color);
 }
 
 .gro-bgcolor {
-  background-color: #49545C;
+  background-color: var(--company-groupclaes-color);
 }
 
 input[type="button"],
@@ -175,38 +175,5 @@ button,
 
   a {
     color: inherit;
-  }
-}
-
-@media (prefers-color-scheme:dark) {
-
-  html,
-  body {
-    background-color: black;
-    color: #ddd;
-  }
-
-  .dis-color {
-    color: #0b8a55;
-  }
-
-  .mac-color {
-    color: #5165ec;
-  }
-
-  .gro-color {
-    color: #777e83;
-  }
-
-  .dis-bgcolor {
-    background-color: #0b8a55;
-  }
-
-  .mac-bgcolor {
-    background-color: #5165ec;
-  }
-
-  .gro-cbgolor {
-    background-color: #777e83;
   }
 }
