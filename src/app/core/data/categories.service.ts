@@ -29,6 +29,7 @@ export interface IGetCategoriesResult {
 
 export interface ICategory {
   id: number;
+  css?: any;
   name: {
     nl: string;
     fr: string;
