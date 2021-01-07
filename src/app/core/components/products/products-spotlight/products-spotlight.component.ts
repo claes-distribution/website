@@ -24,6 +24,10 @@ export class ProductsSpotlightComponent implements OnInit {
     });
   }
 
+  setActiveProduct(id: number, source: string) {
+
+  }
+
   get culture(): string {
     return this.translate.currentLang;
   }
