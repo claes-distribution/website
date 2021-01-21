@@ -9,10 +9,6 @@ export class ApiService {
 
   constructor(@Inject(HttpClient) private http: HttpClient) { }
 
-  getNewsList(company: string, items?: number | null): Observable<IGetBlogsResponse> {
-    return this.http.get<IGetBlogsResponse>(`${this.url}blogs/list?company=${company}&items=${items}`);
-  }
-
   getCategories(list: CategoryList = 'all', id?: number): Observable<Category[]> {
     switch (list) {
       case 'top':

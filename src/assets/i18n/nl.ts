@@ -167,7 +167,8 @@ export const nl = {
         text: 'Ben jij kieskeurig en wil je enkel werken met producten van de bovenste plank? Dat begrijpen wij perfect. In het brede assortiment van onze groothandel vind je uitsluitend artikelen van topkwaliteit, o.a. kruiden, sauzen, marinades, specerijen, voedingswaren, darmen, verpakkingen, producten voor hygiëne en ontsmetting en benodigdheden voor winkel, keuken en werkhuis. Wat je ook zoekt, wij verkopen het! Daarbij staan smaak, gemak, veiligheid, hygiëne en ergonomie steeds voorop.<br><br>En heb je een betrouwbare machine nodig voor de verwerking en verpakking van vlees en/ of andere voeding? Neem dan zeker eens een kijkje bij onze collega-experts van <a class="mac-color" target="_blank" href="https://www.claes-machines.be/">Claes Machines</a>.'
       },
       'products-categories': {
-        title: 'Ontdek ons volledige gamma'
+        title: 'Ontdek ons volledige gamma',
+        'return-overview': ' terug naar overzicht'
       },
       'products-benefits': {
         title: 'Waarom kiezen voor Claes Distribution?',

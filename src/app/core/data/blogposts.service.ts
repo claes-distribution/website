@@ -11,7 +11,7 @@ export class BlogpostsService {
   constructor(@Inject(HttpClient) private http: HttpClient) { }
 
   get(): Observable<IGetBlogsResponse> {
-    return this.http.get<IGetBlogsResponse>(`${this.url}blogs/list?company=dis&items=10&page=0&filter=true`);
+    return this.http.get<IGetBlogsResponse>(`https://liva.groupclaes.be/blogs/list?company=dis&items=10&page=0&filter=true`);
   }
 
   get url() {
