@@ -1,0 +1,23 @@
+:host {
+  display: block;
+
+  h1 {
+    font-size: 37.5px;
+    margin: .5em 0 .3em;
+  }
+
+  img {
+    display: block;
+    margin: auto;
+  }
+
+  div.placeholder {
+    width: 66.6666666667%;
+    margin-left: 16.6666666667%;
+
+    p {
+      display: block;
+      text-align: center;
+    }
+  }
+}

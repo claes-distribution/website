@@ -9,6 +9,11 @@
       text-align: center;
     }
 
+    img {
+      display: block;
+      margin: auto;
+    }
+
     p {
       display: block;
       text-align: justify;
@@ -41,7 +46,7 @@
       }
 
       h2 {
-        text-align: left;
+        // text-align: left;
       }
 
       p {

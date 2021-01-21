@@ -126,8 +126,12 @@
           flex: 1 100%;
           line-height: 40px;
 
-          i {
+          i.fa-linkedin {
             color: #2867B2;
+          }
+
+          i.fa-youtube {
+            color: red;
           }
         }
 

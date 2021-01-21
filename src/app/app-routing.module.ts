@@ -9,6 +9,7 @@ import { EmailDisclaimerPageComponent } from './pages/email-disclaimer/email-dis
 import { ProductCategoriesPageComponent } from './pages/product-categories/product-categories.component';
 import { ContactPageComponent } from './pages/contact/contact.component';
 import { PrivacyPolicyPageComponent } from './pages/privacy-policy/privacy-policy.component';
+import { NotFoundComponent } from './pages/errors/not-found/not-found.component';
 
 
 const routes: Routes = [
@@ -84,7 +85,8 @@ const routes: Routes = [
       description: 'pages.email-disclaimer.title'
     }
   }, {
-    path: '**', redirectTo: '/'
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 
@@ -92,7 +94,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, {
     enableTracing: false,
     relativeLinkResolution: 'legacy'
-})],
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

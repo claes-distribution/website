@@ -1,0 +1,25 @@
+<section>
+  <div class="container">
+    <h1 translate="pages.errors.not-found.title"></h1>
+    <div class="placeholder">
+      <img src="https://pcm.groupclaes.be/v3/content/dis/website/content-image/404/{{ culture }}" alt="">
+      <p>
+        <span [innerHtml]="'pages.errors.not-found.text'| translate"></span>
+        <a routerLink="/products">
+          <span translate="components.menu.products"></span>
+        </a>,
+        <a routerLink="/inspiration">
+          <span translate="components.menu.inspire"></span>
+        </a> of
+        <a routerLink="/order">
+          <span translate="components.menu.order"></span>
+        </a>.
+        <br>
+        <br>
+        <button color="primary" routerLink="/">
+          <span translate="pages.errors.not-found.button"></span>
+        </button>
+      </p>
+    </div>
+  </div>
+</section>

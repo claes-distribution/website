@@ -7,6 +7,7 @@ export const fr = {
       order: 'Bestellen',
       inspire: 'Inspiratie',
       about: 'Over ons',
+      jobs: 'Jobs',
       contact: 'Contact'
     },
     contact: {
@@ -136,7 +137,7 @@ export const fr = {
         },
         'block-4': {
           title: 'Betrouwbaarheid',
-          text: 'Ons distributiecentrum is uitgerust met de meest moderne installaties en zet sterk in op de automatisering van voorraadbeheer en orderverwerking. Goederenontvangst gebeurt via scanning, orderpicking via RF en gekoeld transport met temperatuurregistratie en intelligente boordcomputers. Met ‘track en trace’ kunnen we de status van je bestelling op de voet volgen en bij het minste probleem ook meteen een efficiënte recall uitvoeren.'
+          text: 'Ons distributiecentrum is uitgerust met de meest moderne installaties en zet sterk in op de automatisering van voorraadbeheer en orderverwerking. Goederenontvangst gebeurt via scanning, orderpicking via RF en gekoeld transport met temperatuurregistratie en intelligente boordcomputers. Met ‘track & trace’ volgen we de status van je bestelling op de voet en bij het minste probleem voeren we meteen een recall uit.'
         }
       },
       'home-leaflet': {
@@ -145,12 +146,12 @@ export const fr = {
       },
       'home-recipes-news': {
         'block-recipes': {
-          title: 'Doe smakelijke inspiratie op!',
+          title: 'Recepten: doe inspiratie op',
           text: 'Op zoek naar een leuk recept voor een lekker gerecht? Wij reiken je originele ideeën en tips aan voor nét dat tikkeltje extra.',
           button: 'Ontdek onze recepten'
         },
         'block-news': {
-          title: 'Blijf op de hoogte',
+          title: 'Nieuws: blijf op de hoogte',
           text: 'Claes Distribution informeert je graag over al wat leeft in de sector: tips, tricks, trends, promoties, nieuwigheden … Zo helpen we je om nóg succesvoller te zijn in alles wat je doet!',
           button: 'Lees ons nieuws'
         }
@@ -290,7 +291,7 @@ export const fr = {
         },
         contact: {
           title: 'Contact',
-          text: '<p>Avez-vous des questions ou des commentaires concernant la manière dont vos données personnelles sont utilisées d’une des façons énumérées ci-dessus ? N’hésitez pas à utiliser l\'adresse suivante afin de nous contacter: <a href="mailto:marketing@claes-distribution.be">marketing@claes-distribution.be</a></p><p>Vous pouvez également adresser vos plaintes directement à l’autorité de protection des données (l’ancienne “Commission vie privée”) via <a href="https://www.gegevensbeschermingsautoriteit.be/contact">www.gegevensbeschermingsautoriteit.be/contact</a></p>'
+          text: '<p>Avez-vous des questions ou des commentaires concernant la manière dont vos données personnelles sont utilisées d’une des façons énumérées ci-dessus ? N’hésitez pas à utiliser l\'adresse suivante afin de nous contacter: <a href="mailto:marketing@claes-distribution.be">marketing@claes-distribution.be</a></p><p>Vous pouvez également adresser vos plaintes directement à l’autorité de protection des données (l’ancienne “Commission vie privée”) via <a href="https://www.gegevensbeschermingsautoriteit.be/contact" target="_blank">www.gegevensbeschermingsautoriteit.be/contact</a></p>'
         }
       }
     }

@@ -53,6 +53,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { PrivacyPolicyTitleComponent } from './components/privacy-policy/privacy-policy-title/privacy-policy-title.component';
 import { PrivacyPolicyBlockComponent } from './components/privacy-policy/privacy-policy-block/privacy-policy-block.component';
 import { ProductsSpotlightComponent } from './components/products/products-spotlight/products-spotlight.component';
+import { ProductsBestSellingComponent } from './components/products/products-best-selling/products-best-selling.component';
 import { HomeNewsletterSubscribeComponent } from './home/home-newsletter-subscribe/home-newsletter-subscribe.component';
 
 @NgModule({
@@ -83,6 +84,7 @@ import { HomeNewsletterSubscribeComponent } from './home/home-newsletter-subscri
     ProductsSearchComponent,
     ProductsCategoriesComponent,
     ProductsSpotlightComponent,
+    ProductsBestSellingComponent,
 
     OrderTextComponent,
     OrderMethodsComponent,
@@ -132,6 +134,7 @@ import { HomeNewsletterSubscribeComponent } from './home/home-newsletter-subscri
     ProductsSearchComponent,
     ProductsCategoriesComponent,
     ProductsSpotlightComponent,
+    ProductsBestSellingComponent,
 
     OrderTextComponent,
     OrderMethodsComponent,

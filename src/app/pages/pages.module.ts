@@ -12,6 +12,7 @@ import { CoreModule } from '../core/core.module';
 import { EmailDisclaimerPageComponent } from './email-disclaimer/email-disclaimer.component';
 import { ProductCategoriesPageComponent } from './product-categories/product-categories.component';
 import { PrivacyPolicyPageComponent } from './privacy-policy/privacy-policy.component';
+import { NotFoundComponent } from './errors/not-found/not-found.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { PrivacyPolicyPageComponent } from './privacy-policy/privacy-policy.comp
     ProductsPageComponent,
     EmailDisclaimerPageComponent,
     ProductCategoriesPageComponent,
-    PrivacyPolicyPageComponent
+    PrivacyPolicyPageComponent,
+    NotFoundComponent
   ],
   exports: [
     HomePageComponent,
@@ -40,7 +42,8 @@ import { PrivacyPolicyPageComponent } from './privacy-policy/privacy-policy.comp
     OrderPageComponent,
     ProductsPageComponent,
     EmailDisclaimerPageComponent,
-    ProductCategoriesPageComponent
+    ProductCategoriesPageComponent,
+    NotFoundComponent
   ]
 })
 export class PagesModule {
