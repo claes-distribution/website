@@ -25,7 +25,7 @@ export class ProductsSpotlightComponent implements OnInit {
   }
 
   setActiveProduct(id: number, source: string) {
-
+    // Do nothing existing hete (gtag)
   }
 
   get culture(): string {

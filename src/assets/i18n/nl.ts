@@ -37,7 +37,7 @@ export const nl = {
           selectReason: 'Maak een keuze',
           requestOffer: 'Offerte / informatie aanvragen',
           contactAccounting: 'Boekhouding contacteren',
-          contactIt: 'Contacteer IT',
+          contactIt: 'IT contacteren',
           subject: 'Aanvraag offerte: '
         },
         title: 'Contactformulier',
@@ -168,6 +168,10 @@ export const nl = {
       },
       'products-categories': {
         title: 'Ontdek ons volledige gamma'
+      },
+      'products-benefits': {
+        title: 'Waarom kiezen voor Claes Distribution?',
+        text: '<li>Zeer compleet assortiment van meer dan 14.000 producten</li><li>Artikelen van topmerken diede allerbeste kwaliteit garanderen</li><li>Eigen vloot van gekoelde vrachtwagens voor snelle levering</li><li>Strenge controler op hygiëne, voedselveiligheid en kwaliteit</li><li>Bestellen kan op 6 verschillende manieren: jij bepaald hoe!</li><li>Altijd deskundig advies voorhanden om de juiste keuze te maken</li>'
       },
       'products-search': {
         title: 'Welk type product zoek je?',

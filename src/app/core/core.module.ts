@@ -55,6 +55,7 @@ import { PrivacyPolicyBlockComponent } from './components/privacy-policy/privacy
 import { ProductsSpotlightComponent } from './components/products/products-spotlight/products-spotlight.component';
 import { ProductsBestSellingComponent } from './components/products/products-best-selling/products-best-selling.component';
 import { HomeNewsletterSubscribeComponent } from './home/home-newsletter-subscribe/home-newsletter-subscribe.component';
+import { ProductBenefitsComponent } from './components/products/product-benefits/product-benefits.component';
 
 @NgModule({
   imports: [
@@ -121,7 +122,8 @@ import { HomeNewsletterSubscribeComponent } from './home/home-newsletter-subscri
     FooterComponent,
     ImageCarouselComponent,
     MenuComponent,
-    HomeNewsletterSubscribeComponent
+    HomeNewsletterSubscribeComponent,
+    ProductBenefitsComponent
   ],
   exports: [
     HomeTextComponent,
@@ -135,6 +137,7 @@ import { HomeNewsletterSubscribeComponent } from './home/home-newsletter-subscri
     ProductsCategoriesComponent,
     ProductsSpotlightComponent,
     ProductsBestSellingComponent,
+    ProductBenefitsComponent,
 
     OrderTextComponent,
     OrderMethodsComponent,
