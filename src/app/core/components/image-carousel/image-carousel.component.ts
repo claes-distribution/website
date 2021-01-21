@@ -30,14 +30,7 @@ export class ImageCarouselComponent implements OnInit, OnDestroy {
       if (this.slideCount > 1) {
         // start interval
 
-        this.sub = interval(4500).subscribe($i => {
-          if (this.currentIndex < this.slideCount - 1) {
-            this.currentIndex++;
-          } else {
-            this.currentIndex = 0;
-          }
-          this.ref.markForCheck();
-        });
+        this.startRoration();
       }
 
       setTimeout(() => {
@@ -50,6 +43,17 @@ export class ImageCarouselComponent implements OnInit, OnDestroy {
     if (this.sub) {
       this.sub.unsubscribe();
     }
+  }
+
+  startRoration() {
+    this.sub = interval(4500).subscribe($i => {
+      if (this.currentIndex < this.slideCount - 1) {
+        this.currentIndex++;
+      } else {
+        this.currentIndex = 0;
+      }
+      this.ref.markForCheck();
+    });
   }
 
   onResize(ev: UIEvent) {
@@ -71,18 +75,16 @@ export class ImageCarouselComponent implements OnInit, OnDestroy {
     if (this.sub) {
       this.sub.unsubscribe();
 
-      this.sub = interval(4500).subscribe($i => {
-        if (this.currentIndex < this.slideCount - 1) {
-          this.currentIndex++;
-        } else {
-          this.currentIndex = 0;
-        }
-        this.ref.markForCheck();
-      });
+      this.startRoration();
     }
   }
 
   get css(): SafeStyle {
+    if (this.url.indexOf('https://pcm.groupclaes.be/v3/content') === 0) {
+      return this.sanitizer.bypassSecurityTrustStyle(
+        `url('${this.url}/${this.culture}?size=${this.currentSize}')`
+      );
+    }
     return this.sanitizer.bypassSecurityTrustStyle(
       `url('${this.url}?size=${this.currentSize}')`
     );
@@ -108,4 +110,6 @@ export class ImageCarouselComponent implements OnInit, OnDestroy {
 export interface ImageSlide {
   url: string;
   title: CultureEntry;
+  href: string | null,
+  duration?: number;
 }

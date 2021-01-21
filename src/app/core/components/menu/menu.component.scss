@@ -3,7 +3,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    padding: 0;
     z-index: 2;
     height: 64px;
 
@@ -20,7 +19,14 @@
     }
 
     a.logo {
-      display: none;
+      display: block;
+      grid-column: 1;
+      grid-row: 1;
+      height: inherit;
+
+      pcm-website-logo {
+        height: inherit;
+      }
     }
 
     div.grid-spacer {
@@ -41,11 +47,6 @@
       }
 
       a.logo {
-        display: block;
-        grid-column: 1;
-        grid-row: 1;
-        height: inherit;
-
         pcm-website-logo {
           height: inherit;
         }

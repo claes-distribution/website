@@ -106,7 +106,7 @@ export const fr = {
     },
     home: {
       'home-text': {
-        title: 'Véél meer dan een groothandel voor slagerij & voedingsindustrie',
+        title: 'Véél meer dan een groothandel voor slagerij en voedingsindustrie',
         text: 'Als totaalleverancier biedt Claes Distribution uit Paal-Beringen een ruim en kwaliteitsvol productassortiment voor de verwerking van vlees, gevogelte, vis, groenten, vegetarische en kant-en-klare gerechten, enz. Met meer dan 50 jaar ervaring in het vak zijn wij een betrouwbare partner voor heel wat zelfstandige slagers, traiteurs en versspecialisten. Ook industriële foodproducenten, grootdistributeurs en supermarkten kunnen steevast rekenen op onze professionele service met advies én een snelle levering.'
       },
       'home-products-order': {
@@ -136,7 +136,7 @@ export const fr = {
         },
         'block-4': {
           title: 'Betrouwbaarheid',
-          text: 'Ons distributiecentrum is uitgerust met de meest moderne installaties en zet sterk in op de automatisering van voorraadbeheer en orderverwerking. Goederenontvangst gebeurt via scanning, orderpicking via RF en gekoeld transport met temperatuurregistratie en intelligente boordcomputers. Met ‘track & trace’ kunnen we de status van je bestelling op de voet volgen en bij het minste probleem ook meteen een efficiënte recall uitvoeren.'
+          text: 'Ons distributiecentrum is uitgerust met de meest moderne installaties en zet sterk in op de automatisering van voorraadbeheer en orderverwerking. Goederenontvangst gebeurt via scanning, orderpicking via RF en gekoeld transport met temperatuurregistratie en intelligente boordcomputers. Met ‘track en trace’ kunnen we de status van je bestelling op de voet volgen en bij het minste probleem ook meteen een efficiënte recall uitvoeren.'
         }
       },
       'home-leaflet': {
@@ -297,7 +297,7 @@ export const fr = {
   },
   pages: {
     home: {
-      metaTitle: 'Groothandel voor beenhouwerij & voedingsindustrie',
+      metaTitle: 'Groothandel voor beenhouwerij en voedingsindustrie',
       metaDescription: 'Claes Distribution is een betrouwbare totaalleverancier van producten voor de verwerking van o.a. vlees, gevogelte, vis, groenten en kant-en-klare maaltijden.'
     },
     products: {
@@ -387,7 +387,7 @@ export const fr = {
       metaDescription: 'Claes Distribution houdt je regelmatig op de hoogte van nieuwigheden, trends, tips, recepten … Ook onze kortingen en promoties wil je zeker niet missen!'
     },
     about: {
-      metaTitle: 'Kwaliteit staat voorop bij Claes Distribution & Claes Machines',
+      metaTitle: 'Kwaliteit staat voorop bij Claes Distribution en Claes Machines',
       metaDescription: 'In de foodindustrie en vooral de vleesverwerkende sector staan wij als groothandel bekend voor ons kwaliteitsvolle gamma en onze uitmuntende service.'
     },
     contact: {

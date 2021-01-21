@@ -1,26 +1,4 @@
-/*
- * Application global variables.
- */
-
-// Angular Material custom theme
-// See https://material.angular.io/guide/theming for more details.
-//
-// You can also read https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1
-// for more insight about Angular Material theming.
-
 @import "~@angular/material/theming";
-// @import './src/app/core/shell/shell.component.scss';
-// @import './src/app/login/login.component.scss';
-/* @import './src/app/news/news.component.scss';
-@import './src/app/recipes/recipes.component.scss';
-@import './src/app/products/products.component.scss';
-@import './src/app/shared/product-detail/product-detail.component.scss';
-@import './src/app/shared/category-menu/category-menu.component.scss';
-@import './src/app/shared/basket-list/basket-list.component.scss'; */
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue.
 
 $mat-green: (50: #E8F5E9,
   100: #C8E6C9,
@@ -57,39 +35,31 @@ $app-accent: mat-palette($mat-light-green);
 
 // The warn palette is optional (defaults to red).
 $app-warn: mat-palette($mat-red);
-
 // Create the theme object (a Sass map containing all of the palettes).
 $app-theme: mat-light-theme($app-color, $app-accent, $app-warn);
-
-$custom-typography: mat-typography-config($font-family: 'Nunito'
-);
+$custom-typography: mat-typography-config($font-family: 'Nunito');
 
 @include angular-material-typography($custom-typography);
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
 @include angular-material-theme($app-theme);
-
-// Using the $theme variable from the pre-built theme you can call the theming function
-// @include shell-theme($app-theme);
-// @include login-theme($app-theme);
-
 
 * {
   --background-color: #ffffff;
   --color: #222222;
 
+
   --list-seperator-border: 1px solid #d4d4d4;
   --list-seperator-border-color: #d4d4d4;
+
 
   --control-background-color: #ffffff;
   --control-opaque-background-color: rgba(255, 255, 255, 0.85);
   --control-color: #333333;
+  --control-border: 1px solid rgba(0, 0, 0, 0.1);
+
   --control-hover-background-color: #e9e9e9;
   --control-hover-color: #222222;
   --control-hover-box-shadow: inset 0 0 40px 40px rgba(0, 0, 0, .7);
-  --control-border: 1px solid rgba(0, 0, 0, 0.1);
+
 
   --company-distribution-color: #01633a;
   --company-machines-color: #283480;
@@ -101,16 +71,20 @@ $custom-typography: mat-typography-config($font-family: 'Nunito'
     --background-color: #000000;
     --color: #dddddd;
 
+
     --list-seperator-border: 1px solid #454545;
     --list-seperator-border-color: #454545;
+
 
     --control-background-color: #000000;
     --control-opaque-background-color: rgba(0, 0, 0, 0.75);
     --control-color: #dddddd;
+    --control-border: 1px solid rgba(255, 255, 255, 0.2);
+
     --control-hover-background-color: #333333;
     --control-hover-color: #ffffff;
     --control-hover-box-shadow: inset 0 0 40px 40px rgba(255, 255, 255, .85);
-    --control-border: 1px solid rgba(255, 255, 255, 0.2);
+
 
     --company-distribution-color: #0b8a55;
     --company-machines-color: #5165ec;
