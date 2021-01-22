@@ -107,7 +107,8 @@ export const nl = {
       }
     },
     news: {
-      title: 'Blijf op de hoogte'
+      title: 'Blijf op de hoogte',
+      button: 'Meer nieuws laden'
     },
     home: {
       'home-text': {
