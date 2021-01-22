@@ -9,5 +9,13 @@
       display: block;
       text-align: justify;
     }
+
+    form {
+      text-align: center;
+
+      mat-form-field.email {
+        width: 100%;
+      }
+    }
   }
 }

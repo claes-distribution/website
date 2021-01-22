@@ -16,12 +16,30 @@
     max-width: 1140px;
   }
 
-  div.current-slide {
+  @media (inverted-colors: inverted) {
+    div.slides {
+      filter: invert(1)
+    }
+  }
+
+  div.slides {
+    position: absolute;
+    top: 0;
+    width: 100%;
     display: block;
     height: inherit;
     background-position: center 60%;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: all ease-in-out 600ms;
+
+    &.background {
+      opacity: 0;
+    }
+
+    &.fade-in {
+      opacity: 1;
+    }
   }
 
   div.bottom-container {

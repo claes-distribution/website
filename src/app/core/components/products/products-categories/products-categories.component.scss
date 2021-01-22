@@ -42,6 +42,12 @@
         }
       }
 
+      @media (inverted-colors: inverted) {
+        div.content {
+          filter: invert(1)
+        }
+      }
+
       &:hover {
         border-color: var(--company-distribution-color);
 
