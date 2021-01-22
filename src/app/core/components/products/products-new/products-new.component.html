@@ -1,13 +1,12 @@
-<section class="product-list products-best-selling" *ngIf="bestSellingProducts && bestSellingProducts.length === 4">
+<section class="product-list products-new" *ngIf="newProducts && newProducts.length === 4">
   <h3>
-    <div class="lazy-loading" style="width: 210px" *ngIf="!bestSellingProducts || !bestSellingProducts[0]"></div>
-    <div class="loaded-content" *ngIf="bestSellingProducts && bestSellingProducts[0]"
-      translate="components.products.products-best-selling.title">
+    <div class="lazy-loading" style="width: 210px" *ngIf="!newProducts || !newProducts[0]"></div>
+    <div class="loaded-content" *ngIf="newProducts && newProducts[0]"
+      translate="components.products.products-new.title">
     </div>
   </h3>
   <div class="product-list">
-    <article class="product-item" *ngFor="let product of bestSellingProducts"
-      (click)="setActiveProduct(product.id, 'best-selling')">
+    <article class="product-item" *ngFor="let product of newProducts" (click)="setActiveProduct(product.id, 'new')">
       <div class="lazy-loading-content" *ngIf="!product">
         <img src="/assets/placeholder.png" alt="loading...">
         <header>
@@ -29,7 +28,7 @@
         <a href="https://shop.claes-distribution.be/products?productId={{ product.id }}" target="_blank">
           <button class="button" color="primary">
             <i class="fal fa-fw fa-eye"></i>
-            <span translate="components.products.products-best-selling.button"></span>
+            <span translate="components.products.products-new.button"></span>
           </button>
         </a>
       </div>

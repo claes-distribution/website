@@ -1,11 +1,16 @@
-<h3 translate="components.order.order-methods.order-method-support.title"></h3>
+<h3>
+  <i class="fal fa-fw fa-map-marker-question"></i>
+  <span translate="components.order.order-methods.order-method-support.title"></span>
+</h3>
 <div class="placeholder">
   <p [innerHtml]="'components.order.order-methods.order-method-support.text' | translate"></p>
 </div>
 
-<a [routerLink]="['/contact']">
-  <button color="primary">
-    <i class="fal fa-fw fa-info-circle"></i>&nbsp;
-    <span translate="components.order.order-methods.order-method-support.button-1"></span>
-  </button>
-</a>
+<div class="buttons-placeholder">
+  <a [routerLink]="['/contact']">
+    <button color="primary">
+      <i class="fal fa-fw fa-info-circle"></i>&nbsp;
+      <span translate="components.order.order-methods.order-method-support.button-1"></span>
+    </button>
+  </a>
+</div>

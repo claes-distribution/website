@@ -56,6 +56,8 @@ import { ProductsSpotlightComponent } from './components/products/products-spotl
 import { ProductsBestSellingComponent } from './components/products/products-best-selling/products-best-selling.component';
 import { HomeNewsletterSubscribeComponent } from './home/home-newsletter-subscribe/home-newsletter-subscribe.component';
 import { ProductBenefitsComponent } from './components/products/product-benefits/product-benefits.component';
+import { ProductsNewComponent } from './components/products/products-new/products-new.component';
+import { AboutVideoComponent } from './components/about/about-video/about-video.component';
 
 @NgModule({
   imports: [
@@ -86,6 +88,8 @@ import { ProductBenefitsComponent } from './components/products/product-benefits
     ProductsCategoriesComponent,
     ProductsSpotlightComponent,
     ProductsBestSellingComponent,
+    ProductBenefitsComponent,
+    ProductsNewComponent,
 
     OrderTextComponent,
     OrderMethodsComponent,
@@ -105,6 +109,7 @@ import { ProductBenefitsComponent } from './components/products/product-benefits
     AboutCompaniesComponent,
     AboutMissionComponent,
     AboutPrideComponent,
+    AboutVideoComponent,
 
     ContactFooterComponent,
     ContactInfoComponent,
@@ -123,7 +128,6 @@ import { ProductBenefitsComponent } from './components/products/product-benefits
     ImageCarouselComponent,
     MenuComponent,
     HomeNewsletterSubscribeComponent,
-    ProductBenefitsComponent
   ],
   exports: [
     HomeTextComponent,
@@ -138,6 +142,7 @@ import { ProductBenefitsComponent } from './components/products/product-benefits
     ProductsSpotlightComponent,
     ProductsBestSellingComponent,
     ProductBenefitsComponent,
+    ProductsNewComponent,
 
     OrderTextComponent,
     OrderMethodsComponent,
@@ -157,6 +162,8 @@ import { ProductBenefitsComponent } from './components/products/product-benefits
     AboutCompaniesComponent,
     AboutMissionComponent,
     AboutPrideComponent,
+    AboutVideoComponent,
+
     ContactFooterComponent,
     ContactInfoComponent,
     ContactOpeningHoursComponent,

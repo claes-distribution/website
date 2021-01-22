@@ -6,8 +6,7 @@
   <div class="dis">
     <h2 class="dis-color" translate="companies.dis"></h2>
     <p translate="components.about.about-companies.block-dis.text"></p>
-    <a href="//www.claes-distribution.be" targe="_blank"
-      [title]="'components.about.about-companies.block-dis.button' | translate">
+    <a [routerLink]="['/']" [title]="'components.about.about-companies.block-dis.button' | translate">
       <button color="primary">
         <i class="fal fa-fw fa-water"></i>&nbsp;
         <span translate="components.about.about-companies.block-dis.button"></span>
@@ -17,7 +16,8 @@
   <div class="mac">
     <h2 class="mac-color" translate="companies.mac"></h2>
     <p translate="components.about.about-companies.block-mac.text"></p>
-    <a [routerLink]="['/']" [title]="'components.about.about-companies.block-mac.button' | translate">
+    <a href="//www.claes-machines.be" targe="_blank"
+      [title]="'components.about.about-companies.block-mac.button' | translate">
       <button color="primary">
         <i class="fal fa-fw fa-mouse-pointer"></i>&nbsp;
         <span translate="components.about.about-companies.block-mac.button"></span>

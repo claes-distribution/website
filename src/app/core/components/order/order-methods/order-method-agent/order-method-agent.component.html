@@ -1,11 +1,16 @@
-<h3 translate="components.order.order-methods.order-method-agent.title"></h3>
+<h3>
+  <i class="fal fa-fw fa-comments"></i>
+  <span translate="components.order.order-methods.order-method-agent.title"></span>
+</h3>
 <div class="placeholder">
   <p [innerHtml]="'components.order.order-methods.order-method-agent.text' | translate"></p>
 </div>
 
-<a [routerLink]="['/contact']">
-  <button color="primary">
-    <i class="fal fa-fw fa-people-arrows"></i>&nbsp;
-    <span translate="components.order.order-methods.order-method-agent.button-1"></span>
-  </button>
-</a>
+<div class="buttons-placeholder">
+  <a [routerLink]="['/contact']">
+    <button color="primary">
+      <i class="fal fa-fw fa-people-arrows"></i>&nbsp;
+      <span translate="components.order.order-methods.order-method-agent.button-1"></span>
+    </button>
+  </a>
+</div>

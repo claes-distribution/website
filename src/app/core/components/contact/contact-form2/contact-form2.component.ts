@@ -3,6 +3,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { ApiService, ContactQuestion } from 'src/app/core/api/api.service';
 
+// declare gtag as a function to access the JS code in TS
+declare let gtag: Function;
 @Component({
   selector: 'dis-contact-form2',
   templateUrl: './contact-form2.component.html',
@@ -134,6 +136,10 @@ export class ContactForm2Component implements OnInit {
 
     this.api.sendContactQuestion(question).subscribe((resp: string) => {
       if (resp && resp === 'OK') {
+        gtag('event', 'submit_from', {
+          event_category: 'contact_from',
+          event_label: this.contactReason
+        });
         alert(this.translate.instant('components.contact.contact-form.sendSuccess'));
         this.send.emit();
       }

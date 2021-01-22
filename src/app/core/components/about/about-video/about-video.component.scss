@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  position: relative;
+  text-align: center;
+
+  div {
+    width: 66.6666666667%;
+    margin-left: 16.6666666667%;
+
+    iframe {
+      max-width: 80vw;
+      max-height: auto;
+    }
+  }
+}

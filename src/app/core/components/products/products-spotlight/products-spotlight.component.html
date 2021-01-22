@@ -27,7 +27,7 @@
         </aside>
         <aside *ngIf="product.price <= 0" translate="price.request"></aside> -->
         <a href="https://shop.claes-distribution.be/products?productId={{ product.id }}" target="_blank">
-          <button class="button" color="primary" (click)="$event.stopPropagation()">
+          <button class="button" color="primary">
             <i class="fal fa-fw fa-eye"></i>
             <span translate="components.home.home-spotlight-products.button"></span>
           </button>

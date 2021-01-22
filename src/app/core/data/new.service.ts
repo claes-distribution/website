@@ -6,12 +6,12 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class BestSellingProductsService {
+export class NewProductsService {
 
   constructor(@Inject(HttpClient) private http: HttpClient) { }
 
-  get(): Observable<IGetBestSellingProductsResult> {
-    return this.http.get<IGetBestSellingProductsResult>(`${this.url}distribution/dashboard/best-selling-products`);
+  get(): Observable<IGetNewProductsResult> {
+    return this.http.get<IGetNewProductsResult>(`${this.url}distribution/dashboard/new-products`);
   }
 
   get url() {
@@ -19,11 +19,11 @@ export class BestSellingProductsService {
   }
 }
 
-export interface IGetBestSellingProductsResult {
-  bestSellingProducts: IBestSellingProduct[];
+export interface IGetNewProductsResult {
+  newProducts: INewProduct[];
 }
 
-export interface IBestSellingProduct {
+export interface INewProduct {
   id: number;
   name: {
     nl: string;

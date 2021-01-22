@@ -10,8 +10,8 @@ export class BlogpostsService {
 
   constructor(@Inject(HttpClient) private http: HttpClient) { }
 
-  get(): Observable<IGetBlogsResponse> {
-    return this.http.get<IGetBlogsResponse>(`https://liva.groupclaes.be/blogs/list?company=dis&items=10&page=0&filter=true`);
+  get(items: number = 10, page: number = 0): Observable<IGetBlogsResponse> {
+    return this.http.get<IGetBlogsResponse>(`https://liva.groupclaes.be/blogs/list?company=dis&items=${items}&page=${page}&filter=true`);
   }
 
   get url() {

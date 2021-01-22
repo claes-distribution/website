@@ -54,7 +54,7 @@ export const nl = {
     about: {
       'about-text': {
         title: '3 divisies, 1 sterke groep',
-        text: 'Zowel <span class="dis-color">Claes Distribution</span>, <a href="https://www.claes-machines.be" class="mac-color">Claes Machines</a> als <a href="https://www.group-claes.be" class="gro-color">Group Claes</a> maken deel uit van de holding Claes Food Projects. Intensieve samenwerking is de sleutel van ons succes in België, Nederland, Luxemburg en Frankrijk. Samen maken we onze reputatie elke dag opnieuw waar als vaste waarde én trendsetter in de wereld van slagerij en voedingsindustrie. '
+        text: 'Zowel <span class="dis-color">Claes Distribution</span>, <a target="_blank" href="https://www.claes-machines.be" class="mac-color">Claes Machines</a> als <a target="_blank" href="https://www.group-claes.be" class="gro-color">Group Claes</a> maken deel uit van de holding Claes Food Projects. Intensieve samenwerking is de sleutel van ons succes in België, Nederland, Luxemburg en Frankrijk. Samen maken we onze reputatie elke dag opnieuw waar als vaste waarde én trendsetter in de wereld van slagerij en voedingsindustrie. '
       },
       'about-pride': {
         title: 'Trots op onze stabiele groei',
@@ -180,7 +180,11 @@ export const nl = {
       },
       'products-best-selling': {
         title: 'Toppers van deze maand',
-        button: 'Bekijk meer'
+        button: ' Bekijk meer'
+      },
+      'products-new': {
+        title: 'Nieuw in het assortiment',
+        button: ' Bekijk meer'
       }
     },
     order: {
@@ -190,35 +194,35 @@ export const nl = {
       },
       'order-methods': {
         'order-method-shop': {
-          title: 'Vul je winkelmandje in onze webshop',
-          text: 'Wil je ons uitgebreide gamma online verkennen en in alle rust keuzes maken? In onze <a href="https://shop.claes-distribution.be/">eShop</a> kan dat 24/7 in enkele kliks. Voeg zelf producten toe aan je favorieten, stel handige filters in om nóg sneller te zoeken en blijf op de hoogte van promoties en nieuwigheden. Bovendien kan je de productspecificaties (info over allergenen, voedingswaardes, enz.) van aangekochte artikelen ook altijd digitaal kan raadplegen. Niets dan voordelen, toch?',
+          title: ' Vul je winkelmandje in onze webshop',
+          text: 'Wil je ons uitgebreide gamma online verkennen en in alle rust keuzes maken? In onze <a href="https://shop.claes-distribution.be/">eShop</a> kan dat 24/7 in enkele kliks.<br> Voeg zelf producten toe aan je favorieten, stel handige filters in om nóg sneller te zoeken en blijf op de hoogte van promoties en nieuwigheden. Bovendien kan je de productspecificaties (info over allergenen, voedingswaardes, enz.) van aangekochte artikelen ook altijd digitaal kan raadplegen. Niets dan voordelen, toch?',
           'button-1': 'Log in',
           'button-2': 'Meld je aan',
           'button-3': 'Word klant'
         },
         'order-method-app': {
-          title: 'Installeer onze mobiele app',
-          text: 'Wil je onze uitgebreide productcatalogus ook offline, dus zonder netwerk, kunnen raadplegen? Download de gratis app van Claes Distribution en installeer hem op je smartphone of tablet. Met je persoonlijke registratiecode bestel je snel en eenvoudig al wat je nodig hebt, online en in alle veiligheid. Hulp nodig bij het gebruik? De handleiding in de app maakt je vlot wegwijs.',
+          title: ' Installeer onze mobiele app',
+          text: 'Wil je onze uitgebreide productcatalogus ook offline, dus zonder netwerk, kunnen raadplegen? Download de gratis app van Claes Distribution en installeer hem op je smartphone of tablet.<br> Met je persoonlijke registratiecode bestel je snel en eenvoudig al wat je nodig hebt, online en in alle veiligheid. Hulp nodig bij het gebruik? De handleiding in de app maakt je vlot wegwijs.',
           'button-1': 'Download de app'
         },
         'order-method-showroom': {
-          title: 'Kom langs in onze showroom',
-          text: 'Ook de deuren van onze fysieke winkel in Paal-Beringen staan dagelijks voor je open. Onze showroom is vlot bereikbaar en beschikt over een ruime parking. Twijfel je over een aankoop? Win gerust het advies in van onze ervaren shopmedewerkers en overtuig jezelf van de kwaliteit van onze producten. Gevonden wat je zocht? Plaats je bestelling en neem de artikelen meteen mee als ze voorradig zijn. Kortom, je bent altijd welkom voor een bezoek!',
+          title: ' Kom langs in onze showroom',
+          text: 'Ook de deuren van onze fysieke winkel in Paal-Beringen staan dagelijks voor je open. Onze showroom is vlot bereikbaar en beschikt over een ruime parking.<br> Twijfel je over een aankoop? Win gerust het advies in van onze ervaren shopmedewerkers en overtuig jezelf van de kwaliteit van onze producten. Gevonden wat je zocht? Plaats je bestelling en neem de artikelen meteen mee als ze voorradig zijn. Kortom, je bent altijd welkom voor een bezoek!',
           'button-1': 'Raadpleeg de openingsuren'
         },
         'order-method-agent': {
-          title: 'Spreek je vertegenwoordiger aan',
-          text: 'Geen tijd om zelf langs te komen in onze winkel? Of nog niet helemaal vertrouwd met online bestellingen? Geen probleem! Wij sturen met plezier een van onze vertegenwoordigers langs om je persoonlijk te komen bezoeken in jouw regio. Het zijn stuk voor stuk ervaren vakexperts die écht weten waarover ze spreken en die je graag informeren over nieuwigheden, tips, recepten ... Laat je ter plaatse dus deskundig adviseren om direct de juiste keuzes te maken zonder kostbare tijd te verliezen.',
+          title: ' Spreek je vertegenwoordiger aan',
+          text: 'Geen tijd om zelf langs te komen in onze winkel? Of nog niet helemaal vertrouwd met online bestellingen? Geen probleem! Wij sturen met plezier een van onze vertegenwoordigers langs om je persoonlijk te komen bezoeken in jouw regio.<br> Het zijn stuk voor stuk ervaren vakexperts die écht weten waarover ze spreken en die je graag informeren over nieuwigheden, tips, recepten ... Laat je ter plaatse dus deskundig adviseren om direct de juiste keuzes te maken zonder kostbare tijd te verliezen.',
           'button-1': 'Vraag een bezoek aan'
         },
         'order-method-support': {
-          title: 'Contacteer onze klantendienst',
+          title: ' Contacteer onze klantendienst',
           text: 'Heb je een specifieke vraag of wens? Wil je een eerste offerte aanvragen? Of plaats je bestellingen toch liever via e-mail, per fax of aan de telefoon? Prima! Onze medewerkers van de klantendienst staan altijd voor jou klaar!',
           'button-1': 'Neem contact op'
         },
         'order-method-edi': {
-          title: 'Plaats je bestellingen via EDI',
-          text: 'Werk je met een ERP-systeem in je onderneming, dan kan ‘electronic data interchange’ interessant zijn. EDI maakt de veilige en snelle overdracht en uitwisseling mogelijk van orders, facturen, berichten en bevestigingen. Zo ben je zeker dat je bestelling snel verwerkt wordt en de kans op fouten verkleint. Interesse? Neem contact op met onze IT-afdeling om de technische mogelijkheden te bespreken.',
+          title: ' Plaats je bestellingen via EDI',
+          text: 'Werk je met een ERP-systeem in je onderneming, dan kan ‘electronic data interchange’ interessant zijn. EDI maakt de veilige en snelle overdracht en uitwisseling mogelijk van orders, facturen, berichten en bevestigingen. Zo ben je zeker dat je bestelling snel verwerkt wordt en de kans op fouten verkleint.<br> Interesse? Neem contact op met onze IT-afdeling om de technische mogelijkheden te bespreken.',
           'button-1': 'Contacteer IT'
         }
       }
@@ -235,14 +239,14 @@ export const nl = {
       },
       'inspire-recipes-leaflet': {
         'block-recipes': {
-          title: 'Recepten om duimen en vingers af te likken',
+          title: ' Recepten die je nergens anders vindt',
           text: 'Laat je culinair inspireren door onze originele recepten. Ambachtelijk, verrassend én thematisch ingedeeld ... Zo krijg je de smaak helemaal te pakken!',
-          button: 'Bekijk onze recepten'
+          button: ' Bekijk onze recepten'
         },
         'block-leaflet': {
-          title: 'Tijdelijke aanbiedingen, speciaal voor jou',
+          title: ' Tijdelijke aanbiedingen, speciaal voor jou',
           text: 'Ons assortiment is altijd scherp geprijsd en van de hoogste kwaliteit. Toch doen we er af en toe nog een mooi prijsvoordeel boven op. Het gaat om kortingen en/of promoties die je zeker niet wil missen…',
-          button: 'Bekijk onze maandfolder'
+          button: ' Bekijk onze maandfolder'
         }
       }
     },

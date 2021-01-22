@@ -1,11 +1,16 @@
-<h3 translate="components.order.order-methods.order-method-showroom.title"></h3>
+<h3>
+  <i class="fal fa-fw fa-store"></i>
+  <span translate="components.order.order-methods.order-method-showroom.title"></span>
+</h3>
 <div class="placeholder">
   <p [innerHtml]="'components.order.order-methods.order-method-showroom.text' | translate"></p>
 </div>
 
-<a [routerLink]="['/contact']">
-  <button color="primary">
-    <i class="fal fa-fw fa-clock"></i>&nbsp;
-    <span translate="components.order.order-methods.order-method-showroom.button-1"></span>
-  </button>
-</a>
+<div class="buttons-placeholder">
+  <a [routerLink]="['/contact']">
+    <button color="primary">
+      <i class="fal fa-fw fa-clock"></i>&nbsp;
+      <span translate="components.order.order-methods.order-method-showroom.button-1"></span>
+    </button>
+  </a>
+</div>

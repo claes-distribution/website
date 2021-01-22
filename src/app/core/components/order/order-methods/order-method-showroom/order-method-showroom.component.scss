@@ -1,8 +1,18 @@
 :host {
   display: block;
+  height: 100%;
 
   h3 {
     margin: 0 0 .3em;
     text-align: left;
+  }
+
+  div.placeholder {
+    margin-bottom: 48px;
+  }
+
+  div.buttons-placeholder {
+    position: absolute;
+    bottom: 16px;
   }
 }

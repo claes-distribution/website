@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class SpotlightService {
+export class SpotlightProductsService {
 
   constructor(@Inject(HttpClient) private http: HttpClient) { }
 
