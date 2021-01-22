@@ -9,9 +9,12 @@ import { BlogpostsService, IBlogPreview } from 'src/app/core/data/blogposts.serv
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InspireNewsComponent implements OnInit {
-  newsList: IBlogPreview[];
-  currentBlog: IBlogPreview;
-  currentIndex = 0;
+  newsList: IBlogPreview[]
+  loading = true
+  loadingAdditional = false
+  currentBlog: IBlogPreview
+  currentPage = 1
+  maxItems = 3
 
   constructor(
     private translate: TranslateService,
@@ -20,23 +23,47 @@ export class InspireNewsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.blogpostService.get().subscribe(r => {
+    this.blogpostService.get(6, 0).subscribe(r => {
       r.blogposts.forEach(blog => {
         blog.image = blog.image.replace('{lang}', this.culture);
         if (blog.ctaText.nl === '') {
-          blog.ctaText.nl = 'Lees meer';
+          blog.ctaText.nl = 'Lees meer'
         }
         if (blog.ctaText.fr === '') {
-          blog.ctaText.fr = 'Lire plus';
+          blog.ctaText.fr = 'Lire plus'
         }
       });
       this.newsList = r.blogposts;
+      this.loading = false
       this.ref.markForCheck();
-    });
+    })
 
     this.translate.onLangChange.subscribe(() => {
       this.ref.markForCheck();
-    });
+    })
+  }
+
+  loadMore() {
+    this.currentPage++
+    this.loadingAdditional = true
+    this.maxItems += 3
+    this.ref.markForCheck()
+
+    this.blogpostService.get(3, this.currentPage).subscribe(r => {
+      r.blogposts.forEach(blog => {
+        blog.image = blog.image.replace('{lang}', this.culture);
+        if (blog.ctaText.nl === '') {
+          blog.ctaText.nl = 'Lees meer'
+        }
+        if (blog.ctaText.fr === '') {
+          blog.ctaText.fr = 'Lire plus'
+        }
+      })
+      this.loadingAdditional = false
+      this.newsList.push(...r.blogposts)
+
+      this.ref.markForCheck()
+    })
   }
 
   newsHref(url: string): string {
@@ -54,28 +81,6 @@ export class InspireNewsComponent implements OnInit {
     this.currentBlog = undefined;
     this.ref.markForCheck();
     document.body.style.overflow = 'initial';
-  }
-
-  previous() {
-    if (this.currentIndex >= 1) {
-      this.currentIndex--;
-      this.ref.markForCheck();
-    }
-  }
-
-  next() {
-    if (this.currentIndex < this.newsList.length - 3) {
-      this.currentIndex++;
-      this.ref.markForCheck();
-    }
-  }
-
-  get previousEnabled(): boolean {
-    return this.newsList && this.currentIndex > 0;
-  }
-
-  get nextEnabled(): boolean {
-    return this.newsList && this.currentIndex < this.newsList.length - 3;
   }
 
   get culture(): string {

@@ -73,11 +73,14 @@
     div {
       div.news-grid {
         display: flex;
+        flex-wrap: wrap;
 
         article {
-          flex: 1 33.3333%;
+          flex: 0 33.3333%;
           padding: 0;
-          margin: 0 7.5px;
+          margin: 0 auto 24px;
+
+          padding: 0 7.5px;
 
           p {
             width: 100%;
@@ -87,14 +90,6 @@
           // a button {
           //   margin: 0;
           // }
-        }
-
-        article:first-child {
-          margin-left: 0px;
-        }
-
-        article:last-child {
-          margin-right: 0px;
         }
 
         article+article {
