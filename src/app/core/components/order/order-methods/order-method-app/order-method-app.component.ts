@@ -4,7 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'dis-order-method-app',
   templateUrl: './order-method-app.component.html',
-  styleUrls: ['./order-method-app.component.scss']
+  styleUrls: ['../order-method-shared.component.scss']
 })
 export class OrderMethodAppComponent implements OnInit {
 

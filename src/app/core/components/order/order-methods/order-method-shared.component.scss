@@ -1,18 +1,19 @@
 :host {
-  display: block;
+  display: flex;
   height: 100%;
+  flex-flow: column;
 
   h3 {
     margin: 0 0 .3em;
     text-align: left;
+    flex: 0 auto;
   }
 
   div.placeholder {
-    margin-bottom: 48px;
+    flex: 1 auto
   }
 
   div.buttons-placeholder {
-    position: absolute;
-    bottom: 16px;
+    flex: 0 auto;
   }
 }
