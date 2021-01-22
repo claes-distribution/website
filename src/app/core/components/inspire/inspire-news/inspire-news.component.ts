@@ -12,6 +12,7 @@ export class InspireNewsComponent implements OnInit {
   newsList: IBlogPreview[]
   loading = true
   loadingAdditional = false
+  additionalAvailable = true
   currentBlog: IBlogPreview
   currentPage = 1
   maxItems = 3
@@ -34,6 +35,7 @@ export class InspireNewsComponent implements OnInit {
         }
       });
       this.newsList = r.blogposts;
+      this.additionalAvailable = !(r.blogposts.length < 6)
       this.loading = false
       this.ref.markForCheck();
     })
@@ -61,6 +63,7 @@ export class InspireNewsComponent implements OnInit {
       })
       this.loadingAdditional = false
       this.newsList.push(...r.blogposts)
+      this.additionalAvailable = !(r.blogposts.length < 3) || this.newsList.length >= this.maxItems
 
       this.ref.markForCheck()
     })
