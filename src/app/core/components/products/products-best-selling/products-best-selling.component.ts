@@ -25,7 +25,7 @@ export class ProductsBestSellingComponent implements OnInit {
       gtag('event', 'view_item_list', {
         'event_category': 'engagement',
         'event_label': 'bestSelling'
-      })
+      });
       this.bestSellingProducts = result.bestSellingProducts;
       this.ref.markForCheck();
     });
@@ -38,7 +38,7 @@ export class ProductsBestSellingComponent implements OnInit {
       'event_category': 'engagement',
       'event_label': source,
       'value': id
-    })
+    });
   }
 
   get culture(): string {

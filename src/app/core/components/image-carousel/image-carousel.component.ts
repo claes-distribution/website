@@ -1,5 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input, ChangeDetectorRef, ElementRef, OnDestroy } from '@angular/core';
-import { Subscription, interval } from 'rxjs';
+import { Component, OnInit, ChangeDetectionStrategy, Input, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 import { CultureEntry } from '../../api/api.service';
@@ -11,16 +10,14 @@ import { CultureEntry } from '../../api/api.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ImageCarouselComponent implements OnInit, OnDestroy {
-  @Input() slides: ImageSlide[];
-  private currentSize: string;
-  currentIndex: number;
-
-  private sub: Subscription;
+  @Input() slides: ImageSlide[]
+  private currentSize: string
+  currentIndex: number
+  timeout: number
 
   constructor(
     private ref: ChangeDetectorRef,
     private sanitizer: DomSanitizer,
-    private element: ElementRef,
     private translate: TranslateService
   ) { }
 
@@ -28,54 +25,62 @@ export class ImageCarouselComponent implements OnInit, OnDestroy {
     if (this.slides && this.slideCount > 0) {
       this.currentIndex = 0;
       if (this.slideCount > 1) {
-        // start interval
-
-        this.startRoration();
+        this.startRotation(true)
       }
-
-      setTimeout(() => {
-        this.onResize(null);
-      }, 120);
     }
   }
 
   ngOnDestroy() {
-    if (this.sub) {
-      this.sub.unsubscribe();
+    if (this.timeout) {
+      window.clearTimeout(this.timeout)
     }
   }
 
-  startRoration() {
-    this.sub = interval(4500).subscribe($i => {
+  startRotation(fixResize?: boolean) {
+    // check timeout on current slide
+    const timeout = this.slides[this.currentIndex].duration | 4500
+    if (fixResize) {
+      this.onResize()
+    }
+
+    this.timeout = window.setTimeout(() => {
       if (this.currentIndex < this.slideCount - 1) {
-        this.currentIndex++;
+        this.currentIndex++
       } else {
-        this.currentIndex = 0;
+        this.currentIndex = 0
       }
-      this.ref.markForCheck();
-    });
+      this.startRotation()
+      this.ref.markForCheck()
+    }, timeout)
   }
 
-  onResize(ev: UIEvent) {
-    if (this.element.nativeElement.offsetWidth < 760 && this.currentSize !== 'small') {
-      this.currentSize = 'small';
-      // tslint:disable-next-line: max-line-length
-    } else if (this.element.nativeElement.offsetWidth >= 760 && this.element.nativeElement.offsetWidth < 1140 && this.currentSize !== 'medium') {
-      this.currentSize = 'medium';
-    } else if (this.element.nativeElement.offsetWidth >= 1140 && this.currentSize !== 'large') {
-      this.currentSize = 'large';
+  onResize() {
+    if (window.innerWidth < 760 && this.currentSize !== 'small') {
+      this.currentSize = 'small'
+    } else if (window.innerWidth >= 760 && window.innerWidth < 1140 && this.currentSize !== 'medium') {
+      this.currentSize = 'medium'
+    } else if (window.innerWidth >= 1140 && this.currentSize !== 'large') {
+      this.currentSize = 'large'
     }
-    this.ref.markForCheck();
+    this.ref.markForCheck()
   }
 
   selectIndex(index: number) {
-    this.currentIndex = index;
-    this.onResize(null);
+    this.currentIndex = index
+    this.onResize()
 
-    if (this.sub) {
-      this.sub.unsubscribe();
+    if (this.timeout) {
+      window.clearTimeout(this.timeout)
+    }
 
-      this.startRoration();
+    this.startRotation()
+  }
+
+  open() {
+    // check if current slide has a href
+    const href = this.slides[this.currentIndex].href
+    if (href) {
+      window.open(href, '_blank');
     }
   }
 
@@ -83,33 +88,33 @@ export class ImageCarouselComponent implements OnInit, OnDestroy {
     if (this.url.indexOf('https://pcm.groupclaes.be/v3/content') === 0) {
       return this.sanitizer.bypassSecurityTrustStyle(
         `url('${this.url}/${this.culture}?size=${this.currentSize}')`
-      );
+      )
     }
     return this.sanitizer.bypassSecurityTrustStyle(
       `url('${this.url}?size=${this.currentSize}')`
-    );
+    )
   }
 
   get title(): string {
-    return this.slides[this.currentIndex].title[this.culture];
+    return this.slides[this.currentIndex].title[this.culture]
   }
 
   private get url(): string {
-    return this.slides[this.currentIndex].url;
+    return this.slides[this.currentIndex].url
   }
 
   get slideCount(): number {
-    return this.slides && this.slides.length;
+    return this.slides && this.slides.length
   }
 
   private get culture(): string {
-    return this.translate.currentLang;
+    return this.translate.currentLang
   }
 }
 
 export interface ImageSlide {
-  url: string;
-  title: CultureEntry;
-  href: string | null,
-  duration?: number;
+  url: string
+  title: CultureEntry
+  href?: string | null
+  duration?: number
 }

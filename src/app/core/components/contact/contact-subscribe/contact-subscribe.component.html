@@ -1,0 +1,14 @@
+<h3 translate="components.contact.contact-subscribe.title"></h3>
+<div class="placeholder">
+  <form [formGroup]="subscribeForm" (submit)="submit()">
+    <mat-form-field class="email" appearance="outline">
+      <mat-label>
+        <span translate="components.contact.contact-form.email"></span>
+      </mat-label>
+      <input formControlName="email" autocomplete="email" matInput required>
+    </mat-form-field>
+    <button color="primary" type="submit">
+      <span translate="components.contact.contact-subscribe.button"></span>
+    </button>
+  </form>
+</div>

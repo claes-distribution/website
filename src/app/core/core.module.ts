@@ -58,6 +58,7 @@ import { HomeNewsletterSubscribeComponent } from './home/home-newsletter-subscri
 import { ProductBenefitsComponent } from './components/products/product-benefits/product-benefits.component';
 import { ProductsNewComponent } from './components/products/products-new/products-new.component';
 import { AboutVideoComponent } from './components/about/about-video/about-video.component';
+import { ContactSubscribeComponent } from './components/contact/contact-subscribe/contact-subscribe.component';
 
 @NgModule({
   imports: [
@@ -115,6 +116,7 @@ import { AboutVideoComponent } from './components/about/about-video/about-video.
     ContactInfoComponent,
     ContactOpeningHoursComponent,
     ContactForm2Component,
+    ContactSubscribeComponent,
 
     PrivacyPolicyTitleComponent,
     PrivacyPolicyBlockComponent,
@@ -168,6 +170,7 @@ import { AboutVideoComponent } from './components/about/about-video/about-video.
     ContactInfoComponent,
     ContactOpeningHoursComponent,
     ContactForm2Component,
+    ContactSubscribeComponent,
 
     PrivacyPolicyTitleComponent,
     PrivacyPolicyBlockComponent,

@@ -1,4 +1,6 @@
-<div class="current-slide" (window:resize)="onResize($event)" *ngIf="css" [style.background-image]="css"></div>
+<div class="current-slide" (window:resize)="onResize()" *ngIf="css" [style.background-image]="css" (click)="open()">
+
+</div>
 <div class="bottom-container">
   <h2 [innerText]="title"></h2>
   <div class="slide-selectors" *ngIf="slideCount > 1">

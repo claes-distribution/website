@@ -12,33 +12,25 @@ export class HomePageComponent implements OnInit {
     title: {
       nl: 'Totaalleverancier voor beenhouwers en andere versspecialisten',
       fr: 'Fournisseur fiable de grandes marques'
-    },
-    href: null,
-    duration: 3000
+    }
   }, {
     url: 'https://pcm.groupclaes.be/v3/content/dis/website/banner-image/200',
     title: {
       nl: 'Welkom in onze winkel!',
       fr: 'Bienvenue également dans notre salle d\'exposition'
-    },
-    href: null,
-    duration: 3000
+    }
   }, {
     url: 'https://pcm.groupclaes.be/v3/content/dis/website/banner-image/300',
     title: {
       nl: 'Uitgebreide keuze aan topproducten',
       fr: 'Techniciens bien formés'
-    },
-    href: null,
-    duration: 3000
+    }
   }, {
     url: 'https://pcm.groupclaes.be/v3/content/dis/website/banner-image/400',
     title: {
       nl: 'Eigen vrachtwagens voor snelle levering',
       fr: 'Propre service d\'intervention'
-    },
-    href: null,
-    duration: 3000
+    }
   }];
 
   constructor() { }

@@ -25,7 +25,7 @@ export class ProductsSpotlightComponent implements OnInit {
       gtag('event', 'view_item_list', {
         'event_category': 'engagement',
         'event_label': 'spotlight'
-      })
+      });
       this.spotlightProducts = result.spotlightProducts;
       this.ref.markForCheck();
     });
@@ -38,7 +38,7 @@ export class ProductsSpotlightComponent implements OnInit {
       'event_category': 'engagement',
       'event_label': source,
       'value': id
-    })
+    });
   }
 
   get culture(): string {

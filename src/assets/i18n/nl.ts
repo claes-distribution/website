@@ -50,6 +50,10 @@ export const nl = {
         send: 'Verzenden',
         sendSuccess: 'Bedankt! Wij hebben je vraag goed ontvangen en nemen zo snel mogelijk contact met je op.'
       },
+      'contact-subscribe': {
+        title: 'Ontvang onze maandelijkse nieuwsbrief',
+        button: 'Inschrijven'
+      }
     },
     about: {
       'about-text': {
