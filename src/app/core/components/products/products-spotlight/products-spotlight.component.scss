@@ -2,7 +2,7 @@ section.product-list {
   h3 {
     div.lazy-loading {
       border-radius: 14px;
-      background-color: #f4F5F7;
+      background-color: var(--background-color-alt);
       height: 26px;
     }
 
@@ -76,7 +76,7 @@ section.product-list {
         header div.placeholder,
         aside div.placeholder {
           border-radius: 14px;
-          background-color: #f4F5F7;
+          background-color: var(--background-color-alt)
         }
 
         header div.placeholder {

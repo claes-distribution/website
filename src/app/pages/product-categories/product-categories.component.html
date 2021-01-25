@@ -1,3 +1,4 @@
+<div></div>
 <section>
   <div class="container">
     <h1 [translate]="categoryTitle"></h1>
@@ -7,8 +8,10 @@
       </p>
     </div>
     <a routerLink="/products"> <i class="fal fa-fw fa-angle-left"></i>
-      <span translate="pages.product-cateegories.return-overview"></span>
+      <span translate="pages.product-categories.return-overview"></span>
     </a>
+    <br>
+    <br>
 
     <dis-products-categories [parent]="categoryId"></dis-products-categories>
   </div>

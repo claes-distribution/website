@@ -5,11 +5,11 @@
     padding: 40px 0px;
   }
 
-  section:nth-child(even) {
-    background-color: #F4F5F7;
+  section+section {
+    border-top: var(--list-seperator-border)
+  }
 
-    @media (prefers-color-scheme: dark) {
-      background-color: #212223;
-    }
+  section:nth-child(odd) {
+    background-color: var(--background-color-alt);
   }
 }

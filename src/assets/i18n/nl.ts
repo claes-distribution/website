@@ -147,7 +147,7 @@ export const nl = {
       },
       'home-leaflet': {
         title: 'Blader door de nieuwste promoties',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+        button: 'Bekijk de online promofolder'
       },
       'home-recipes-news': {
         'block-recipes': {
@@ -324,6 +324,7 @@ export const nl = {
       metaDescription: 'Ons gamma omvat o.a. kruiden, sauzen, marinades, specerijen, voedingswaren, darmen, verpakkingen en producten voor schoonmaak, winkel, keuken en werkhuis.',
     },
     'product-categories': {
+      'return-overview': 'Terug naar overzicht',
       voeding: {
         title: 'Etenswaren van a tot z',
         description: 'Bij Claes Distribution vind je een uitgebreide keuze aan kruiden, sauzen, fonds en marinades. De ideale smaakmakers dus voor al je vlees, vis, gevogelte, vegetarische en kant-en klare gerechten. Ook basisingrediënten zoals bloem, olie en suiker behoren tot ons assortiment. En dan vergeten we nog de soepen, conserven, deegwaren en pasta’s te vermelden. Kortom, zo goed als alle levensmiddelen die jij nodig hebt voor lekkere en verse bereidingen zitten in ons gamma.',

@@ -28,8 +28,6 @@ export class ContactForm2Component implements OnInit {
   ];
   contactReason: string;
 
-  file: { name: string; content: string };
-
   constructor(
     private ref: ChangeDetectorRef,
     private fb: FormBuilder,
@@ -145,35 +143,6 @@ export class ContactForm2Component implements OnInit {
       }
       this.ref.markForCheck();
     });
-  }
-
-  onFileSelected() {
-    const inputNode: any = document.querySelector('#file');
-
-    if (typeof (FileReader) !== 'undefined') {
-      const reader = new FileReader();
-
-      reader.onload = (e: any) => {
-        // this.srcResult = e.target.result;
-        const buffer: ArrayBuffer = e.target.result;
-        this.file = {
-          name: inputNode.files.item(0).name,
-          content: this._arrayBufferToBase64(buffer)
-        };
-      };
-
-      reader.readAsArrayBuffer(inputNode.files[0]);
-    }
-  }
-
-  _arrayBufferToBase64(buffer) {
-    let binary = '';
-    const bytes = new Uint8Array(buffer);
-    const len = bytes.byteLength;
-    for (let i = 0; i < len; i++) {
-      binary += String.fromCharCode(bytes[i]);
-    }
-    return Base64.encode(binary);
   }
 
   get predefined(): boolean {

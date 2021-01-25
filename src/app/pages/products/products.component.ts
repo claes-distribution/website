@@ -3,7 +3,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 @Component({
   selector: 'dis-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss'],
+  styleUrls: ['../pages.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductsPageComponent implements OnInit {

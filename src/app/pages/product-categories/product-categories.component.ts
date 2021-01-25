@@ -6,7 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'dis-product-categories',
   templateUrl: './product-categories.component.html',
-  styleUrls: ['./product-categories.component.scss'],
+  styleUrls: ['./product-categories.component.scss', '../pages.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductCategoriesPageComponent implements OnInit {

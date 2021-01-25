@@ -101,4 +101,9 @@ img {
   .mat-form-field-appearance-outline .mat-form-field-outline {
     color: hsla(0, 0%, 100%, .3);
   }
+
+  .mat-select-placeholder,
+  .mat-form-field-label {
+    color: hsla(0, 0%, 100%, .3);
+  }
 }

@@ -5,7 +5,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'dis-email-disclaimer',
   templateUrl: './email-disclaimer.component.html',
-  styleUrls: ['./email-disclaimer.component.scss'],
+  styleUrls: ['./email-disclaimer.component.scss', '../pages.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EmailDisclaimerPageComponent implements OnInit {
