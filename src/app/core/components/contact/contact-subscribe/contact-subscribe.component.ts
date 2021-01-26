@@ -23,6 +23,6 @@ export class ContactSubscribeComponent implements OnInit {
   }
 
   submit() {
-
+    console.log(this.subscribeForm.value)
   }
 }

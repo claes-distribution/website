@@ -13,6 +13,7 @@ import { EmailDisclaimerPageComponent } from './email-disclaimer/email-disclaime
 import { ProductCategoriesPageComponent } from './product-categories/product-categories.component';
 import { PrivacyPolicyPageComponent } from './privacy-policy/privacy-policy.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
     CommonModule,
     HttpClientModule,
     CoreModule,
+    RouterModule,
     TranslateModule.forChild()
   ],
   declarations: [

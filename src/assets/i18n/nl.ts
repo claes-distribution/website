@@ -235,6 +235,11 @@ export const nl = {
     footer: {
       'opening-hours': {
         title: 'Openingsuren kantoren'
+      },
+      'social-links': {
+        linkedIn: 'Volg ons op',
+        youtube: 'Abonneer je op',
+        google: 'Beoordeel ons op '
       }
     },
     inspire: {

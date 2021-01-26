@@ -10,6 +10,7 @@ import { SafeUrl, DomSanitizer } from '@angular/platform-browser';
 })
 export class PcmWebsiteLogoComponent implements OnInit {
   @Input() company: string;
+  @Input() id: string = '100';
 
   constructor(private ref: ChangeDetectorRef, private sanitizer: DomSanitizer) { }
 
@@ -21,6 +22,6 @@ export class PcmWebsiteLogoComponent implements OnInit {
   }
 
   get url(): SafeUrl {
-    return this.sanitizer.bypassSecurityTrustUrl(`https://pcm.groupclaes.be/v2/content/${this.company}/website/logo`);
+    return this.sanitizer.bypassSecurityTrustUrl(`https://pcm.groupclaes.be/v2/content/${this.company}/website/logo/${this.id}`);
   }
 }

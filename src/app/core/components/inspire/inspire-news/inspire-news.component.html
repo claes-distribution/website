@@ -8,23 +8,23 @@
         <i [innerText]="news.description[culture]"></i>
       </p>
       <a href="#" (click)="open(news, $event)" [title]="news.ctaText[culture]" *ngIf="!news.ctaHref">
-        <button color="primary">
+        <button color="">
           <i class="fal fa-fw" [ngClass]="news.icon"></i>&nbsp;
           <span [innerText]="news.ctaText[culture]"></span>
         </button>
       </a>
       <a [href]="newsHref(news.ctaHref)" target="_blank" [title]="news.ctaText[culture]" *ngIf="news.ctaHref">
-        <button color="primary">
+        <button color="">
           <i class="fal fa-fw" [ngClass]="news.icon"></i>&nbsp;
           <span [innerText]="news.ctaText[culture]"></span>
         </button>
       </a>
     </article>
   </div>
-  <div style="text-align:center;border-top:1px solid #ccc;padding-top:24px" *ngIf="additionalAvailable">
+  <div style="text-align:center;padding-top:24px" *ngIf="additionalAvailable">
     <button color="primary" (click)="loadMore()">
       <span translate="components.news.button"></span>&nbsp;
-      <i class="fal fa-fw fa-chevron-circle-down"></i>
+      <i class="fal fa-fw fa-cloud-download"></i>
     </button>
   </div>
   <div *ngIf="loading || loadingAdditional" style="text-align:center">
