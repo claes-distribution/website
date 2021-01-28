@@ -52,7 +52,21 @@ export const nl = {
       },
       'contact-subscribe': {
         title: 'Ontvang onze maandelijkse nieuwsbrief',
-        button: 'Inschrijven'
+        button: 'Inschrijven',
+        messages: {
+          success: {
+            title: 'Bedankt voor je inschrijving',
+            message: 'Je krijgt zo meteen nog een e-mail om je inschrijving op onze nieuwsbrief definitief te bevestigen.'
+          },
+          webshop: {
+            title: 'ERROR',
+            message: 'user already is a webshop user'
+          },
+          duplicate: {
+            title: 'ERROR',
+            message: 'user already in subscribers list'
+          }
+        }
       }
     },
     about: {
