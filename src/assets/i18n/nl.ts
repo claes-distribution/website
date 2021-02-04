@@ -433,6 +433,12 @@ export const nl = {
       metaTitle: 'Claes Distribution staat voor je klaar!',
       metaDescription: 'Vragen? Of advies nodig? Spreek je vertegenwoordiger aan, kom langs in onze toonzaal in Paal-Beringen of je kan ons bellen, mailen of faxen.'
     },
+    'verify-subscribe': {
+      title: 'Bijna klaar: bevestig je inschrijving',
+      description: 'Bedankt voor je interesse in onze nieuwsbrieven!\n\nOm je inschrijving helemaal volgens de regels van de kunst af te ronden, moet je alleen nog even bevestigen. Nadien ontvang je 1 tot maximaal 2 keer per maand een mailtje van ons.',
+      metaTitle: 'Bijna klaar: bevestig je inschrijving',
+      metaDescription: 'Bedankt voor je interesse in onze nieuwsbrieven!\n\nOm je inschrijving helemaal volgens de regels van de kunst af te ronden, moet je alleen nog even bevestigen. Nadien ontvang je 1 tot maximaal 2 keer per maand een mailtje van ons.'
+    },
     'privacy-policy': {
       title: 'Jouw privacy, onze zorg',
       description: 'Claes Distribution gebruikt cookies om je een betere en meer persoonlijke gebruikservaring te bieden. In onze privacyverklaring vertellen we je er alles over.'

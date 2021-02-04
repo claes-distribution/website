@@ -1,0 +1,40 @@
+<div></div>
+<section>
+  <div class="container">
+    <h1 translate="pages.verify-subscribe.title"></h1>
+    <div class="placeholder">
+      <p>
+        <b translate="pages.verify-subscribe.description"></b>
+      </p>
+
+      <p>
+        We leren je graag beter kennen. Vul onderstaand formulier geheel vrijblijvend in, zo kunnen we onze service nog
+        meer op jou afstemmen.
+      </p>
+
+      <form novalidate [formGroup]="verifyForm">
+        <input type="text" placeholder="personalName" id="personalName"><br>
+        <input type="text" placeholder="personalSurname" id="personalSurname"><br>
+        <input type="text" placeholder="personalCompany" id="personalCompany"><br>
+        <input type="text" placeholder="personalPhone" id="personalPhone"><br>
+
+
+        <div style="display:flex;align-items:center;justify-content:center;">
+          <input type="checkbox" formControlName="acceptPolicy">
+          <div>&nbsp; &nbsp; &nbsp;</div>
+          <p>
+            <i>
+              <small>
+                Ik ga akkoord met de privacy policy (link leggen naar de webpagina) en kan mijn gegevens op elk moment
+                aanpassen door contact op te nemen via marketing@claes-distribution.be. Uitschrijven voor de nieuwsbrief
+                kan
+                door op de link te klikken in de voettekst van elke e-mail die je van ons ontvangt.
+              </small>
+            </i>
+          </p>
+        </div>
+        <button color="primary" [disabled]="verifyForm.invalid" type="submit">Bevestig je inschrijving</button>
+      </form>
+    </div>
+  </div>
+</section>

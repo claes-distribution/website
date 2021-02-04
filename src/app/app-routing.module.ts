@@ -10,6 +10,7 @@ import { ProductCategoriesPageComponent } from './pages/product-categories/produ
 import { ContactPageComponent } from './pages/contact/contact.component';
 import { PrivacyPolicyPageComponent } from './pages/privacy-policy/privacy-policy.component';
 import { NotFoundComponent } from './pages/errors/not-found/not-found.component';
+import { VerifySubscribePageComponent } from './pages/verify-subscribe-page/verify-subscribe-page.component';
 
 
 const routes: Routes = [
@@ -61,6 +62,13 @@ const routes: Routes = [
     data: {
       title: 'pages.contact.metaTitle',
       description: 'pages.contact.metaDescription'
+    }
+  }, {
+    path: 'verify-subscribe/:email',
+    component: VerifySubscribePageComponent,
+    data: {
+      title: 'pages.verify-subscribe.metaTitle',
+      description: 'pages.verify-subscribe.metaDescription'
     }
   }, {
     path: 'privacy-policy',

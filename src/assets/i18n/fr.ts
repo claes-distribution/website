@@ -217,6 +217,11 @@ export const fr = {
     footer: {
       'opening-hours': {
         title: 'Openingsuren kantoren'
+      },
+      'social-links': {
+        linkedIn: 'Volg ons op',
+        youtube: 'Abonnez-vous à',
+        google: 'Évaluez-nous sur'
       }
     },
     inspire: {

@@ -14,6 +14,8 @@ import { ProductCategoriesPageComponent } from './product-categories/product-cat
 import { PrivacyPolicyPageComponent } from './privacy-policy/privacy-policy.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { RouterModule } from '@angular/router';
+import { VerifySubscribePageComponent } from './verify-subscribe-page/verify-subscribe-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     CoreModule,
     RouterModule,
+    ReactiveFormsModule,
+    FormsModule,
     TranslateModule.forChild()
   ],
   declarations: [
@@ -34,7 +38,8 @@ import { RouterModule } from '@angular/router';
     EmailDisclaimerPageComponent,
     ProductCategoriesPageComponent,
     PrivacyPolicyPageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    VerifySubscribePageComponent
   ],
   exports: [
     HomePageComponent,
@@ -45,7 +50,8 @@ import { RouterModule } from '@angular/router';
     ProductsPageComponent,
     EmailDisclaimerPageComponent,
     ProductCategoriesPageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    VerifySubscribePageComponent
   ]
 })
 export class PagesModule {
