@@ -59,12 +59,12 @@ export const nl = {
             message: 'Je krijgt zo meteen nog een e-mail om je inschrijving op onze nieuwsbrief definitief te bevestigen.'
           },
           webshop: {
-            title: 'ERROR',
-            message: 'user already is a webshop user'
+            title: 'OPGELET!',
+            message: 'Dit e-mailadres komt reeds voor in ons bestand. Je ontvangt onze nieuwsbrief dus sowieso al elke maand in je inbox.'
           },
           duplicate: {
-            title: 'ERROR',
-            message: 'user already in subscribers list'
+            title: 'OPGELET!',
+            message: 'Dit e-mailadres komt reeds voor in ons bestand. Je ontvangt onze nieuwsbrief dus sowieso al elke maand in je inbox.'
           }
         }
       }
@@ -437,7 +437,16 @@ export const nl = {
       title: 'Bijna klaar: bevestig je inschrijving',
       description: 'Bedankt voor je interesse in onze nieuwsbrieven!\n\nOm je inschrijving helemaal volgens de regels van de kunst af te ronden, moet je alleen nog even bevestigen. Nadien ontvang je 1 tot maximaal 2 keer per maand een mailtje van ons.',
       metaTitle: 'Bijna klaar: bevestig je inschrijving',
-      metaDescription: 'Bedankt voor je interesse in onze nieuwsbrieven!\n\nOm je inschrijving helemaal volgens de regels van de kunst af te ronden, moet je alleen nog even bevestigen. Nadien ontvang je 1 tot maximaal 2 keer per maand een mailtje van ons.'
+      metaDescription: 'Bedankt voor je interesse in onze nieuwsbrieven!\n\nOm je inschrijving helemaal volgens de regels van de kunst af te ronden, moet je alleen nog even bevestigen. Nadien ontvang je 1 tot maximaal 2 keer per maand een mailtje van ons.',
+      preform: 'We leren je graag beter kennen. Vul onderstaand formulier geheel vrijblijvend in, zo kunnen we onze service nog meer op jou afstemmen.',
+      form: {
+        personalName: 'Voornaam',
+        personalSurname: 'Familienaam',
+        personalCompany: 'Bedrijf',
+        personalPhone: 'Telefoon',
+        acceptedOptInTerms: 'Ik ga akkoord met de <a href="/privacy policy">privacy policy</a> en kan mijn gegevens op elk moment aanpassen door contact op te nemen via marketing@claes-distribution.be. Uitschrijven voor de nieuwsbrief kan door op de link te klikken in de voettekst van elke e - mail die je van ons ontvangt.',
+        submit: 'Bevestig je inschrijving'
+      }
     },
     'privacy-policy': {
       title: 'Jouw privacy, onze zorg',

@@ -1,5 +1,7 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { ISubscriber, SubscribersService } from 'src/app/core/api/subscribers.service';
 
 @Component({
   selector: 'dis-verify-subscribe-page',
@@ -9,18 +11,64 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class VerifySubscribePageComponent implements OnInit {
   verifyForm: FormGroup
+  subscriber: ISubscriber
+  hash: string
 
   constructor(
-    private fb: FormBuilder
+    private ref: ChangeDetectorRef,
+    private fb: FormBuilder,
+    private route: ActivatedRoute,
+    private subscribersService: SubscribersService
   ) { }
 
   ngOnInit(): void {
     this.verifyForm = this.fb.group({
-      acceptPolicy: [false, [Validators.required, Validators.requiredTrue]]
+      personalName: [''],
+      personalSurname: [''],
+      personalCompany: [''],
+      personalPhone: [''],
+      acceptedOptInTerms: [false, [Validators.required, Validators.requiredTrue]]
+    })
+
+    this.route.params.subscribe(params => {
+      this.hash = params['hash']
+
+      this.subscribersService.get(this.hash).subscribe(response => {
+        this.subscriber = response.subscriber
+
+        this.verifyForm.controls.personalName.setValue(this.subscriber.personalName)
+        this.verifyForm.controls.personalSurname.setValue(this.subscriber.personalSurname)
+        this.verifyForm.controls.personalCompany.setValue(this.subscriber.personalCompany)
+        this.verifyForm.controls.personalPhone.setValue(this.subscriber.personalPhone)
+        this.verifyForm.controls.acceptedOptInTerms.setValue(this.subscriber.acceptedOptInTerms)
+
+        this.ref.markForCheck()
+      })
     })
   }
 
   completeSubscribe(): void {
+    if (this.verifyForm.valid) {
+      const formValue = this.verifyForm.value
 
+      const newSub: ISubscriber = {
+        ...this.subscriber,
+        ...formValue
+      }
+
+      newSub.optInOn = new Date()
+      newSub.optInMethod = 'form_checkbox'
+      newSub.optInTerms = 'twice_monthly'
+
+      this.subscribersService.update(this.hash, newSub).subscribe(r => {
+        if (r.result) {
+          alert('ok')
+        } else {
+          alert(r.reason)
+        }
+      })
+    } else {
+      alert('form invalid!')
+    }
   }
 }

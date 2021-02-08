@@ -15,4 +15,43 @@
       text-align: justify;
     }
   }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+
+    mat-form-field.personalName {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    mat-form-field.personalSurname {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    mat-form-field.personalCompany {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    mat-form-field.personalPhone {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    div.confirm {
+      grid-column: 1 / 3;
+      grid-row: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button {
+      grid-column: 1;
+      grid-row: 5;
+    }
+  }
 }

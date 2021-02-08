@@ -9,6 +9,10 @@
     border-top: var(--list-seperator-border)
   }
 
+  section:nth-last-child(1) {
+    border-bottom: var(--list-seperator-border)
+  }
+
   section:nth-child(odd) {
     background-color: var(--background-color-alt);
   }

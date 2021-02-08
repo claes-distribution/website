@@ -37,7 +37,7 @@ export const fr = {
           selectReason: 'Maak een keuze',
           requestOffer: 'Offerte / informatie aanvragen',
           contactAccounting: 'Boekhouding contacteren',
-          contactIt: 'Contacteer IT',
+          contactIt: 'IT contacteren',
           subject: 'Aanvraag offerte: '
         },
         title: 'Contactformulier',
@@ -50,11 +50,29 @@ export const fr = {
         send: 'Verzenden',
         sendSuccess: 'Bedankt! Wij hebben je vraag goed ontvangen en nemen zo snel mogelijk contact met je op.'
       },
+      'contact-subscribe': {
+        title: 'Ontvang onze maandelijkse nieuwsbrief',
+        button: 'Inschrijven',
+        messages: {
+          success: {
+            title: 'Bedankt voor je inschrijving',
+            message: 'Je krijgt zo meteen nog een e-mail om je inschrijving op onze nieuwsbrief definitief te bevestigen.'
+          },
+          webshop: {
+            title: 'ATTENTION !',
+            message: 'Cette adresse e-mail figure déjà dans notre base de données. De toute façon, vous recevrez notre bulletin d\'information mensuel dans votre boîte de réception.'
+          },
+          duplicate: {
+            title: 'ATTENTION !',
+            message: 'Cette adresse e-mail figure déjà dans notre base de données. De toute façon, vous recevrez notre bulletin d\'information mensuel dans votre boîte de réception.'
+          }
+        }
+      }
     },
     about: {
       'about-text': {
         title: '3 divisies, 1 sterke groep',
-        text: 'Zowel <span class="dis-color">Claes Distribution</span>, <a href="https://www.claes-machines.be" class="mac-color">Claes Machines</a> als <a href="https://www.group-claes.be" class="gro-color">Group Claes</a> maken deel uit van de holding Claes Food Projects. Intensieve samenwerking is de sleutel van ons succes in België, Nederland, Luxemburg en Frankrijk. Samen maken we onze reputatie elke dag opnieuw waar als vaste waarde én trendsetter in de wereld van slagerij en voedingsindustrie. '
+        text: 'Zowel <span class="dis-color">Claes Distribution</span>, <a target="_blank" href="https://www.claes-machines.be" class="mac-color">Claes Machines</a> als <a target="_blank" href="https://www.group-claes.be" class="gro-color">Group Claes</a> maken deel uit van de holding Claes Food Projects. Intensieve samenwerking is de sleutel van ons succes in België, Nederland, Luxemburg en Frankrijk. Samen maken we onze reputatie elke dag opnieuw waar als vaste waarde én trendsetter in de wereld van slagerij en voedingsindustrie. '
       },
       'about-pride': {
         title: 'Trots op onze stabiele groei',
@@ -103,11 +121,12 @@ export const fr = {
       }
     },
     news: {
-      title: 'Blijf op de hoogte'
+      title: 'Blijf op de hoogte',
+      button: 'Meer nieuws laden'
     },
     home: {
       'home-text': {
-        title: 'Véél meer dan een groothandel voor slagerij en voedingsindustrie',
+        title: 'Véél meer dan een groothandel voor slagerij & voedingsindustrie',
         text: 'Als totaalleverancier biedt Claes Distribution uit Paal-Beringen een ruim en kwaliteitsvol productassortiment voor de verwerking van vlees, gevogelte, vis, groenten, vegetarische en kant-en-klare gerechten, enz. Met meer dan 50 jaar ervaring in het vak zijn wij een betrouwbare partner voor heel wat zelfstandige slagers, traiteurs en versspecialisten. Ook industriële foodproducenten, grootdistributeurs en supermarkten kunnen steevast rekenen op onze professionele service met advies én een snelle levering.'
       },
       'home-products-order': {
@@ -137,21 +156,21 @@ export const fr = {
         },
         'block-4': {
           title: 'Betrouwbaarheid',
-          text: 'Ons distributiecentrum is uitgerust met de meest moderne installaties en zet sterk in op de automatisering van voorraadbeheer en orderverwerking. Goederenontvangst gebeurt via scanning, orderpicking via RF en gekoeld transport met temperatuurregistratie en intelligente boordcomputers. Met ‘track & trace’ volgen we de status van je bestelling op de voet en bij het minste probleem voeren we meteen een recall uit.'
+          text: 'Ons distributiecentrum is uitgerust met de meest moderne installaties en zet sterk in op de automatisering van voorraadbeheer en orderverwerking. Goederenontvangst gebeurt via scanning, orderpicking via RF en gekoeld transport met temperatuurregistratie en intelligente boordcomputers. Met ‘track & trace’ kunnen we de status van je bestelling op de voet volgen en bij het minste probleem een efficiënte recall uitvoeren.'
         }
       },
       'home-leaflet': {
         title: 'Blader door de nieuwste promoties',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+        button: 'Bekijk de online promofolder'
       },
       'home-recipes-news': {
         'block-recipes': {
-          title: 'Recepten: doe inspiratie op',
+          title: 'Doe smakelijke inspiratie op!',
           text: 'Op zoek naar een leuk recept voor een lekker gerecht? Wij reiken je originele ideeën en tips aan voor nét dat tikkeltje extra.',
           button: 'Ontdek onze recepten'
         },
         'block-news': {
-          title: 'Nieuws: blijf op de hoogte',
+          title: 'Blijf op de hoogte',
           text: 'Claes Distribution informeert je graag over al wat leeft in de sector: tips, tricks, trends, promoties, nieuwigheden … Zo helpen we je om nóg succesvoller te zijn in alles wat je doet!',
           button: 'Lees ons nieuws'
         }
@@ -164,14 +183,27 @@ export const fr = {
     products: {
       'products-text': {
         title: '<span class="dis-color">Claes Distribution</span>, jouw totaalleverancier voor de beste producten',
-        text: 'Ben jij kieskeurig en wil je enkel werken met producten van de bovenste plank? Dat begrijpen wij perfect. In het brede assortiment van onze groothandel vind je uitsluitend artikelen van topkwaliteit, o.a. kruiden, sauzen, marinades, specerijen, voedingswaren, darmen, verpakkingen, producten voor hygiëne en ontsmetting en benodigdheden voor winkel, keuken en werkhuis. Wat je ook zoekt, wij verkopen het! Daarbij staan smaak, gemak, veiligheid, hygiëne en ergonomie steeds voorop.<br><br>En heb je een betrouwbare machine nodig voor de verwerking en verpakking van vlees en/ of andere voeding? Neem dan zeker eens een kijkje bij onze collega- experts van <a class="mac-color" href="https://www.claes-machines.be/">Claes Machines</a>.'
+        text: 'Ben jij kieskeurig en wil je enkel werken met producten van de bovenste plank? Dat begrijpen wij perfect. In het brede assortiment van onze groothandel vind je uitsluitend artikelen van topkwaliteit, o.a. kruiden, sauzen, marinades, specerijen, voedingswaren, darmen, verpakkingen, producten voor hygiëne en ontsmetting en benodigdheden voor winkel, keuken en werkhuis. Wat je ook zoekt, wij verkopen het! Daarbij staan smaak, gemak, veiligheid, hygiëne en ergonomie steeds voorop.<br><br>En heb je een betrouwbare machine nodig voor de verwerking en verpakking van vlees en/ of andere voeding? Neem dan zeker eens een kijkje bij onze collega-experts van <a class="mac-color" target="_blank" href="https://www.claes-machines.be/">Claes Machines</a>.'
       },
       'products-categories': {
-        title: 'Ontdek ons volledige gamma'
+        title: 'Ontdek ons volledige gamma',
+        'return-overview': ' terug naar overzicht'
+      },
+      'products-benefits': {
+        title: 'Waarom kiezen voor Claes Distribution?',
+        text: '<li>Zeer compleet assortiment van meer dan 14.000 producten</li><li>Artikelen van topmerken diede allerbeste kwaliteit garanderen</li><li>Eigen vloot van gekoelde vrachtwagens voor snelle levering</li><li>Strenge controler op hygiëne, voedselveiligheid en kwaliteit</li><li>Bestellen kan op 6 verschillende manieren: jij bepaald hoe!</li><li>Altijd deskundig advies voorhanden om de juiste keuze te maken</li>'
       },
       'products-search': {
         title: 'Welk type product zoek je?',
         text: 'Zoek in ons uitgebreide assortiment'
+      },
+      'products-best-selling': {
+        title: 'Toppers van deze maand',
+        button: ' Bekijk meer'
+      },
+      'products-new': {
+        title: 'Nieuw in het assortiment',
+        button: ' Bekijk meer'
       }
     },
     order: {
@@ -181,35 +213,35 @@ export const fr = {
       },
       'order-methods': {
         'order-method-shop': {
-          title: 'Vul je winkelmandje in onze webshop',
-          text: 'Wil je ons uitgebreide gamma online verkennen en in alle rust keuzes maken? In onze <a href="https://shop.claes-distribution.be/">eShop</a> kan dat 24/7 in enkele kliks. Voeg zelf producten toe aan je favorieten, stel handige filters in om nóg sneller te zoeken en blijf op de hoogte van promoties en nieuwigheden. Bovendien kan je de productspecificaties (info over allergenen, voedingswaardes, enz.) van aangekochte artikelen ook altijd digitaal kan raadplegen. Niets dan voordelen, toch?',
+          title: ' Vul je winkelmandje in onze webshop',
+          text: 'Wil je ons uitgebreide gamma online verkennen en in alle rust keuzes maken? In onze <a href="https://shop.claes-distribution.be/">eShop</a> kan dat 24/7 in enkele kliks.<br> Voeg zelf producten toe aan je favorieten, stel handige filters in om nóg sneller te zoeken en blijf op de hoogte van promoties en nieuwigheden. Bovendien kan je de productspecificaties (info over allergenen, voedingswaardes, enz.) van aangekochte artikelen ook altijd digitaal kan raadplegen. Niets dan voordelen, toch?',
           'button-1': 'Log in',
           'button-2': 'Meld je aan',
           'button-3': 'Word klant'
         },
         'order-method-app': {
-          title: 'Installeer onze mobiele app',
-          text: 'Wil je onze uitgebreide productcatalogus ook offline, dus zonder netwerk, kunnen raadplegen? Download de gratis app van Claes Distribution en installeer hem op je smartphone of tablet. Met je persoonlijke registratiecode bestel je snel en eenvoudig al wat je nodig hebt, online en in alle veiligheid. Hulp nodig bij het gebruik? De handleiding in de app maakt je vlot wegwijs.',
+          title: ' Installeer onze mobiele app',
+          text: 'Wil je onze uitgebreide productcatalogus ook offline, dus zonder netwerk, kunnen raadplegen? Download de gratis app van Claes Distribution en installeer hem op je smartphone of tablet.<br> Met je persoonlijke registratiecode bestel je snel en eenvoudig al wat je nodig hebt, online en in alle veiligheid. Hulp nodig bij het gebruik? De handleiding in de app maakt je vlot wegwijs.',
           'button-1': 'Download de app'
         },
         'order-method-showroom': {
-          title: 'Kom langs in onze showroom',
-          text: 'Ook de deuren van onze fysieke winkel in Paal-Beringen staan dagelijks voor je open. Onze showroom is vlot bereikbaar en beschikt over een ruime parking. Twijfel je over een aankoop? Win gerust het advies in van onze ervaren shopmedewerkers en overtuig jezelf van de kwaliteit van onze producten. Gevonden wat je zocht? Plaats je bestelling en neem de artikelen meteen mee als ze voorradig zijn. Kortom, je bent altijd welkom voor een bezoek!',
+          title: ' Kom langs in onze showroom',
+          text: 'Ook de deuren van onze fysieke winkel in Paal-Beringen staan dagelijks voor je open. Onze showroom is vlot bereikbaar en beschikt over een ruime parking.<br> Twijfel je over een aankoop? Win gerust het advies in van onze ervaren shopmedewerkers en overtuig jezelf van de kwaliteit van onze producten. Gevonden wat je zocht? Plaats je bestelling en neem de artikelen meteen mee als ze voorradig zijn. Kortom, je bent altijd welkom voor een bezoek!',
           'button-1': 'Raadpleeg de openingsuren'
         },
         'order-method-agent': {
-          title: 'Spreek je vertegenwoordiger aan',
-          text: 'Geen tijd om zelf langs te komen in onze winkel? Of nog niet helemaal vertrouwd met online bestellingen? Geen probleem! Wij sturen met plezier een van onze vertegenwoordigers langs om je persoonlijk te komen bezoeken in jouw regio. Het zijn stuk voor stuk ervaren vakexperts die écht weten waarover ze spreken en die je graag informeren over nieuwigheden, tips, recepten ... Laat je ter plaatse dus deskundig adviseren om direct de juiste keuzes te maken zonder kostbare tijd te verliezen.',
+          title: ' Spreek je vertegenwoordiger aan',
+          text: 'Geen tijd om zelf langs te komen in onze winkel? Of nog niet helemaal vertrouwd met online bestellingen? Geen probleem! Wij sturen met plezier een van onze vertegenwoordigers langs om je persoonlijk te komen bezoeken in jouw regio.<br> Het zijn stuk voor stuk ervaren vakexperts die écht weten waarover ze spreken en die je graag informeren over nieuwigheden, tips, recepten ... Laat je ter plaatse dus deskundig adviseren om direct de juiste keuzes te maken zonder kostbare tijd te verliezen.',
           'button-1': 'Vraag een bezoek aan'
         },
         'order-method-support': {
-          title: 'Contacteer onze klantendienst',
+          title: ' Contacteer onze klantendienst',
           text: 'Heb je een specifieke vraag of wens? Wil je een eerste offerte aanvragen? Of plaats je bestellingen toch liever via e-mail, per fax of aan de telefoon? Prima! Onze medewerkers van de klantendienst staan altijd voor jou klaar!',
           'button-1': 'Neem contact op'
         },
         'order-method-edi': {
-          title: 'Plaats je bestellingen via EDI',
-          text: 'Werk je met een ERP-systeem in je onderneming, dan kan ‘electronic data interchange’ interessant zijn. EDI maakt de veilige en snelle overdracht en uitwisseling mogelijk van orders, facturen, berichten en bevestigingen. Zo ben je zeker dat je bestelling snel verwerkt wordt en de kans op fouten verkleint. Interesse? Neem contact op met onze IT-afdeling om de technische mogelijkheden te bespreken.',
+          title: ' Plaats je bestellingen via EDI',
+          text: 'Werk je met een ERP-systeem in je onderneming, dan kan ‘electronic data interchange’ interessant zijn. EDI maakt de veilige en snelle overdracht en uitwisseling mogelijk van orders, facturen, berichten en bevestigingen. Zo ben je zeker dat je bestelling snel verwerkt wordt en de kans op fouten verkleint.<br> Interesse? Neem contact op met onze IT-afdeling om de technische mogelijkheden te bespreken.',
           'button-1': 'Contacteer IT'
         }
       }
@@ -231,14 +263,14 @@ export const fr = {
       },
       'inspire-recipes-leaflet': {
         'block-recipes': {
-          title: 'Recepten om duimen en vingers af te likken',
+          title: ' Recepten die je nergens anders vindt',
           text: 'Laat je culinair inspireren door onze originele recepten. Ambachtelijk, verrassend én thematisch ingedeeld ... Zo krijg je de smaak helemaal te pakken!',
-          button: 'Bekijk onze recepten'
+          button: ' Bekijk onze recepten'
         },
         'block-leaflet': {
-          title: 'Tijdelijke aanbiedingen, speciaal voor jou',
+          title: ' Tijdelijke aanbiedingen, speciaal voor jou',
           text: 'Ons assortiment is altijd scherp geprijsd en van de hoogste kwaliteit. Toch doen we er af en toe nog een mooi prijsvoordeel boven op. Het gaat om kortingen en/of promoties die je zeker niet wil missen…',
-          button: 'Bekijk onze maandfolder'
+          button: ' Bekijk onze maandfolder'
         }
       }
     },
@@ -303,7 +335,7 @@ export const fr = {
   },
   pages: {
     home: {
-      metaTitle: 'Groothandel voor beenhouwerij en voedingsindustrie',
+      metaTitle: 'Groothandel voor beenhouwerij & voedingsindustrie',
       metaDescription: 'Claes Distribution is een betrouwbare totaalleverancier van producten voor de verwerking van o.a. vlees, gevogelte, vis, groenten en kant-en-klare maaltijden.'
     },
     products: {
@@ -311,6 +343,7 @@ export const fr = {
       metaDescription: 'Ons gamma omvat o.a. kruiden, sauzen, marinades, specerijen, voedingswaren, darmen, verpakkingen en producten voor schoonmaak, winkel, keuken en werkhuis.',
     },
     'product-categories': {
+      'return-overview': 'Terug naar overzicht',
       voeding: {
         title: 'Etenswaren van a tot z',
         description: 'Bij Claes Distribution vind je een uitgebreide keuze aan kruiden, sauzen, fonds en marinades. De ideale smaakmakers dus voor al je vlees, vis, gevogelte, vegetarische en kant-en klare gerechten. Ook basisingrediënten zoals bloem, olie en suiker behoren tot ons assortiment. En dan vergeten we nog de soepen, conserven, deegwaren en pasta’s te vermelden. Kortom, zo goed als alle levensmiddelen die jij nodig hebt voor lekkere en verse bereidingen zitten in ons gamma.',
@@ -393,12 +426,27 @@ export const fr = {
       metaDescription: 'Claes Distribution houdt je regelmatig op de hoogte van nieuwigheden, trends, tips, recepten … Ook onze kortingen en promoties wil je zeker niet missen!'
     },
     about: {
-      metaTitle: 'Kwaliteit staat voorop bij Claes Distribution en Claes Machines',
+      metaTitle: 'Kwaliteit staat voorop bij Claes Distribution & Claes Machines',
       metaDescription: 'In de foodindustrie en vooral de vleesverwerkende sector staan wij als groothandel bekend voor ons kwaliteitsvolle gamma en onze uitmuntende service.'
     },
     contact: {
       metaTitle: 'Claes Distribution staat voor je klaar!',
       metaDescription: 'Vragen? Of advies nodig? Spreek je vertegenwoordiger aan, kom langs in onze toonzaal in Paal-Beringen of je kan ons bellen, mailen of faxen.'
+    },
+    'verify-subscribe': {
+      title: 'Bijna klaar: bevestig je inschrijving',
+      description: 'Bedankt voor je interesse in onze nieuwsbrieven!\n\nOm je inschrijving helemaal volgens de regels van de kunst af te ronden, moet je alleen nog even bevestigen. Nadien ontvang je 1 tot maximaal 2 keer per maand een mailtje van ons.',
+      metaTitle: 'Bijna klaar: bevestig je inschrijving',
+      metaDescription: 'Bedankt voor je interesse in onze nieuwsbrieven!\n\nOm je inschrijving helemaal volgens de regels van de kunst af te ronden, moet je alleen nog even bevestigen. Nadien ontvang je 1 tot maximaal 2 keer per maand een mailtje van ons.',
+      preform: 'We leren je graag beter kennen. Vul onderstaand formulier geheel vrijblijvend in, zo kunnen we onze service nog meer op jou afstemmen.',
+      form: {
+        personalName: 'Voornaam',
+        personalSurname: 'Familienaam',
+        personalCompany: 'Bedrijf',
+        personalPhone: 'Telefoon',
+        acceptedOptInTerms: 'Ik ga akkoord met de <a href="/privacy policy">privacy policy</a> en kan mijn gegevens op elk moment aanpassen door contact op te nemen via marketing@claes-distribution.be. Uitschrijven voor de nieuwsbrief kan door op de link te klikken in de voettekst van elke e - mail die je van ons ontvangt.',
+        submit: 'Bevestig je inschrijving'
+      }
     },
     'privacy-policy': {
       title: 'Jouw privacy, onze zorg',
@@ -413,6 +461,13 @@ export const fr = {
       text4: 'Ontving je deze e-mail per vergissing, verwittig de afzender dan alstublieft  door te replyen op deze mail en vernietig hem nadien onmiddellijk. E-mail en bijgevoegde bestanden worden zorgvuldig gecontroleerd op computervirussen volgens onze standaardprocedures, doch wij waarborgen niet dat alle e-mailverkeer virusvrij is.',
       text5: '<b>Privacy</b>: e-mail die vanuit of naar het gebruikte adres van de afzender worden verstuurd, kunnen door Claes Distribution gelezen en bewaard worden.'
     },
+    errors: {
+      'not-found': {
+        title: '404 - Oeps ... er ging iets mis!',
+        text: 'Laat dit je vooral niet tegenhouden en neem een kijkje bij ',
+        button: 'Naar de homepagina'
+      }
+    }
   },
 
   newsList: 'Nieuws',

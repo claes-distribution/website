@@ -64,7 +64,7 @@ const routes: Routes = [
       description: 'pages.contact.metaDescription'
     }
   }, {
-    path: 'verify-subscribe/:email',
+    path: 'verify-subscribe/:hash',
     component: VerifySubscribePageComponent,
     data: {
       title: 'pages.verify-subscribe.metaTitle',

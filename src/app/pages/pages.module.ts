@@ -16,6 +16,8 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { RouterModule } from '@angular/router';
 import { VerifySubscribePageComponent } from './verify-subscribe-page/verify-subscribe-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     ReactiveFormsModule,
     FormsModule,
+    MatInputModule,
+    MatFormFieldModule,
     TranslateModule.forChild()
   ],
   declarations: [

@@ -11,9 +11,8 @@ export class SubscribersService {
     private http: HttpClient
   ) { }
 
-  get(email?: string | null) {
-    if (email) {
-      const hash = crypto.SHA1(email)
+  get(hash?: string) {
+    if (hash) {
       return this.http.get<IGetSubscriberResponse>(`${this.url}/${hash}`)
     } else {
       return this.http.get<IGetSubscriberResponse>(`${this.url}`)
@@ -24,9 +23,8 @@ export class SubscribersService {
     return this.http.post<IPostSubscriberResponse>(`${this.url}`, subscriber)
   }
 
-  update(email: string, subscriber: ISubscriber) {
-    const hash = crypto.SHA1(email)
-    return this.http.put(`${this.url}/${hash}`, subscriber)
+  update(hash: string, subscriber: ISubscriber) {
+    return this.http.put<IPostSubscriberResponse>(`${this.url}/${hash}`, subscriber)
   }
 
   get url(): string {

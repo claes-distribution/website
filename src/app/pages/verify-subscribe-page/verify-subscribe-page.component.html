@@ -1,40 +1,71 @@
 <div></div>
-<section>
-  <div class="container">
+<section style="border:0">
+  <div class="container" *ngIf="subscriber && !subscriber.optInOn">
     <h1 translate="pages.verify-subscribe.title"></h1>
     <div class="placeholder">
+
+      <img style="display:block;margin:0 auto"
+        src="https://pcm.groupclaes.be/v3/content/dis/website/content-image/48953752" width="300" height="300"
+        alt="frans duim">
+
       <p>
         <b translate="pages.verify-subscribe.description"></b>
       </p>
 
       <p>
-        We leren je graag beter kennen. Vul onderstaand formulier geheel vrijblijvend in, zo kunnen we onze service nog
-        meer op jou afstemmen.
+        &nbsp;
       </p>
 
-      <form novalidate [formGroup]="verifyForm">
-        <input type="text" placeholder="personalName" id="personalName"><br>
-        <input type="text" placeholder="personalSurname" id="personalSurname"><br>
-        <input type="text" placeholder="personalCompany" id="personalCompany"><br>
-        <input type="text" placeholder="personalPhone" id="personalPhone"><br>
+      <p>
+        <span translate="pages.verify-subscribe.preform"></span>
+      </p>
 
+      <form novalidate [formGroup]="verifyForm" (submit)="completeSubscribe()">
+        <mat-form-field class="personalName" appearance="outline">
+          <mat-label>
+            <span translate="pages.verify-subscribe.form.personalName"></span>
+          </mat-label>
+          <input formControlName="personalName" autocomplete="given-name" matInput>
+        </mat-form-field><br>
+        <mat-form-field class="personalSurname" appearance="outline">
+          <mat-label>
+            <span translate="pages.verify-subscribe.form.personalSurname"></span>
+          </mat-label>
+          <input formControlName="personalSurname" autocomplete="family-name" matInput>
+        </mat-form-field><br>
+        <mat-form-field class="personalCompany" appearance="outline">
+          <mat-label>
+            <span translate="pages.verify-subscribe.form.personalCompany"></span>
+          </mat-label>
+          <input formControlName="personalCompany" autocomplete="organization" matInput>
+        </mat-form-field><br>
+        <mat-form-field class="personalPhone" appearance="outline">
+          <mat-label>
+            <span translate="pages.verify-subscribe.form.personalPhone"></span>
+          </mat-label>
+          <input formControlName="personalPhone" autocomplete="tel" matInput>
+        </mat-form-field>
 
-        <div style="display:flex;align-items:center;justify-content:center;">
-          <input type="checkbox" formControlName="acceptPolicy">
+        <p style="grid-row: 3;">
+          &nbsp;
+        </p>
+
+        <div class="confirm">
+          <input type="checkbox" formControlName="acceptedOptInTerms">
           <div>&nbsp; &nbsp; &nbsp;</div>
           <p>
             <i>
-              <small>
-                Ik ga akkoord met de privacy policy (link leggen naar de webpagina) en kan mijn gegevens op elk moment
-                aanpassen door contact op te nemen via marketing@claes-distribution.be. Uitschrijven voor de nieuwsbrief
-                kan
-                door op de link te klikken in de voettekst van elke e-mail die je van ons ontvangt.
-              </small>
+              <small [innerHtml]="'pages.verify-subscribe.form.acceptedOptInTerms' | translate"></small>
             </i>
           </p>
         </div>
         <button color="primary" [disabled]="verifyForm.invalid" type="submit">Bevestig je inschrijving</button>
       </form>
     </div>
+  </div>
+  <div class="container" *ngIf="subscriber && subscriber.optInOn">
+    <p>
+      <b>Stoem kieken ge hebt dees al bevestigd ...</b>
+    </p>
   </div>
 </section>
