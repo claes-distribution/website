@@ -1,7 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateModule } from '@ngx-translate/core';
-import { CoreModule } from 'src/app/core/core.module';
+import { CategoriesService } from 'src/app/core/data/categories.service';
 
 import { ProductsCategoriesComponent } from './products-categories.component';
 
@@ -12,10 +13,13 @@ describe('ProductsCategoriesComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ProductsCategoriesComponent],
+      providers: [
+        CategoriesService,
+      ],
       imports: [
+        HttpClientModule,
         TranslateModule.forRoot(),
-        RouterTestingModule,
-        CoreModule
+        RouterTestingModule
       ]
     })
       .compileComponents();

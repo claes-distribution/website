@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { BrowserModule } from '@angular/platform-browser';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { ImageCarouselComponent } from './image-carousel.component';
@@ -11,7 +13,9 @@ describe('ImageCarouselComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ImageCarouselComponent],
       imports: [
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        CommonModule,
+        BrowserModule
       ]
     })
       .compileComponents();

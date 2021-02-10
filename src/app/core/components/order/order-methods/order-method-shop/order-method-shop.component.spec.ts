@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { OrderMethodShopComponent } from './order-method-shop.component';
@@ -11,7 +12,8 @@ describe('OrderMethodShopComponent', () => {
     TestBed.configureTestingModule({
       declarations: [OrderMethodShopComponent],
       imports: [
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        RouterTestingModule
       ]
     })
       .compileComponents();

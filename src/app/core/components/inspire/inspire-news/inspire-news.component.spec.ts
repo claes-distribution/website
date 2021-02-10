@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { TranslateModule } from '@ngx-translate/core';
 import { BlogpostsService } from 'src/app/core/data/blogposts.service';
@@ -19,6 +20,7 @@ describe('InspireNewsComponent', () => {
         BlogpostsService
       ],
       imports: [
+        HttpClientModule,
         TranslateModule.forRoot()
       ]
     })

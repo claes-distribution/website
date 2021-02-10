@@ -33,19 +33,21 @@ export class VerifySubscribePageComponent implements OnInit {
       acceptedOptInTerms: [false, [Validators.required, Validators.requiredTrue]]
     })
 
-    this.route.params.subscribe(params => {
-      this.hash = params['hash']
+    this.route.paramMap.subscribe(params => {
+      this.hash = params.get('hash')
 
       this.subscribersService.get(this.hash).subscribe(response => {
-        this.subscriber = response.subscriber
+        if (response && response.subscriber) {
+          this.subscriber = response.subscriber
 
-        this.verifyForm.controls.personalName.setValue(this.subscriber.personalName)
-        this.verifyForm.controls.personalSurname.setValue(this.subscriber.personalSurname)
-        this.verifyForm.controls.personalCompany.setValue(this.subscriber.personalCompany)
-        this.verifyForm.controls.personalPhone.setValue(this.subscriber.personalPhone)
-        this.verifyForm.controls.acceptedOptInTerms.setValue(this.subscriber.acceptedOptInTerms)
+          this.verifyForm.controls.personalName.setValue(this.subscriber.personalName)
+          this.verifyForm.controls.personalSurname.setValue(this.subscriber.personalSurname)
+          this.verifyForm.controls.personalCompany.setValue(this.subscriber.personalCompany)
+          this.verifyForm.controls.personalPhone.setValue(this.subscriber.personalPhone)
+          this.verifyForm.controls.acceptedOptInTerms.setValue(this.subscriber.acceptedOptInTerms)
 
-        this.ref.markForCheck()
+          this.ref.markForCheck()
+        }
       })
     })
   }

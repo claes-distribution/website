@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { OrderMethodAgentComponent } from './order-method-agent.component';
@@ -11,7 +13,9 @@ describe('OrderMethodAgentComponent', () => {
     TestBed.configureTestingModule({
       declarations: [OrderMethodAgentComponent],
       imports: [
-        TranslateModule.forRoot()
+        BrowserDynamicTestingModule,
+        TranslateModule.forRoot(),
+        RouterTestingModule
       ]
     })
       .compileComponents();

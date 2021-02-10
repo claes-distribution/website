@@ -12,7 +12,7 @@ import { CultureEntry } from '../../api/api.service';
 export class ImageCarouselComponent implements OnInit, OnDestroy {
   @Input() slides: ImageSlide[] = []
   private currentSize: string
-  currentIndex: number
+  currentIndex: number = 0
   timeout: number
 
   constructor(
@@ -105,7 +105,10 @@ export class ImageCarouselComponent implements OnInit, OnDestroy {
   }
 
   get title(): string {
-    return this.slides[this.currentIndex].title[this.culture]
+    if (this.slides[this.currentIndex] && this.slides[this.currentIndex].title) {
+      return this.slides[this.currentIndex].title[this.culture]
+    }
+    return null;
   }
 
   get slideCount(): number {

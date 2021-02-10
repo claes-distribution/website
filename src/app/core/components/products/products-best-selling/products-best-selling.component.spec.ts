@@ -1,5 +1,7 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { TranslateModule } from '@ngx-translate/core';
+import { BestSellingProductsService } from 'src/app/core/data/best-selling.service';
 
 import { ProductsBestSellingComponent } from './products-best-selling.component';
 
@@ -10,7 +12,11 @@ describe('ProductsSpotlightComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ProductsBestSellingComponent],
+      providers: [
+        BestSellingProductsService
+      ],
       imports: [
+        HttpClientModule,
         TranslateModule.forRoot()
       ]
     })

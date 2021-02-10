@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@
 import { CultureEntry } from 'src/app/core/api/api.service';
 import { map } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
-import { CategoriesService } from '../../../data/categories.service';
+import { CategoriesService } from 'src/app/core/data/categories.service';
 
 @Component({
   selector: 'dis-products-search',

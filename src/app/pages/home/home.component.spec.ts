@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateModule } from '@ngx-translate/core';
 import { CoreModule } from 'src/app/core/core.module';
 
@@ -13,6 +15,8 @@ describe('HomeComponent', () => {
       declarations: [HomePageComponent],
       imports: [
         TranslateModule.forRoot(),
+        RouterTestingModule,
+        NoopAnimationsModule,
         CoreModule
       ]
     })
