@@ -1,4 +1,9 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { MatOptionModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { ContactForm2Component } from './contact-form2.component';
 
@@ -8,9 +13,16 @@ describe('ContactForm2Component', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContactForm2Component ]
+      declarations: [ContactForm2Component],
+      imports: [
+        TranslateModule.forRoot(),
+        FormsModule,
+        MatInputModule,
+        MatSelectModule,
+        MatOptionModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

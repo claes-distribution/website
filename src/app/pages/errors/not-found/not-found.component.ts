@@ -17,6 +17,6 @@ export class NotFoundComponent implements OnInit {
   }
 
   get culture(): string {
-    return this.translate.currentLang.split('-')[0];
+    return this.translate.currentLang;
   }
 }

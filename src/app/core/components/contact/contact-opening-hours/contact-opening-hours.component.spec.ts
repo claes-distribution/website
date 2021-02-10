@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { ContactOpeningHoursComponent } from './contact-opening-hours.component';
 
@@ -8,9 +9,12 @@ describe('ContactOpeningHoursComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContactOpeningHoursComponent ]
+      declarations: [ContactOpeningHoursComponent],
+      imports: [
+        TranslateModule.forRoot()
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

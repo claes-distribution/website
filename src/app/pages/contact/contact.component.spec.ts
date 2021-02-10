@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
+import { CoreModule } from 'src/app/core/core.module';
 
 import { ContactPageComponent } from './contact.component';
 
@@ -8,7 +10,10 @@ describe('ContactComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ContactPageComponent]
+      declarations: [ContactPageComponent],
+      imports: [
+        TranslateModule.forRoot(),
+      ]
     })
       .compileComponents();
   }));

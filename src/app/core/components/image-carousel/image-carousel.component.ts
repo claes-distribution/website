@@ -10,7 +10,7 @@ import { CultureEntry } from '../../api/api.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ImageCarouselComponent implements OnInit, OnDestroy {
-  @Input() slides: ImageSlide[]
+  @Input() slides: ImageSlide[] = []
   private currentSize: string
   currentIndex: number
   timeout: number

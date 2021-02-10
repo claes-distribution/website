@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { ISubscriber, SubscribersService } from 'src/app/core/api/subscribers.service';
 
 @Component({
@@ -18,7 +19,9 @@ export class VerifySubscribePageComponent implements OnInit {
     private ref: ChangeDetectorRef,
     private fb: FormBuilder,
     private route: ActivatedRoute,
-    private subscribersService: SubscribersService
+    private subscribersService: SubscribersService,
+    private translate: TranslateService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -62,7 +65,12 @@ export class VerifySubscribePageComponent implements OnInit {
 
       this.subscribersService.update(this.hash, newSub).subscribe(r => {
         if (r.result) {
-          alert('ok')
+          if (this.culture === 'nl') {
+            alert('Bedankt om je inschrijving te bevestigen.')
+          } else {
+            alert('Bedankt om je inschrijving te bevestigen.')
+          }
+          this.router.navigate(['/'])
         } else {
           alert(r.reason)
         }
@@ -70,5 +78,9 @@ export class VerifySubscribePageComponent implements OnInit {
     } else {
       alert('form invalid!')
     }
+  }
+
+  get culture(): string {
+    return this.translate.currentLang;
   }
 }

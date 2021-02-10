@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { TranslateModule } from '@ngx-translate/core';
+import { CoreModule } from 'src/app/core/core.module';
 
 import { ProductsPageComponent } from './products.component';
 
@@ -8,7 +11,12 @@ describe('ProductsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ProductsPageComponent]
+      declarations: [ProductsPageComponent],
+      imports: [
+        TranslateModule.forRoot(),
+        RouterTestingModule,
+        CoreModule
+      ]
     })
       .compileComponents();
   }));

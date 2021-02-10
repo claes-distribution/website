@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-
+import { TranslateModule } from '@ngx-translate/core'
 import { AboutPrideComponent } from './about-pride.component';
 
 describe('AboutPrideComponent', () => {
@@ -8,9 +8,12 @@ describe('AboutPrideComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ AboutPrideComponent ]
+      declarations: [AboutPrideComponent],
+      imports: [
+        TranslateModule.forRoot()
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

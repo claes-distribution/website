@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { InspireRecipesLeafletComponent } from './inspire-recipes-leaflet.component';
 
@@ -8,9 +9,12 @@ describe('InspireRecipesLeafletComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ InspireRecipesLeafletComponent ]
+      declarations: [InspireRecipesLeafletComponent],
+      imports: [
+        TranslateModule.forRoot()
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

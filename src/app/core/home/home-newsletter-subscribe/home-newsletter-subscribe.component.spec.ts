@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { HomeNewsletterSubscribeComponent } from './home-newsletter-subscribe.component';
 
@@ -8,9 +9,12 @@ describe('HomeNewsletterSubscribeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeNewsletterSubscribeComponent ]
+      declarations: [HomeNewsletterSubscribeComponent],
+      imports: [
+        TranslateModule.forRoot()
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

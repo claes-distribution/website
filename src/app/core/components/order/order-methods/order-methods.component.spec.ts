@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { OrderMethodsComponent } from './order-methods.component';
+import { OrderMethodsModule } from './order-methods.module';
 
 describe('OrderMethodsComponent', () => {
   let component: OrderMethodsComponent;
@@ -8,9 +10,15 @@ describe('OrderMethodsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ OrderMethodsComponent ]
+      declarations: [
+        OrderMethodsComponent
+      ],
+      imports: [
+        TranslateModule.forRoot(),
+        OrderMethodsModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

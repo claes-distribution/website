@@ -16,8 +16,6 @@ import { HomeBenefitsComponent } from './components/home/home-benefits/home-bene
 import { HomeLeafletComponent } from './components/home/home-leaflet/home-leaflet.component';
 import { HomeRecipesNewsComponent } from './components/home/home-recipes-news/home-recipes-news.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { PcmWebsiteLogoComponent } from '../pcm-website-logo/pcm-website-logo.component';
-import { PcmWebsiteBannerComponent } from '../pcm-website-banner/pcm-website-banner.component';
 import { ContactFooterComponent } from './components/contact/contact-footer/contact-footer.component';
 import { ProductsTextComponent } from './components/products/products-text/products-text.component';
 import { ProductsSearchComponent } from './components/products/products-search/products-search.component';
@@ -25,13 +23,7 @@ import { ProductsCategoriesComponent } from './components/products/products-cate
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AutoCompleteFilterPipe } from './pipes/auto-complete-filter.pipe';
 import { OrderTextComponent } from './components/order/order-text/order-text.component';
-import { OrderMethodShopComponent } from './components/order/order-methods/order-method-shop/order-method-shop.component';
-import { OrderMethodAppComponent } from './components/order/order-methods/order-method-app/order-method-app.component';
-import { OrderMethodShowroomComponent } from './components/order/order-methods/order-method-showroom/order-method-showroom.component';
-import { OrderMethodAgentComponent } from './components/order/order-methods/order-method-agent/order-method-agent.component';
-import { OrderMethodEdiComponent } from './components/order/order-methods/order-method-edi/order-method-edi.component';
 import { OrderMethodsComponent } from './components/order/order-methods/order-methods.component';
-import { OrderMethodSupportComponent } from './components/order/order-methods/order-method-support/order-method-support.component';
 import { InspireTextComponent } from './components/inspire/inspire-text/inspire-text.component';
 import { InspireRecipesLeafletComponent } from './components/inspire/inspire-recipes-leaflet/inspire-recipes-leaflet.component';
 import { InspireNewsComponent } from './components/inspire/inspire-news/inspire-news.component';
@@ -59,6 +51,8 @@ import { ProductBenefitsComponent } from './components/products/product-benefits
 import { ProductsNewComponent } from './components/products/products-new/products-new.component';
 import { AboutVideoComponent } from './components/about/about-video/about-video.component';
 import { ContactSubscribeComponent } from './components/contact/contact-subscribe/contact-subscribe.component';
+import { OrderMethodsModule } from './components/order/order-methods/order-methods.module';
+import { GroupclaesPcmModule } from 'groupclaes-pcm';
 
 @NgModule({
   imports: [
@@ -74,8 +68,10 @@ import { ContactSubscribeComponent } from './components/contact/contact-subscrib
     MatSelectModule,
     FormsModule,
     ReactiveFormsModule,
+    OrderMethodsModule,
     TranslateModule.forChild(),
-    MatButtonModule
+    MatButtonModule,
+    GroupclaesPcmModule
   ],
   declarations: [
     HomeTextComponent,
@@ -94,12 +90,6 @@ import { ContactSubscribeComponent } from './components/contact/contact-subscrib
 
     OrderTextComponent,
     OrderMethodsComponent,
-    OrderMethodShopComponent,
-    OrderMethodAppComponent,
-    OrderMethodShowroomComponent,
-    OrderMethodAgentComponent,
-    OrderMethodEdiComponent,
-    OrderMethodSupportComponent,
 
     InspireTextComponent,
     InspireRecipesLeafletComponent,
@@ -121,8 +111,6 @@ import { ContactSubscribeComponent } from './components/contact/contact-subscrib
     PrivacyPolicyTitleComponent,
     PrivacyPolicyBlockComponent,
 
-    PcmWebsiteLogoComponent,
-    PcmWebsiteBannerComponent,
     AutoCompleteFilterPipe,
     BlogpostPopupComponent,
     CookiePopupComponent,
@@ -148,12 +136,7 @@ import { ContactSubscribeComponent } from './components/contact/contact-subscrib
 
     OrderTextComponent,
     OrderMethodsComponent,
-    OrderMethodShopComponent,
-    OrderMethodAppComponent,
-    OrderMethodShowroomComponent,
-    OrderMethodAgentComponent,
-    OrderMethodEdiComponent,
-    OrderMethodSupportComponent,
+
 
     InspireTextComponent,
     InspireRecipesLeafletComponent,
@@ -174,9 +157,6 @@ import { ContactSubscribeComponent } from './components/contact/contact-subscrib
 
     PrivacyPolicyTitleComponent,
     PrivacyPolicyBlockComponent,
-
-    PcmWebsiteLogoComponent,
-    PcmWebsiteBannerComponent,
 
     ImageCarouselComponent,
     MenuComponent,

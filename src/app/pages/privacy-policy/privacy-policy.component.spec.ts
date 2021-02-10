@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
+import { CoreModule } from 'src/app/core/core.module';
 
 import { PrivacyPolicyPageComponent } from './privacy-policy.component';
 
@@ -8,7 +10,11 @@ describe('PrivacyPolicyComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [PrivacyPolicyPageComponent]
+      declarations: [PrivacyPolicyPageComponent],
+      imports: [
+        TranslateModule.forRoot(),
+        CoreModule
+      ]
     })
       .compileComponents();
   }));

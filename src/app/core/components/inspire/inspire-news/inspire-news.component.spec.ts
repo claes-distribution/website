@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
+import { BlogpostsService } from 'src/app/core/data/blogposts.service';
+import { BlogpostPopupComponent } from '../../popups/blogpost-popup/blogpost-popup.component';
 
 import { InspireNewsComponent } from './inspire-news.component';
 
@@ -8,9 +11,18 @@ describe('InspireNewsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ InspireNewsComponent ]
+      declarations: [
+        InspireNewsComponent,
+        BlogpostPopupComponent
+      ],
+      providers: [
+        BlogpostsService
+      ],
+      imports: [
+        TranslateModule.forRoot()
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

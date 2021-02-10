@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PcmWebsiteLogoComponent } from './pcm-website-logo.component';
 
@@ -6,12 +6,12 @@ describe('PcmWebsiteLogoComponent', () => {
   let component: PcmWebsiteLogoComponent;
   let fixture: ComponentFixture<PcmWebsiteLogoComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       declarations: [ PcmWebsiteLogoComponent ]
     })
     .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(PcmWebsiteLogoComponent);

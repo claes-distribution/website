@@ -1,4 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { TranslateModule } from '@ngx-translate/core';
+import { CoreModule } from 'src/app/core/core.module';
 
 import { VerifySubscribePageComponent } from './verify-subscribe-page.component';
 
@@ -8,9 +12,15 @@ describe('VerifySubscribePageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VerifySubscribePageComponent ]
+      declarations: [VerifySubscribePageComponent],
+      imports: [
+        TranslateModule.forRoot(),
+        CoreModule,
+        FormsModule,
+        MatFormFieldModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

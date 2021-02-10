@@ -59,13 +59,16 @@
             </i>
           </p>
         </div>
-        <button color="primary" [disabled]="verifyForm.invalid" type="submit">Bevestig je inschrijving</button>
+        <button color="primary" [disabled]="verifyForm.invalid" type="submit">
+          <span translate="pages.verify-subscribe.form.submit"></span>
+        </button>
       </form>
     </div>
   </div>
   <div class="container" *ngIf="subscriber && subscriber.optInOn">
+    <h1 translate="components.contact.contact-subscribe.messages.duplicate.title"></h1>
     <p>
-      <b>Stoem kieken ge hebt dees al bevestigd ...</b>
+      <b translate="components.contact.contact-subscribe.messages.duplicate.message"></b>
     </p>
   </div>
 </section>

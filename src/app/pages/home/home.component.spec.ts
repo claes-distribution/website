@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
+import { CoreModule } from 'src/app/core/core.module';
 
 import { HomePageComponent } from './home.component';
 
@@ -8,7 +10,11 @@ describe('HomeComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [HomePageComponent]
+      declarations: [HomePageComponent],
+      imports: [
+        TranslateModule.forRoot(),
+        CoreModule
+      ]
     })
       .compileComponents();
   }));

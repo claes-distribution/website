@@ -1,4 +1,7 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
+import { SpotlightProductsService } from 'src/app/core/data/spotlight.service';
 
 import { ProductsSpotlightComponent } from './products-spotlight.component';
 
@@ -8,9 +11,16 @@ describe('ProductsSpotlightComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProductsSpotlightComponent ]
+      declarations: [ProductsSpotlightComponent],
+      providers: [
+        SpotlightProductsService
+      ],
+      imports: [
+        TranslateModule.forRoot(),
+        HttpClientModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

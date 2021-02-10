@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { ProductsBestSellingComponent } from './products-best-selling.component';
 
@@ -8,7 +9,10 @@ describe('ProductsSpotlightComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ProductsBestSellingComponent]
+      declarations: [ProductsBestSellingComponent],
+      imports: [
+        TranslateModule.forRoot()
+      ]
     })
       .compileComponents();
   }));

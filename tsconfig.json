@@ -17,7 +17,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "groupclaes-pcm": [
+        "dist/groupclaes-pcm/groupclaes-pcm",
+        "dist/groupclaes-pcm"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": false,

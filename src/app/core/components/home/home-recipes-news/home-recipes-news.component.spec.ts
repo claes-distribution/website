@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { HomeRecipesNewsComponent } from './home-recipes-news.component';
 
@@ -8,9 +10,13 @@ describe('HomeRecipesNewsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeRecipesNewsComponent ]
+      declarations: [HomeRecipesNewsComponent],
+      imports: [
+        TranslateModule.forRoot(),
+        RouterTestingModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
