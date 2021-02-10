@@ -52,7 +52,7 @@ import { ProductsNewComponent } from './components/products/products-new/product
 import { AboutVideoComponent } from './components/about/about-video/about-video.component';
 import { ContactSubscribeComponent } from './components/contact/contact-subscribe/contact-subscribe.component';
 import { OrderMethodsModule } from './components/order/order-methods/order-methods.module';
-import { GroupclaesPcmModule } from 'groupclaes-pcm';
+import { AngularPcmModule } from '@groupclaes/angular-pcm';
 
 @NgModule({
   imports: [
@@ -71,7 +71,7 @@ import { GroupclaesPcmModule } from 'groupclaes-pcm';
     OrderMethodsModule,
     TranslateModule.forChild(),
     MatButtonModule,
-    GroupclaesPcmModule
+    AngularPcmModule
   ],
   declarations: [
     HomeTextComponent,
