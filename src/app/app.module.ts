@@ -25,6 +25,7 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { PagesModule } from './pages/pages.module';
+import { AngularPcmModule } from '@groupclaes/angular-pcm';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { PagesModule } from './pages/pages.module';
     TranslateModule.forRoot(),
     PagesModule,
     CoreModule,
+    AngularPcmModule,
     AppRoutingModule,
     MatToolbarModule,
     MatSidenavModule,

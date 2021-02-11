@@ -32,11 +32,13 @@ export class ProductsCategoriesComponent implements OnInit {
             description: e.description,
             css: this.sanitizer.bypassSecurityTrustStyle(
               `background-image:url('https://pcm.groupclaes.be/v3/content/dis/website/category-image/${e.id}');`
-            )
-          };
-        });
-        this.ref.markForCheck();
-      });
+            ),
+            href: `https://shop.claes-distribution.be/products/${e.name[this.culture]}/${e.id}`
+          }
+        })
+        console.log(this.categories)
+        this.ref.markForCheck()
+      })
     } else {
       this.categoriesService.get().subscribe((result: IGetCategoriesResult) => {
         this.categories = result.categories.map(e => {
@@ -46,11 +48,13 @@ export class ProductsCategoriesComponent implements OnInit {
             description: e.description,
             css: this.sanitizer.bypassSecurityTrustStyle(
               `background-image:url('https://pcm.groupclaes.be/v3/content/dis/website/category-image/${e.id}');`
-            )
-          };
-        });
-        this.ref.markForCheck();
-      });
+            ),
+            href: `/products/${e.name[this.culture]}?id=${e.id}`
+          }
+        })
+        console.log(this.categories)
+        this.ref.markForCheck()
+      })
     }
   }
 
