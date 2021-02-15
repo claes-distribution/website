@@ -36,7 +36,6 @@ export class ProductsCategoriesComponent implements OnInit {
             href: `https://shop.claes-distribution.be/products/${e.name[this.culture]}/${e.id}`
           }
         })
-        console.log(this.categories)
         this.ref.markForCheck()
       })
     } else {
@@ -52,7 +51,6 @@ export class ProductsCategoriesComponent implements OnInit {
             href: `/products/${e.name[this.culture]}?id=${e.id}`
           }
         })
-        console.log(this.categories)
         this.ref.markForCheck()
       })
     }
