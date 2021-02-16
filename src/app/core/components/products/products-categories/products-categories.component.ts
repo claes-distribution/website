@@ -39,7 +39,7 @@ export class ProductsCategoriesComponent implements OnInit {
     }
 
     this.categoriesService.get().subscribe((result: IGetCategoriesResult) => {
-      window.localStorage.setItem('be.claes-distribution.www.categories', JSON.stringify(result.categories))
+      window.sessionStorage.setItem('be.claes-distribution.www.categories', JSON.stringify(result.categories))
 
       this.categories = result.categories.map(e => this.mapCategory(e))
       this.ref.markForCheck()
@@ -55,7 +55,7 @@ export class ProductsCategoriesComponent implements OnInit {
     }
 
     this.categoriesService.getChildren(parentId).subscribe((result: IGetCategoriesResult) => {
-      window.localStorage.setItem('be.claes-distribution.www.categories-' + parentId, JSON.stringify(result.categories))
+      window.sessionStorage.setItem('be.claes-distribution.www.categories-' + parentId, JSON.stringify(result.categories))
 
       this.categories = result.categories.map(e => this.mapChildCategory(e))
       this.ref.markForCheck()
@@ -87,7 +87,7 @@ export class ProductsCategoriesComponent implements OnInit {
   }
 
   private retrieveFromCache(cacheKey: string) {
-    const cachedItem = window.localStorage.getItem(cacheKey)
+    const cachedItem = window.sessionStorage.getItem(cacheKey)
     return cachedItem ?? null
   }
 
