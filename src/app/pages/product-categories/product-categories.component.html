@@ -7,7 +7,7 @@
         <b [translate]="categoryDescription"></b>
       </p>
     </div>
-    <a [routerLink]="['/products']"> <i class="fal fa-fw fa-angle-left"></i>
+    <a href="#" (click)="$event.preventDefault();goBack()"> <i class="fal fa-fw fa-angle-left"></i>
       <span translate="pages.product-categories.return-overview"></span>
     </a>
     <br>

@@ -69,11 +69,11 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     const onNavigationEnd = this.router.events.pipe(filter(event => event instanceof NavigationEnd));
 
-    if (typeof window !== 'undefined') {
-      onNavigationEnd.subscribe(_ => {
-        window.scrollTo(0, 0);
-      });
-    }
+    // if (typeof window !== 'undefined') {
+    //   onNavigationEnd.subscribe(_ => {
+    //     window.scrollTo(0, 0);
+    //   });
+    // }
 
     merge(onNavigationEnd, this.translateService.onLangChange)
       .pipe(

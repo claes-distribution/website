@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
@@ -20,7 +21,8 @@ export class ProductCategoriesPageComponent implements OnInit {
     private route: ActivatedRoute,
     private meta: Meta,
     private translateService: TranslateService,
-    private titleService: Title
+    private titleService: Title,
+    private location: Location
   ) { }
 
   ngOnInit(): void {
@@ -134,5 +136,9 @@ export class ProductCategoriesPageComponent implements OnInit {
       }
       this.ref.markForCheck();
     });
+  }
+
+  goBack() {
+    this.location.back();
   }
 }
