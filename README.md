@@ -1,27 +1,28 @@
-# ClaesdistributionWebsite
+# Claes Distribution Website [![Build Status](https://img.shields.io/travis/claes-distribution/website/master.svg )](https://travis-ci.org/claes-distribution/website) [![Known Vulnerabilities](https://snyk.io/test/github/claes-distribution/website/badge.svg)](https://snyk.io/test/github/claes-distribution/website) [![depenencies](https://status.david-dm.org/gh/claes-distribution/website.svg)](https://david-dm.org/claes-distribution/website) [![devDepenencies](https://status.david-dm.org/gh/claes-distribution/website.svg?type=dev)](https://david-dm.org/claes-distribution/website?type=dev) [![Maintainability](https://api.codeclimate.com/v1/badges/673debd507b01daa20ea/maintainability)](https://codeclimate.com/github/claes-distribution/website/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/673debd507b01daa20ea/test_coverage)](https://codeclimate.com/github/claes-distribution/website/test_coverage)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
+Claes distribution public company website
 
-## Development server
+## Table of contents
+  - [Requirements](##-Requirements)
+  - [Installation](##-Installation)
+  - [Building](##-Building)
+  - [Publishing](##-Publishing)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Requirements
+  - Angular 11
+  - NodeJS 14
 
-## Code scaffolding
+## Installation
+  - Clone the repo `git clone git@github.com:claes-distribution/website.git`
+  - Install dependencies `npm install`
+  - Run test environment `ng serve --port 4200`
+  - Run live environment `ng serve --port 4200 --prod`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Building
+  - Build project `ng build --prod`
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Publising
+  - Goto output dir `cd dist/claesdistribution-website/`
+  - Connect to SFTP Server `sftp ubnt-samba.groupclaes.be`
+  - Change working direcotry `cd /share-data/www/sites/claes-distribution.be/www.claes-distribution.be`
+  - Put all files `put -r *`
