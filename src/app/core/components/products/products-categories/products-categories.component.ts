@@ -36,6 +36,7 @@ export class ProductsCategoriesComponent implements OnInit {
     if (cachedCategories) {
       this.categories = JSON.parse(cachedCategories).map(e => this.mapCategory(e))
       this.ref.markForCheck()
+      return
     }
 
     this.categoriesService.get().subscribe((result: IGetCategoriesResult) => {
@@ -52,6 +53,7 @@ export class ProductsCategoriesComponent implements OnInit {
     if (cachedChilCategories) {
       this.categories = JSON.parse(cachedChilCategories).map(e => this.mapChildCategory(e))
       this.ref.markForCheck()
+      return
     }
 
     this.categoriesService.getChildren(parentId).subscribe((result: IGetCategoriesResult) => {

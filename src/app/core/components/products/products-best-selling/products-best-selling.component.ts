@@ -21,14 +21,37 @@ export class ProductsBestSellingComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.bestSellingService.get().subscribe(result => {
+    this.loadProducts()
+  }
+
+  private loadProducts() {
+    const cachedBestSellingProducts = this.retrieveFromCache('be.claes-distribution.www.bestSelling')
+
+    if (cachedBestSellingProducts) {
+      this.bestSellingProducts = JSON.parse(cachedBestSellingProducts)
       gtag('event', 'view_item_list', {
         'event_category': 'engagement',
         'event_label': 'bestSelling'
       });
-      this.bestSellingProducts = result.bestSellingProducts;
-      this.ref.markForCheck();
-    });
+      this.ref.markForCheck()
+      return
+    }
+
+    this.bestSellingService.get().subscribe((result: any) => {
+      window.sessionStorage.setItem('be.claes-distribution.www.bestSelling', JSON.stringify(result.bestSellingProducts))
+
+      gtag('event', 'view_item_list', {
+        'event_category': 'engagement',
+        'event_label': 'bestSelling'
+      });
+      this.bestSellingProducts = result.bestSellingProducts
+      this.ref.markForCheck()
+    })
+  }
+
+  private retrieveFromCache(cacheKey: string) {
+    const cachedItem = window.sessionStorage.getItem(cacheKey)
+    return cachedItem ?? null
   }
 
   setActiveProduct(id: number, source: string) {

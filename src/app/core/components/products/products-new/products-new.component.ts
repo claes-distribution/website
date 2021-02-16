@@ -21,14 +21,37 @@ export class ProductsNewComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.newService.get().subscribe(result => {
+    this.loadProducts()
+  }
+
+  private loadProducts() {
+    const cachedNewProducts = this.retrieveFromCache('be.claes-distribution.www.new')
+
+    if (cachedNewProducts) {
+      this.newProducts = JSON.parse(cachedNewProducts)
+      gtag('event', 'view_item_list', {
+        'event_category': 'engagement',
+        'event_label': 'new'
+      })
+      this.ref.markForCheck()
+      return
+    }
+
+    this.newService.get().subscribe((result: any) => {
+      window.sessionStorage.setItem('be.claes-distribution.www.new', JSON.stringify(result.newProducts))
+
       gtag('event', 'view_item_list', {
         'event_category': 'engagement',
         'event_label': 'new'
       });
-      this.newProducts = result.newProducts;
-      this.ref.markForCheck();
-    });
+      this.newProducts = result.newProducts
+      this.ref.markForCheck()
+    })
+  }
+
+  private retrieveFromCache(cacheKey: string) {
+    const cachedItem = window.sessionStorage.getItem(cacheKey)
+    return cachedItem ?? null
   }
 
   setActiveProduct(id: number, source: string) {

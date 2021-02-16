@@ -1,8 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { CultureEntry } from 'src/app/core/api/api.service';
-import { map } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
-import { CategoriesService } from 'src/app/core/data/categories.service';
+import { CategoriesService, IGetCategoriesResult } from 'src/app/core/data/categories.service';
 
 @Component({
   selector: 'dis-products-search',
@@ -23,14 +22,36 @@ export class ProductsSearchComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.categoriesService.get().pipe(map(result => result.categories.map(categoy => {
-      return {
-        id: categoy.id,
-        name: categoy.name
-      };
-    }))).subscribe((categories: any[]) => {
-      this.results = categories;
-    });
+    this.loadCategories()
+  }
+
+  private loadCategories() {
+    const cachedCategories = this.retrieveFromCache('be.claes-distribution.www.categories')
+
+    if (cachedCategories) {
+      this.results = JSON.parse(cachedCategories).map(e => this.mapResult(e))
+      this.ref.markForCheck()
+      return
+    }
+
+    this.categoriesService.get().subscribe((result: IGetCategoriesResult) => {
+      window.sessionStorage.setItem('be.claes-distribution.www.categories', JSON.stringify(result.categories))
+
+      this.results = result.categories.map(e => this.mapResult(e))
+      this.ref.markForCheck()
+    })
+  }
+
+  private mapResult(e) {
+    return {
+      id: e.id,
+      name: e.name
+    }
+  }
+
+  private retrieveFromCache(cacheKey: string) {
+    const cachedItem = window.sessionStorage.getItem(cacheKey)
+    return cachedItem ?? null
   }
 
   show(): void {
