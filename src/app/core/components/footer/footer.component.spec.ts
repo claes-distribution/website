@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { MatMenuModule } from '@angular/material/menu';
+import { AngularPcmModule } from '@groupclaes/angular-pcm';
 import { TranslateModule } from '@ngx-translate/core';
-import { GroupclaesPcmModule } from 'groupclaes-pcm';
 
 import { FooterComponent } from './footer.component';
 
@@ -15,7 +15,7 @@ describe('FooterComponent', () => {
       imports: [
         TranslateModule.forRoot(),
         MatMenuModule,
-        GroupclaesPcmModule
+        AngularPcmModule
       ]
     })
       .compileComponents();
