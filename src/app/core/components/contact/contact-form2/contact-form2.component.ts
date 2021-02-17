@@ -134,10 +134,12 @@ export class ContactForm2Component implements OnInit {
 
     this.api.sendContactQuestion(question).subscribe((resp: string) => {
       if (resp && resp === 'OK') {
-        gtag('event', 'submit_from', {
-          event_category: 'contact_from',
-          event_label: this.contactReason
-        });
+        if (gtag != undefined) {
+          gtag('event', 'submit_from', {
+            event_category: 'contact_from',
+            event_label: this.contactReason
+          });
+        }
         alert(this.translate.instant('components.contact.contact-form.sendSuccess'));
         this.send.emit();
       }

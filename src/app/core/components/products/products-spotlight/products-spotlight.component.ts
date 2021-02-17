@@ -2,9 +2,6 @@ import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@
 import { ISpotlightProduct, SpotlightProductsService } from 'src/app/core/data/spotlight.service';
 import { TranslateService } from '@ngx-translate/core';
 
-// declare gtag as a function to access the JS code in TS
-declare let gtag: Function;
-
 @Component({
   selector: 'dis-products-spotlight',
   templateUrl: './products-spotlight.component.html',
@@ -18,7 +15,8 @@ export class ProductsSpotlightComponent implements OnInit {
     private spotlightService: SpotlightProductsService,
     private translate: TranslateService,
     private ref: ChangeDetectorRef
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.loadProducts()
@@ -29,10 +27,12 @@ export class ProductsSpotlightComponent implements OnInit {
 
     if (cachedSpotlightProducts) {
       this.spotlightProducts = JSON.parse(cachedSpotlightProducts)
-      gtag('event', 'view_item_list', {
-        'event_category': 'engagement',
-        'event_label': 'spotlight'
-      });
+      if (typeof gtag != 'undefined') {
+        gtag('event', 'view_item_list', {
+          'event_category': 'engagement',
+          'event_label': 'spotlight'
+        });
+      }
       this.ref.markForCheck()
       return
     }
@@ -40,10 +40,12 @@ export class ProductsSpotlightComponent implements OnInit {
     this.spotlightService.get().subscribe((result: any) => {
       window.sessionStorage.setItem('be.claes-distribution.www.spotlight', JSON.stringify(result.spotlightProducts))
 
-      gtag('event', 'view_item_list', {
-        'event_category': 'engagement',
-        'event_label': 'spotlight'
-      });
+      if (typeof gtag != 'undefined') {
+        gtag('event', 'view_item_list', {
+          'event_category': 'engagement',
+          'event_label': 'spotlight'
+        });
+      }
       this.spotlightProducts = result.spotlightProducts
       this.ref.markForCheck()
     })
@@ -56,12 +58,14 @@ export class ProductsSpotlightComponent implements OnInit {
 
   setActiveProduct(id: number, source: string) {
     console.log('setActiveProduct')
-    // Do nothing existing here (gtag)
-    gtag('event', 'view_item', {
-      'event_category': 'engagement',
-      'event_label': source,
-      'value': id
-    })
+
+    if (typeof gtag != 'undefined') {
+      gtag('event', 'view_item', {
+        'event_category': 'engagement',
+        'event_label': source,
+        'value': id
+      })
+    }
   }
 
   get culture(): string {

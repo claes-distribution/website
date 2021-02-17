@@ -3,9 +3,13 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AngularPcmModule } from '@groupclaes/angular-pcm';
 import { TranslateModule } from '@ngx-translate/core';
+import { CoreModule } from 'src/app/core/core.module';
 import { CategoriesService } from 'src/app/core/data/categories.service';
 
 import { ProductsCategoriesComponent } from './products-categories.component';
+
+// declare gtag as a function to access the JS code in TS
+declare let gtag: Function;
 
 describe('ProductsCategoriesComponent', () => {
   let component: ProductsCategoriesComponent;
@@ -19,9 +23,10 @@ describe('ProductsCategoriesComponent', () => {
       ],
       imports: [
         HttpClientModule,
+        CoreModule,
+        AngularPcmModule,
         TranslateModule.forRoot(),
-        RouterTestingModule,
-        AngularPcmModule
+        RouterTestingModule
       ]
     })
       .compileComponents();

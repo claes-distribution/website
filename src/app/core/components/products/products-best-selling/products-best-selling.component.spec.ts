@@ -5,6 +5,9 @@ import { BestSellingProductsService } from 'src/app/core/data/best-selling.servi
 
 import { ProductsBestSellingComponent } from './products-best-selling.component';
 
+// declare gtag as a function to access the JS code in TS
+declare let gtag: Function;
+
 describe('ProductsSpotlightComponent', () => {
   let component: ProductsBestSellingComponent;
   let fixture: ComponentFixture<ProductsBestSellingComponent>;

@@ -2,9 +2,6 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@
 import { TranslateService } from '@ngx-translate/core';
 import { INewProduct, NewProductsService } from 'src/app/core/data/new.service';
 
-// declare gtag as a function to access the JS code in TS
-declare let gtag: Function;
-
 @Component({
   selector: 'dis-products-new',
   templateUrl: './products-new.component.html',
@@ -29,10 +26,12 @@ export class ProductsNewComponent implements OnInit {
 
     if (cachedNewProducts) {
       this.newProducts = JSON.parse(cachedNewProducts)
-      gtag('event', 'view_item_list', {
-        'event_category': 'engagement',
-        'event_label': 'new'
-      })
+      if (typeof gtag != 'undefined') {
+        gtag('event', 'view_item_list', {
+          'event_category': 'engagement',
+          'event_label': 'new'
+        })
+      }
       this.ref.markForCheck()
       return
     }
@@ -40,10 +39,12 @@ export class ProductsNewComponent implements OnInit {
     this.newService.get().subscribe((result: any) => {
       window.sessionStorage.setItem('be.claes-distribution.www.new', JSON.stringify(result.newProducts))
 
-      gtag('event', 'view_item_list', {
-        'event_category': 'engagement',
-        'event_label': 'new'
-      });
+      if (typeof gtag != 'undefined') {
+        gtag('event', 'view_item_list', {
+          'event_category': 'engagement',
+          'event_label': 'new'
+        });
+      }
       this.newProducts = result.newProducts
       this.ref.markForCheck()
     })
@@ -56,12 +57,14 @@ export class ProductsNewComponent implements OnInit {
 
   setActiveProduct(id: number, source: string) {
     console.log('setActiveProduct');
-    // Do nothing existing here (gtag)
-    gtag('event', 'view_item', {
-      'event_category': 'engagement',
-      'event_label': source,
-      'value': id
-    });
+
+    if (typeof gtag != 'undefined') {
+      gtag('event', 'view_item', {
+        'event_category': 'engagement',
+        'event_label': source,
+        'value': id
+      });
+    }
   }
 
   get culture(): string {

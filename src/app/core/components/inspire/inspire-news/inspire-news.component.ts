@@ -1,6 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { BlogpostsService, IBlogPreview } from 'src/app/core/data/blogposts.service';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core'
+import { TranslateService } from '@ngx-translate/core'
+import { BlogpostsService, IBlogPreview } from 'src/app/core/data/blogposts.service'
 
 @Component({
   selector: 'dis-inspire-news',
@@ -15,7 +15,6 @@ export class InspireNewsComponent implements OnInit {
   additionalAvailable = true
   currentBlog: IBlogPreview
   currentPage = 1
-  maxItems = 3
 
   constructor(
     private translate: TranslateService,
@@ -25,15 +24,7 @@ export class InspireNewsComponent implements OnInit {
 
   ngOnInit(): void {
     this.blogpostService.get(6, 0).subscribe(r => {
-      r.blogposts.forEach(blog => {
-        blog.image = blog.image.replace('{lang}', this.culture);
-        if (blog.ctaText.nl === '') {
-          blog.ctaText.nl = 'Lees meer'
-        }
-        if (blog.ctaText.fr === '') {
-          blog.ctaText.fr = 'Lire plus'
-        }
-      });
+      r.blogposts.forEach(blog => this.fixPostContent(blog))
       this.newsList = r.blogposts;
       this.additionalAvailable = !(r.blogposts.length < 6)
       this.loading = false
@@ -41,26 +32,38 @@ export class InspireNewsComponent implements OnInit {
     })
 
     this.translate.onLangChange.subscribe(() => {
-      this.ref.markForCheck();
+      this.ref.markForCheck()
+    })
+  }
+
+  loadNews() {
+    const cachedNews = this.retrieveFromCache('be.claes-distribution.www.news')
+
+    if (cachedNews) {
+      this.newsList = JSON.parse(cachedNews).map(e => this.fixPostContent(e))
+      this.additionalAvailable = !(this.newsList.length < 6)
+      this.loading = false
+      this.ref.markForCheck()
+      return
+    }
+
+    this.blogpostService.get(6, 0).subscribe(result => {
+      window.sessionStorage.setItem('be.claes-distribution.www.news', JSON.stringify(result.blogposts))
+
+      this.newsList = result.blogposts.map(e => this.fixPostContent(e))
+      this.additionalAvailable = !(this.newsList.length < 6)
+      this.loading = false
+      this.ref.markForCheck()
     })
   }
 
   loadMore() {
     this.currentPage++
     this.loadingAdditional = true
-    this.maxItems += 3
     this.ref.markForCheck()
 
     this.blogpostService.get(3, this.currentPage).subscribe(r => {
-      r.blogposts.forEach(blog => {
-        blog.image = blog.image.replace('{lang}', this.culture);
-        if (blog.ctaText.nl === '') {
-          blog.ctaText.nl = 'Lees meer'
-        }
-        if (blog.ctaText.fr === '') {
-          blog.ctaText.fr = 'Lire plus'
-        }
-      })
+      r.blogposts.forEach(blog => this.fixPostContent(blog))
       this.loadingAdditional = false
       this.newsList.push(...r.blogposts)
       this.additionalAvailable = !(r.blogposts.length < 3) || this.newsList.length >= this.maxItems
@@ -69,24 +72,46 @@ export class InspireNewsComponent implements OnInit {
     })
   }
 
+  private fixPostContent(blog) {
+    blog.image = blog.image.replace('{lang}', this.culture)
+
+    if (!blog.ctaText.nl) {
+      blog.ctaText.nl = 'Lees meer'
+    }
+    if (!blog.ctaText.fr) {
+      blog.ctaText.fr = 'Lire plus'
+    }
+
+    return blog
+  }
+
+  private retrieveFromCache(cacheKey: string) {
+    const cachedItem = window.sessionStorage.getItem(cacheKey)
+    return cachedItem ?? null
+  }
+
   newsHref(url: string): string {
-    return url.replace('{lang}', this.culture);
+    return url.replace('{lang}', this.culture)
   }
 
   open(blog: IBlogPreview, $event: any) {
-    this.currentBlog = blog;
-    $event.preventDefault();
-    this.ref.markForCheck();
-    document.body.style.overflow = 'hidden';
+    this.currentBlog = blog
+    $event.preventDefault()
+    this.ref.markForCheck()
+    document.body.style.overflow = 'hidden'
   }
 
   close() {
-    this.currentBlog = undefined;
-    this.ref.markForCheck();
-    document.body.style.overflow = 'initial';
+    this.currentBlog = undefined
+    this.ref.markForCheck()
+    document.body.style.overflow = 'initial'
+  }
+
+  get maxItems(): number {
+    return this.currentPage * 3
   }
 
   get culture(): string {
-    return this.translate.currentLang;
+    return this.translate.currentLang
   }
 }
