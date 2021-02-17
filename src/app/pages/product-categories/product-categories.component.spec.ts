@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { AngularPcmModule } from '@groupclaes/angular-pcm';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProductsCategoriesComponent } from 'src/app/core/components/products/products-categories/products-categories.component';
 
@@ -19,7 +20,8 @@ describe('ProductCategoriesComponent', () => {
       imports: [
         HttpClientModule,
         TranslateModule.forRoot(),
-        RouterTestingModule
+        RouterTestingModule,
+        AngularPcmModule
       ]
     })
       .compileComponents();

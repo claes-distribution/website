@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { AngularPcmModule } from '@groupclaes/angular-pcm';
 import { TranslateModule } from '@ngx-translate/core';
 import { CoreModule } from 'src/app/core/core.module';
 
@@ -15,7 +16,8 @@ describe('ProductsComponent', () => {
       imports: [
         TranslateModule.forRoot(),
         RouterTestingModule,
-        CoreModule
+        CoreModule,
+        AngularPcmModule
       ]
     })
       .compileComponents();
