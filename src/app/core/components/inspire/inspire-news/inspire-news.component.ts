@@ -23,13 +23,7 @@ export class InspireNewsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.blogpostService.get(6, 0).subscribe(r => {
-      r.blogposts.forEach(blog => this.fixPostContent(blog))
-      this.newsList = r.blogposts;
-      this.additionalAvailable = !(r.blogposts.length < 6)
-      this.loading = false
-      this.ref.markForCheck();
-    })
+    this.loadNews()
 
     this.translate.onLangChange.subscribe(() => {
       this.ref.markForCheck()
@@ -62,11 +56,23 @@ export class InspireNewsComponent implements OnInit {
     this.loadingAdditional = true
     this.ref.markForCheck()
 
-    this.blogpostService.get(3, this.currentPage).subscribe(r => {
-      r.blogposts.forEach(blog => this.fixPostContent(blog))
+
+    const cachedNewsPage = this.retrieveFromCache('be.claes-distribution.www.news-' + (this.currentPage - 1))
+    if (cachedNewsPage) {
+      const additionalNews = JSON.parse(cachedNewsPage).map(e => this.fixPostContent(e))
       this.loadingAdditional = false
-      this.newsList.push(...r.blogposts)
-      this.additionalAvailable = !(r.blogposts.length < 3) || this.newsList.length >= this.maxItems
+      this.newsList.push(...additionalNews)
+      this.additionalAvailable = !(additionalNews.length < 3) || this.newsList.length >= this.maxItems
+
+      this.ref.markForCheck()
+      return
+    }
+
+    this.blogpostService.get(3, this.currentPage).subscribe(result => {
+      window.sessionStorage.setItem('be.claes-distribution.www.news-' + (this.currentPage - 1), JSON.stringify(result.blogposts))
+      this.loadingAdditional = false
+      this.newsList.push(...result.blogposts.map(e => this.fixPostContent(e)))
+      this.additionalAvailable = !(result.blogposts.length < 3) || this.newsList.length >= this.maxItems
 
       this.ref.markForCheck()
     })
