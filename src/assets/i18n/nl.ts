@@ -5,7 +5,7 @@ export const nl = {
       home: 'Homepagina',
       products: 'Producten',
       order: 'Bestellen',
-      inspire: 'Inspiratie',
+      inspire: 'Nieuws',
       about: 'Over ons',
       jobs: 'Jobs',
       contact: 'Contact'
@@ -122,12 +122,12 @@ export const nl = {
     },
     news: {
       title: 'Blijf op de hoogte',
-      button: 'Meer nieuws laden'
+      button: 'Laad meer nieuws'
     },
     home: {
       'home-text': {
-        title: 'Véél meer dan een groothandel voor slagerij & voedingsindustrie',
-        text: 'Als totaalleverancier biedt Claes Distribution uit Paal-Beringen een ruim en kwaliteitsvol productassortiment voor de verwerking van vlees, gevogelte, vis, groenten, vegetarische en kant-en-klare gerechten, enz. Met meer dan 50 jaar ervaring in het vak zijn wij een betrouwbare partner voor heel wat zelfstandige slagers, traiteurs en versspecialisten. Ook industriële foodproducenten, grootdistributeurs en supermarkten kunnen steevast rekenen op onze professionele service met advies én een snelle levering.'
+        title: 'Véél meer dan een groothandel voor slagerij en voedingsindustrie',
+        text: 'Als totaalleverancier biedt <span class="dis-color">Claes Distribution</span> uit Paal-Beringen een ruim en kwaliteitsvol productassortiment voor de verwerking van vlees, gevogelte, vis, groenten, vegetarische en kant-en-klare gerechten, enz. Met meer dan 50 jaar ervaring in het vak zijn wij een betrouwbare partner voor heel wat zelfstandige slagers, traiteurs en versspecialisten. Ook industriële foodproducenten, grootdistributeurs en supermarkten kunnen steevast rekenen op onze professionele service met advies én een snelle levering.'
       },
       'home-products-order': {
         'block-products': {
@@ -156,16 +156,17 @@ export const nl = {
         },
         'block-4': {
           title: 'Betrouwbaarheid',
-          text: 'Ons distributiecentrum is uitgerust met de meest moderne installaties en zet sterk in op de automatisering van voorraadbeheer en orderverwerking. Goederenontvangst gebeurt via scanning, orderpicking via RF en gekoeld transport met temperatuurregistratie en intelligente boordcomputers. Met ‘track & trace’ kunnen we de status van je bestelling op de voet volgen en bij het minste probleem een efficiënte recall uitvoeren.'
+          text: 'Ons distributiecentrum is uitgerust met de meest moderne installaties en zet sterk in op de automatisering van voorraadbeheer en orderverwerking. Goederenontvangst gebeurt via scanning, orderpicking via RF en gekoeld transport met temperatuurregistratie en intelligente boordcomputers. Met ‘track & trace’ volgen we de status van je bestelling op de voet en bij het minste probleem voeren we meteen een recall uit.'
         }
       },
       'home-leaflet': {
         title: 'Blader door de nieuwste promoties',
-        button: 'Bekijk de online promofolder'
+        text: 'Elke maand opnieuw pakken we uit met tijdelijke acties en interessante kortingen. Doe snel je voordeel!',
+        button: 'Bekijk onze folder'
       },
       'home-recipes-news': {
         'block-recipes': {
-          title: 'Doe smakelijke inspiratie op!',
+          title: 'Doe inspiratie op',
           text: 'Op zoek naar een leuk recept voor een lekker gerecht? Wij reiken je originele ideeën en tips aan voor nét dat tikkeltje extra.',
           button: 'Ontdek onze recepten'
         },
@@ -173,6 +174,18 @@ export const nl = {
           title: 'Blijf op de hoogte',
           text: 'Claes Distribution informeert je graag over al wat leeft in de sector: tips, tricks, trends, promoties, nieuwigheden … Zo helpen we je om nóg succesvoller te zijn in alles wat je doet!',
           button: 'Lees ons nieuws'
+        }
+      },
+      'home-leaflet-recipes': {
+        'block-leaflet': {
+          title: 'Blader door de nieuwste promoties',
+          text: 'Elke maand opnieuw pakken we uit met tijdelijke acties en interessante kortingen. Doe snel je voordeel!',
+          button: 'Bekijk onze folder'
+        },
+        'block-recipes': {
+          title: 'Doe inspiratie op',
+          text: 'Op zoek naar een leuk recept voor een lekker gerecht? Wij reiken je originele ideeën en tips aan voor nét dat tikkeltje extra.',
+          button: 'Ontdek onze recepten'
         }
       },
       'home-spotlight-products': {
@@ -191,7 +204,7 @@ export const nl = {
       },
       'products-benefits': {
         title: 'Waarom kiezen voor Claes Distribution?',
-        text: '<li>Zeer compleet assortiment van meer dan 14.000 producten</li><li>Artikelen van topmerken diede allerbeste kwaliteit garanderen</li><li>Eigen vloot van gekoelde vrachtwagens voor snelle levering</li><li>Strenge controler op hygiëne, voedselveiligheid en kwaliteit</li><li>Bestellen kan op 6 verschillende manieren: jij bepaald hoe!</li><li>Altijd deskundig advies voorhanden om de juiste keuze te maken</li>'
+        text: '<li>Zeer compleet assortiment van meer dan 14.000 producten</li><li>Artikelen van topmerken die de allerbeste kwaliteit garanderen</li><li>Eigen vloot van gekoelde vrachtwagens voor snelle levering</li><li>Strenge controles op hygiëne, voedselveiligheid en kwaliteit</li><li>Bestellen kan op 6 verschillende manieren: jij bepaalt hoe!</li><li>Altijd deskundig advies voorhanden om de juiste keuze te maken</li>'
       },
       'products-search': {
         title: 'Welk type product zoek je?',
@@ -214,7 +227,7 @@ export const nl = {
       'order-methods': {
         'order-method-shop': {
           title: ' Vul je winkelmandje in onze webshop',
-          text: 'Wil je ons uitgebreide gamma online verkennen en in alle rust keuzes maken? In onze <a href="https://shop.claes-distribution.be/">eShop</a> kan dat 24/7 in enkele kliks.<br> Voeg zelf producten toe aan je favorieten, stel handige filters in om nóg sneller te zoeken en blijf op de hoogte van promoties en nieuwigheden. Bovendien kan je de productspecificaties (info over allergenen, voedingswaardes, enz.) van aangekochte artikelen ook altijd digitaal kan raadplegen. Niets dan voordelen, toch?',
+          text: 'Wil je ons uitgebreide gamma online verkennen en in alle rust keuzes maken? In onze <a href="https://shop.claes-distribution.be/" target="_blank">eShop</a> kan dat 24/7 in enkele kliks.<br> Voeg zelf producten toe aan je favorieten, stel handige filters in om nóg sneller te zoeken en blijf op de hoogte van promoties en nieuwigheden. Bovendien kan je de productspecificaties (info over allergenen, voedingswaardes, enz.) van aangekochte artikelen ook altijd digitaal kan raadplegen. Niets dan voordelen, toch?',
           'button-1': 'Log in',
           'button-2': 'Meld je aan',
           'button-3': 'Word klant'
@@ -226,7 +239,7 @@ export const nl = {
         },
         'order-method-showroom': {
           title: ' Kom langs in onze showroom',
-          text: 'Ook de deuren van onze fysieke winkel in Paal-Beringen staan dagelijks voor je open. Onze showroom is vlot bereikbaar en beschikt over een ruime parking.<br> Twijfel je over een aankoop? Win gerust het advies in van onze ervaren shopmedewerkers en overtuig jezelf van de kwaliteit van onze producten. Gevonden wat je zocht? Plaats je bestelling en neem de artikelen meteen mee als ze voorradig zijn. Kortom, je bent altijd welkom voor een bezoek!',
+          text: 'Ook de deuren van onze fysieke winkel in <a href="maps:Beverlosesteenweg%20128%203583%20Beringen" target="_blank">Paal-Beringen</a> staan dagelijks voor je open. Onze showroom is vlot bereikbaar en beschikt over een ruime parking.<br> Twijfel je over een aankoop? Win gerust het advies in van onze ervaren shopmedewerkers en overtuig jezelf van de kwaliteit van onze producten. Gevonden wat je zocht? Plaats je bestelling en neem de artikelen meteen mee als ze voorradig zijn. Kortom, je bent altijd welkom voor een bezoek!',
           'button-1': 'Raadpleeg de openingsuren'
         },
         'order-method-agent': {
@@ -269,7 +282,7 @@ export const nl = {
         },
         'block-leaflet': {
           title: ' Tijdelijke aanbiedingen, speciaal voor jou',
-          text: 'Ons assortiment is altijd scherp geprijsd en van de hoogste kwaliteit. Toch doen we er af en toe nog een mooi prijsvoordeel boven op. Het gaat om kortingen en/of promoties die je zeker niet wil missen…',
+          text: 'Ons assortiment is altijd scherp geprijsd en van de hoogste kwaliteit. Toch doen we er af en toe nog een mooi prijsvoordeel boven op. Het gaat om kortingen en/of promoties die je zeker niet wil missen.',
           button: ' Bekijk onze maandfolder'
         }
       }
@@ -300,7 +313,7 @@ export const nl = {
         },
         'data-collection': {
           title: 'Gegevensverzameling',
-          text: '<p>Voor de verwerking van persoonsgegevens in het kader van de activiteiten zoals vermeld in deze verklaring ziet Claes Distribution zichzelf als verwerkingsverantwoordelijke in de zin van de Algemene Verordening Gegevensbescherming.</p><p>Afhankelijk van hoe je onze website gebruikt, kunnen we verschillende soorten informatie over jou verzamelen en opslaan. Via de website verzamelen we persoonlijke gegevens. Denk hierbij bijvoorbeeld aan je naam en e-mailadres, die je aan ons voor bepaalde producten en services aan ons verstrekt.</p><p>We verzamelen ook gegevens over de browser van je computer, waaronder het IP-adres en de locatie van een persoon, browsertype, besturingssysteem en de internetpagina’s die je bezoekt. Hiermee kunnen we relevante content en services voor dat apparaat weergeven en vormgeven.</p>'
+          text: '<p>Voor de verwerking van persoonsgegevens in het kader van de activiteiten zoals vermeld in deze verklaring ziet Claes Distribution zichzelf als verwerkingsverantwoordelijke in de zin van de Algemene Verordening Gegevensbescherming.</p><p>Afhankelijk van hoe je onze website gebruikt, kunnen we verschillende soorten informatie over jou verzamelen en opslaan. Via de website verzamelen we persoonlijke gegevens. Denk hierbij bijvoorbeeld aan je naam en e-mailadres, die je aan ons verstrekt in ruil voor bepaalde producten, informatie en/of services.</p><p>We verzamelen ook gegevens over de browser van je computer, waaronder het IP-adres en de locatie van een persoon, browsertype, besturingssysteem en de internetpagina’s die je bezoekt. Hiermee kunnen we relevante content en services voor dat apparaat weergeven en vormgeven.</p><p>Vul je naar aanleiding van een mailing of een andere digitale rondvraag een tevredenheidsenquête in, dan ga je ermee akkoord dat je antwoorden en de resultaten verwerkt worden voor marketingdoeleinden.</p>'
         },
         security: {
           title: 'Beveiliging',
@@ -335,7 +348,7 @@ export const nl = {
   },
   pages: {
     home: {
-      metaTitle: 'Groothandel voor beenhouwerij & voedingsindustrie',
+      metaTitle: 'Groothandel voor beenhouwerij en voedingsindustrie',
       metaDescription: 'Claes Distribution is een betrouwbare totaalleverancier van producten voor de verwerking van o.a. vlees, gevogelte, vis, groenten en kant-en-klare maaltijden.'
     },
     products: {
@@ -406,7 +419,7 @@ export const nl = {
       },
       kledijVerzorging: {
         title: 'Zo maak je de juiste indruk',
-        description: 'Feit: de professionele uitstraling van je zaak heeft een grote invloed op de koopbeleving van je klanten. Daarom investeer je best in hoogwaardige, moderne en duurzame beroepskledij als slager, traiteur of versondernemer. Liefst mét hoog draagcomfort en goede bewegingsvrijheid natuurlijk… In ons gamma vind je niet alleen slagersjassen, overalls, handschoenen, klompen, laarzen, haarnetjes en schorten, maar ook EHBO-kits voor medische verzorging. Zo ben je in 1-2-3 deskundig uitgerust!',
+        description: 'Feit: de professionele uitstraling van je zaak heeft een grote invloed op de koopbeleving van je klanten. Daarom investeer je best in hoogwaardige, moderne en duurzame beroepskledij als slager, traiteur of versondernemer. Liefst mét hoog draagcomfort en goede bewegingsvrijheid natuurlijk … In ons gamma vind je niet alleen slagersjassen, overalls, handschoenen, klompen, laarzen, haarnetjes en schorten, maar ook EHBO-kits voor medische verzorging. Zo ben je in 1-2-3 deskundig uitgerust!',
         metaTitle: 'Kledij en verzorging voor slagers',
         metaDescription: 'Wij verkopen niet alleen slagersjassen, overalls, handschoenen, klompen, laarzen, haarnetjes en schorten, maar ook EHBO-kits voor medische verzorging.'
       },
@@ -426,7 +439,7 @@ export const nl = {
       metaDescription: 'Claes Distribution houdt je regelmatig op de hoogte van nieuwigheden, trends, tips, recepten … Ook onze kortingen en promoties wil je zeker niet missen!'
     },
     about: {
-      metaTitle: 'Kwaliteit staat voorop bij Claes Distribution & Claes Machines',
+      metaTitle: 'Kwaliteit staat voorop bij Claes Distribution en Claes Machines',
       metaDescription: 'In de foodindustrie en vooral de vleesverwerkende sector staan wij als groothandel bekend voor ons kwaliteitsvolle gamma en onze uitmuntende service.'
     },
     contact: {
@@ -459,7 +472,8 @@ export const nl = {
       text2: 'E-mails geven enkel het standpunt weer van de auteur ervan, en komen niet noodzakelijk overeen met het standpunt van Claes Distribution of de vennootschappen die met haar verbonden zijn.',
       text3: 'Het aangaan van juridische verbintenissen dient krachtens onze firmaregels per brief of per fax te gebeuren en voorzien te worden van een <b>handtekening</b> van één of meerdere daartoe gemachtigde personen.',
       text4: 'Ontving je deze e-mail per vergissing, verwittig de afzender dan alstublieft  door te replyen op deze mail en vernietig hem nadien onmiddellijk. E-mail en bijgevoegde bestanden worden zorgvuldig gecontroleerd op computervirussen volgens onze standaardprocedures, doch wij waarborgen niet dat alle e-mailverkeer virusvrij is.',
-      text5: '<b>Privacy</b>: e-mail die vanuit of naar het gebruikte adres van de afzender worden verstuurd, kunnen door Claes Distribution gelezen en bewaard worden.'
+      text5: '<b>Privacy</b>: e-mail die vanuit of naar het gebruikte adres van de afzender worden verstuurd, kunnen door Claes Distribution gelezen en bewaard worden.',
+      footer: 'De volledige versie van onze privacydisclaimer kan je <a href="/privacy policy">hier</a> raadplegen.'
     },
     errors: {
       'not-found': {

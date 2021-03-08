@@ -3,7 +3,7 @@
   <span translate="components.order.order-methods.order-method-showroom.title"></span>
 </h3>
 <div class="placeholder">
-  <p [innerHtml]="'components.order.order-methods.order-method-showroom.text' | translate"></p>
+  <p [innerHtml]="('components.order.order-methods.order-method-showroom.text' | translate) | safeTestHtml"></p>
 </div>
 
 <div class="buttons-placeholder">

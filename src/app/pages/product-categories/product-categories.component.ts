@@ -38,7 +38,7 @@ export class ProductCategoriesPageComponent implements OnInit {
         let description: string;
 
         switch (id) {
-          case 228:
+          case 288:
             this.categoryTitle = 'pages.product-categories.voeding.title';
             this.categoryDescription = 'pages.product-categories.voeding.description';
             title = 'pages.product-categories.voeding.metaTitle';

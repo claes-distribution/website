@@ -53,6 +53,8 @@ import { AboutVideoComponent } from './components/about/about-video/about-video.
 import { ContactSubscribeComponent } from './components/contact/contact-subscribe/contact-subscribe.component';
 import { OrderMethodsModule } from './components/order/order-methods/order-methods.module';
 import { AngularPcmModule } from '@groupclaes/angular-pcm';
+import { SafeHtmlPipe } from './pipes/safe-html.pipe';
+import { HomeLeafletRecipesComponent } from './components/home/home-leaflet-recipes/home-leaflet-recipes.component';
 
 @NgModule({
   imports: [
@@ -79,6 +81,8 @@ import { AngularPcmModule } from '@groupclaes/angular-pcm';
     HomeBenefitsComponent,
     HomeLeafletComponent,
     HomeRecipesNewsComponent,
+    HomeNewsletterSubscribeComponent,
+    HomeLeafletRecipesComponent,
 
     ProductsTextComponent,
     ProductsSearchComponent,
@@ -112,12 +116,12 @@ import { AngularPcmModule } from '@groupclaes/angular-pcm';
     PrivacyPolicyBlockComponent,
 
     AutoCompleteFilterPipe,
+    SafeHtmlPipe,
     BlogpostPopupComponent,
     CookiePopupComponent,
     FooterComponent,
     ImageCarouselComponent,
     MenuComponent,
-    HomeNewsletterSubscribeComponent,
   ],
   exports: [
     HomeTextComponent,
@@ -125,6 +129,8 @@ import { AngularPcmModule } from '@groupclaes/angular-pcm';
     HomeBenefitsComponent,
     HomeLeafletComponent,
     HomeRecipesNewsComponent,
+    HomeNewsletterSubscribeComponent,
+    HomeLeafletRecipesComponent,
 
     ProductsTextComponent,
     ProductsSearchComponent,
@@ -161,6 +167,7 @@ import { AngularPcmModule } from '@groupclaes/angular-pcm';
     ImageCarouselComponent,
     MenuComponent,
     AutoCompleteFilterPipe,
+    SafeHtmlPipe,
     BlogpostPopupComponent,
     CookiePopupComponent,
     FooterComponent

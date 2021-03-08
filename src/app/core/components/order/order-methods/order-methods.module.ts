@@ -1,5 +1,7 @@
 import { CommonModule } from "@angular/common";
+import { Pipe, PipeTransform } from "@angular/core";
 import { NgModule, Optional, SkipSelf } from "@angular/core";
+import { DomSanitizer, SafeHtml } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
 import { TranslateModule } from "@ngx-translate/core";
 import { OrderMethodAgentComponent } from "./order-method-agent/order-method-agent.component";
@@ -8,6 +10,17 @@ import { OrderMethodEdiComponent } from "./order-method-edi/order-method-edi.com
 import { OrderMethodShopComponent } from "./order-method-shop/order-method-shop.component";
 import { OrderMethodShowroomComponent } from "./order-method-showroom/order-method-showroom.component";
 import { OrderMethodSupportComponent } from "./order-method-support/order-method-support.component";
+
+@Pipe({
+  name: 'safeTestHtml'
+})
+export class SafeHtmlTestPipe implements PipeTransform {
+  constructor(private sanitizer: DomSanitizer) { }
+
+  transform(value: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(value);
+  }
+}
 
 @NgModule({
   imports: [
@@ -22,6 +35,7 @@ import { OrderMethodSupportComponent } from "./order-method-support/order-method
     OrderMethodAgentComponent,
     OrderMethodEdiComponent,
     OrderMethodSupportComponent,
+    SafeHtmlTestPipe
   ],
   exports: [
     OrderMethodShopComponent,

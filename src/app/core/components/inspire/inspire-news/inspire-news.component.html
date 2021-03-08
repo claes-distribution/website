@@ -1,9 +1,14 @@
 <div>
-  <h3 translate="components.news.title"></h3>
+  <h2 translate="components.news.title"></h2>
   <div class="news-grid" *ngIf="!loading">
     <article *ngFor="let news of newsList | slice:0:maxItems; let i = index" [ngClass]="'newsitem-' + i">
-      <img [src]="news.image" [alt]="news.title[culture]">
-      <h4 [innerText]="news.title[culture]"></h4>
+      <a href="#" (click)="open(news, $event)" [title]="news.ctaText[culture]" *ngIf="!news.ctaHref">
+        <img [src]="news.image" [alt]="news.title[culture]">
+      </a>
+      <a [href]="newsHref(news.ctaHref)" target="_blank" [title]="news.ctaText[culture]" *ngIf="news.ctaHref">
+        <img [src]="news.image" [alt]="news.title[culture]">
+      </a>
+      <h3 [innerText]="news.title[culture]"></h3>
       <p>
         <i [innerText]="news.description[culture]"></i>
       </p>

@@ -7,10 +7,8 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeRecipesNewsComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
   }
-
 }

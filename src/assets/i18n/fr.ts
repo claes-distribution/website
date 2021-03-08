@@ -126,7 +126,7 @@ export const fr = {
     },
     home: {
       'home-text': {
-        title: 'Véél meer dan een groothandel voor slagerij & voedingsindustrie',
+        title: 'Véél meer dan een groothandel voor slagerij en voedingsindustrie',
         text: 'Als totaalleverancier biedt Claes Distribution uit Paal-Beringen een ruim en kwaliteitsvol productassortiment voor de verwerking van vlees, gevogelte, vis, groenten, vegetarische en kant-en-klare gerechten, enz. Met meer dan 50 jaar ervaring in het vak zijn wij een betrouwbare partner voor heel wat zelfstandige slagers, traiteurs en versspecialisten. Ook industriële foodproducenten, grootdistributeurs en supermarkten kunnen steevast rekenen op onze professionele service met advies én een snelle levering.'
       },
       'home-products-order': {
@@ -335,7 +335,7 @@ export const fr = {
   },
   pages: {
     home: {
-      metaTitle: 'Groothandel voor beenhouwerij & voedingsindustrie',
+      metaTitle: 'Groothandel voor beenhouwerij en voedingsindustrie',
       metaDescription: 'Claes Distribution is een betrouwbare totaalleverancier van producten voor de verwerking van o.a. vlees, gevogelte, vis, groenten en kant-en-klare maaltijden.'
     },
     products: {
@@ -426,7 +426,7 @@ export const fr = {
       metaDescription: 'Claes Distribution houdt je regelmatig op de hoogte van nieuwigheden, trends, tips, recepten … Ook onze kortingen en promoties wil je zeker niet missen!'
     },
     about: {
-      metaTitle: 'Kwaliteit staat voorop bij Claes Distribution & Claes Machines',
+      metaTitle: 'Kwaliteit staat voorop bij Claes Distribution en Claes Machines',
       metaDescription: 'In de foodindustrie en vooral de vleesverwerkende sector staan wij als groothandel bekend voor ons kwaliteitsvolle gamma en onze uitmuntende service.'
     },
     contact: {
@@ -459,7 +459,8 @@ export const fr = {
       text2: 'E-mails geven enkel het standpunt weer van de auteur ervan, en komen niet noodzakelijk overeen met het standpunt van Claes Distribution of de vennootschappen die met haar verbonden zijn.',
       text3: 'Het aangaan van juridische verbintenissen dient krachtens onze firmaregels per brief of per fax te gebeuren en voorzien te worden van een <b>handtekening</b> van één of meerdere daartoe gemachtigde personen.',
       text4: 'Ontving je deze e-mail per vergissing, verwittig de afzender dan alstublieft  door te replyen op deze mail en vernietig hem nadien onmiddellijk. E-mail en bijgevoegde bestanden worden zorgvuldig gecontroleerd op computervirussen volgens onze standaardprocedures, doch wij waarborgen niet dat alle e-mailverkeer virusvrij is.',
-      text5: '<b>Privacy</b>: e-mail die vanuit of naar het gebruikte adres van de afzender worden verstuurd, kunnen door Claes Distribution gelezen en bewaard worden.'
+      text5: '<b>Privacy</b>: e-mail die vanuit of naar het gebruikte adres van de afzender worden verstuurd, kunnen door Claes Distribution gelezen en bewaard worden.',
+      footer: '<a href="/privacy policy">Ici</a> vous pouvez consulter la version intégrale de notre déclaration de confidentialité.'
     },
     errors: {
       'not-found': {
