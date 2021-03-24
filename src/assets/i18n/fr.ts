@@ -251,7 +251,7 @@ export const fr = {
         title: 'Openingsuren kantoren'
       },
       'social-links': {
-        linkedIn: 'Volg ons op',
+        linkedIn: 'Suivez nous',
         youtube: 'Abonnez-vous à',
         google: 'Évaluez-nous sur'
       }
