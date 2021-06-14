@@ -1,5 +1,4 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core'
-import { Title } from '@angular/platform-browser'
 
 @Component({
   selector: 'dis-menu',
@@ -9,10 +8,9 @@ import { Title } from '@angular/platform-browser'
 })
 export class MenuComponent implements OnInit {
   @Input() pageTitle: string
+  @Input() pageDescription: string
 
-  constructor(
-    private titleService: Title
-  ) { }
+  constructor() { }
 
   ngOnInit() {
   }
@@ -22,6 +20,6 @@ export class MenuComponent implements OnInit {
   }
 
   get subtitle(): string {
-    return this.titleService.getTitle()
+    return this.pageDescription
   }
 }

@@ -25,7 +25,8 @@
         <!-- <aside *ngIf="product.price > 0" [innerText]="product.price | currency:'EUR':'symbol-narrow':'0.2-2':'nl-BE'">
         </aside>
         <aside *ngIf="product.price <= 0" translate="price.request"></aside> -->
-        <a href="https://shop.claes-distribution.be/products?productId={{ product.id }}" target="_blank">
+        <a rel="noreferrer noopener" href="https://shop.claes-distribution.be/products?productId={{ product.id }}"
+          target="_blank">
           <button class="button" color="primary">
             <i class="fal fa-fw fa-eye"></i>
             <span translate="components.products.products-new.button"></span>

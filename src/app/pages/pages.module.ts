@@ -18,6 +18,7 @@ import { VerifySubscribePageComponent } from './verify-subscribe-page/verify-sub
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { AngularPcmModule } from '@groupclaes/angular-pcm';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { MatInputModule } from '@angular/material/input';
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
+    AngularPcmModule,
     TranslateModule.forChild()
   ],
   declarations: [

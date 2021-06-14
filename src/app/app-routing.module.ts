@@ -18,7 +18,8 @@ const routes: Routes = [
     path: '',
     component: HomePageComponent,
     data: {
-      pageTitle: 'pages.home.pagetTitle',
+      pageTitle: 'pages.home.pageTitle',
+      pageDescription: 'pages.home.pageDescription',
       title: 'pages.home.metaTitle',
       description: 'pages.home.metaDescription'
     }
@@ -26,7 +27,8 @@ const routes: Routes = [
     path: 'products',
     component: ProductsPageComponent,
     data: {
-      pageTitle: 'pages.products.pagetTitle',
+      pageTitle: 'pages.products.pageTitle',
+      pageDescription: 'pages.products.pageDescription',
       title: 'pages.products.metaTitle',
       description: 'pages.products.metaDescription'
     }
@@ -34,7 +36,8 @@ const routes: Routes = [
     path: 'products/koopjes',
     component: ProductCategoriesPageComponent,
     data: {
-      pageTitle: 'pages.product-categories.koopjes.pagetTitle',
+      pageTitle: 'pages.product-categories.koopjes.pageTitle',
+      pageDescription: 'pages.product-categories.koopjes.pageDescription',
       title: 'pages.product-categories.koopjes.metaTitle',
       description: 'pages.product-categories.koopjes.metaDescription'
     }
@@ -42,7 +45,8 @@ const routes: Routes = [
     path: 'products/voeding',
     component: ProductCategoriesPageComponent,
     data: {
-      pageTitle: 'pages.product-categories.voeding.pagetTitle',
+      pageTitle: 'pages.product-categories.voeding.pageTitle',
+      pageDescription: 'pages.product-categories.voeding.pageDescription',
       title: 'pages.product-categories.voeding.metaTitle',
       description: 'pages.product-categories.voeding.metaDescription'
     }
@@ -50,7 +54,8 @@ const routes: Routes = [
     path: 'products/darmen',
     component: ProductCategoriesPageComponent,
     data: {
-      pageTitle: 'pages.product-categories.darmen.pagetTitle',
+      pageTitle: 'pages.product-categories.darmen.pageTitle',
+      pageDescription: 'pages.product-categories.darmen.pageDescription',
       title: 'pages.product-categories.darmen.metaTitle',
       description: 'pages.product-categories.darmen.metaDescription'
     }
@@ -58,7 +63,8 @@ const routes: Routes = [
     path: 'products/verpakkingen',
     component: ProductCategoriesPageComponent,
     data: {
-      pageTitle: 'pages.product-categories.verpakkingen.pagetTitle',
+      pageTitle: 'pages.product-categories.verpakkingen.pageTitle',
+      pageDescription: 'pages.product-categories.verpakkingen.pageDescription',
       title: 'pages.product-categories.verpakkingen.metaTitle',
       description: 'pages.product-categories.verpakkingen.metaDescription'
     }
@@ -66,7 +72,8 @@ const routes: Routes = [
     path: 'products/uitrusting winkel',
     component: ProductCategoriesPageComponent,
     data: {
-      pageTitle: 'pages.product-categories.uitrustingWinkel.pagetTitle',
+      pageTitle: 'pages.product-categories.uitrustingWinkel.pageTitle',
+      pageDescription: 'pages.product-categories.uitrustingWinkel.pageDescription',
       title: 'pages.product-categories.uitrustingWinkel.metaTitle',
       description: 'pages.product-categories.uitrustingWinkel.metaDescription'
     }
@@ -74,7 +81,8 @@ const routes: Routes = [
     path: 'products/uitrusting werkhuis',
     component: ProductCategoriesPageComponent,
     data: {
-      pageTitle: 'pages.product-categories.uitrustingWerkhuis.pagetTitle',
+      pageTitle: 'pages.product-categories.uitrustingWerkhuis.pageTitle',
+      pageDescription: 'pages.product-categories.uitrustingWerkhuis.pageDescription',
       title: 'pages.product-categories.koopjes.metaTitle',
       description: 'pages.product-categories.uitrustingWerkhuis.metaDescription'
     }
@@ -82,7 +90,8 @@ const routes: Routes = [
     path: 'products/snijgerief en toebehoren',
     component: ProductCategoriesPageComponent,
     data: {
-      pageTitle: 'pages.product-categories.snijgeriefToebehoren.pagetTitle',
+      pageTitle: 'pages.product-categories.snijgeriefToebehoren.pageTitle',
+      pageDescription: 'pages.product-categories.snijgeriefToebehoren.pageDescription',
       title: 'pages.product-categories.snijgeriefToebehoren.metaTitle',
       description: 'pages.product-categories.snijgeriefToebehoren.metaDescription'
     }
@@ -90,7 +99,8 @@ const routes: Routes = [
     path: 'products/specifiek slagerijmateriaal',
     component: ProductCategoriesPageComponent,
     data: {
-      pageTitle: 'pages.product-categories.specifiekSlagerijmateriaal.pagetTitle',
+      pageTitle: 'pages.product-categories.specifiekSlagerijmateriaal.pageTitle',
+      pageDescription: 'pages.product-categories.specifiekSlagerijmateriaal.pageDescription',
       title: 'pages.product-categories.specifiekSlagerijmateriaal.metaTitle',
       description: 'pages.product-categories.specifiekSlagerijmateriaal.metaDescription'
     }
@@ -98,7 +108,8 @@ const routes: Routes = [
     path: 'products/algemeen keukengerief',
     component: ProductCategoriesPageComponent,
     data: {
-      pageTitle: 'pages.product-categories.algemeenKeukengerief.pagetTitle',
+      pageTitle: 'pages.product-categories.algemeenKeukengerief.pageTitle',
+      pageDescription: 'pages.product-categories.algemeenKeukengerief.pageDescription',
       title: 'pages.product-categories.algemeenKeukengerief.metaTitle',
       description: 'pages.product-categories.algemeenKeukengerief.metaDescription'
     }
@@ -106,7 +117,8 @@ const routes: Routes = [
     path: 'products/party en buffet',
     component: ProductCategoriesPageComponent,
     data: {
-      pageTitle: 'pages.product-categories.partyBuffet.pagetTitle',
+      pageTitle: 'pages.product-categories.partyBuffet.pageTitle',
+      pageDescription: 'pages.product-categories.partyBuffet.pageDescription',
       title: 'pages.product-categories.partyBuffet.metaTitle',
       description: 'pages.product-categories.partyBuffet.metaDescription'
     }
@@ -114,7 +126,8 @@ const routes: Routes = [
     path: 'products/onderhoud',
     component: ProductCategoriesPageComponent,
     data: {
-      pageTitle: 'pages.product-categories.onderhoud.pagetTitle',
+      pageTitle: 'pages.product-categories.onderhoud.pageTitle',
+      pageDescription: 'pages.product-categories.onderhoud.pageDescription',
       title: 'pages.product-categories.onderhoud.metaTitle',
       description: 'pages.product-categories.onderhoud.metaDescription'
     }
@@ -122,7 +135,8 @@ const routes: Routes = [
     path: 'products/kledij en verzorging',
     component: ProductCategoriesPageComponent,
     data: {
-      pageTitle: 'pages.product-categories.kledijVerzorging.pagetTitle',
+      pageTitle: 'pages.product-categories.kledijVerzorging.pageTitle',
+      pageDescription: 'pages.product-categories.kledijVerzorging.pageDescription',
       title: 'pages.product-categories.kledijVerzorging.metaTitle',
       description: 'pages.product-categories.kledijVerzorging.metaDescription'
     }
@@ -130,7 +144,8 @@ const routes: Routes = [
     path: 'order',
     component: OrderPageComponent,
     data: {
-      pageTitle: 'pages.order.pagetTitle',
+      pageTitle: 'pages.order.pageTitle',
+      pageDescription: 'pages.order.pageDescription',
       title: 'pages.order.metaTitle',
       description: 'pages.order.metaDescription'
     }
@@ -138,7 +153,8 @@ const routes: Routes = [
     path: 'inspire',
     component: InspirePageComponent,
     data: {
-      pageTitle: 'pages.inspire.pagetTitle',
+      pageTitle: 'pages.inspire.pageTitle',
+      pageDescription: 'pages.inspire.pageDescription',
       title: 'pages.inspire.metaTitle',
       description: 'pages.inspire.metaDescription'
     }
@@ -146,7 +162,8 @@ const routes: Routes = [
     path: 'about',
     component: AboutPageComponent,
     data: {
-      pageTitle: 'pages.about.pagetTitle',
+      pageTitle: 'pages.about.pageTitle',
+      pageDescription: 'pages.about.pageDescription',
       title: 'pages.about.metaTitle',
       description: 'pages.about.metaDescription'
     }
@@ -154,7 +171,8 @@ const routes: Routes = [
     path: 'contact',
     component: ContactPageComponent,
     data: {
-      pageTitle: 'pages.contact.pagetTitle',
+      pageTitle: 'pages.contact.pageTitle',
+      pageDescription: 'pages.contact.pageDescription',
       title: 'pages.contact.metaTitle',
       description: 'pages.contact.metaDescription'
     }
@@ -162,7 +180,8 @@ const routes: Routes = [
     path: 'verify-subscribe/:hash',
     component: VerifySubscribePageComponent,
     data: {
-      pageTitle: 'pages.verify-subscribe.pagetTitle',
+      pageTitle: 'pages.verify-subscribe.pageTitle',
+      pageDescription: 'pages.verify-subscribe.pageDescription',
       title: 'pages.verify-subscribe.metaTitle',
       description: 'pages.verify-subscribe.metaDescription'
     }
@@ -170,7 +189,8 @@ const routes: Routes = [
     path: 'privacy-policy',
     component: PrivacyPolicyPageComponent,
     data: {
-      pageTitle: 'pages.privacy-policy.pagetTitle',
+      pageTitle: 'pages.privacy-policy.pageTitle',
+      pageDescription: 'pages.privacy-policy.pageDescription',
       title: 'pages.privacy-policy.title',
       description: 'pages.privacy-policy.description',
       hidePolicy: true
@@ -179,7 +199,8 @@ const routes: Routes = [
     path: 'legal/email-disclaimer',
     component: EmailDisclaimerPageComponent,
     data: {
-      pageTitle: 'pages.email-disclaimer.pagetTitle',
+      pageTitle: 'pages.email-disclaimer.pageTitle',
+      pageDescription: 'pages.email-disclaimer.pageDescription',
       title: 'pages.email-disclaimer.title',
       description: 'pages.email-disclaimer.title'
     }
@@ -187,7 +208,8 @@ const routes: Routes = [
     path: 'legal/email-disclaimer/:language',
     component: EmailDisclaimerPageComponent,
     data: {
-      pageTitle: 'pages.email-disclaimer.pagetTitle',
+      pageTitle: 'pages.email-disclaimer.pageTitle',
+      pageDescription: 'pages.email-disclaimer.pageDescription',
       title: 'pages.email-disclaimer.title',
       description: 'pages.email-disclaimer.title'
     }

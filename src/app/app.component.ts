@@ -18,6 +18,7 @@ import { fr } from '../assets/i18n/fr';
 export class AppComponent implements OnInit {
   showCookiePolicy = true
   pageTitle: string
+  pageDescription: string
 
   constructor(
     private router: Router,
@@ -83,7 +84,7 @@ export class AppComponent implements OnInit {
         filter(route => route.outlet === 'primary'),
         mergeMap(route => route.data)
       )
-      .subscribe((event: { title: string, description: string, pageTitle: string, hidePolicy?: boolean }) => {
+      .subscribe((event: { title: string, description: string, pageTitle: string, pageDescription: string, hidePolicy?: boolean }) => {
 
         if (event.hidePolicy) {
           this.showCookiePolicy = false
@@ -94,6 +95,7 @@ export class AppComponent implements OnInit {
         const title = event.title
         const description = event.description
         const pageTitle = event.pageTitle
+        const pageDescription = event.pageDescription
 
         if (title) {
           const transTitle = this.translateService.instant(title)
@@ -108,10 +110,12 @@ export class AppComponent implements OnInit {
           this.meta.updateTag({ property: 'og:description', content: transDescription }, `property="og:description"`)
         }
 
-        if (pageTitle) {
+        if (pageTitle && pageDescription) {
           this.pageTitle = this.translateService.instant(pageTitle)
+          this.pageDescription = this.translateService.instant(pageDescription)
         } else {
           this.pageTitle = this.translateService.instant('unknown')
+          this.pageDescription = this.translateService.instant('unknown')
         }
         this.ref.markForCheck()
       })

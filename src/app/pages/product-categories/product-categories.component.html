@@ -1,4 +1,4 @@
-<div></div>
+<pcm-webcontent-banner company="dis" [culture]="culture" page="productcategoriespage"></pcm-webcontent-banner>
 <section>
   <div class="container">
     <h1 [translate]="categoryTitle"></h1>
@@ -7,7 +7,8 @@
         <b [translate]="categoryDescription"></b>
       </p>
     </div>
-    <a href="#" (click)="$event.preventDefault();goBack()"> <i class="fal fa-fw fa-angle-left"></i>
+    <a rel="noreferrer noopener" href="#" (click)="$event.preventDefault();goBack()"> <i
+        class="fal fa-fw fa-angle-left"></i>
       <span translate="pages.product-categories.return-overview"></span>
     </a>
     <br>

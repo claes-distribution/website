@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'dis-products',
@@ -33,9 +34,14 @@ export class ProductsPageComponent implements OnInit {
     }
   }];
 
-  constructor() { }
+  constructor(
+    private translate: TranslateService
+  ) { }
 
   ngOnInit() {
   }
 
+  get culture(): string {
+    return this.translate.currentLang
+  }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'dis-product-categories',
@@ -17,7 +18,8 @@ export class ProductCategoriesPageComponent implements OnInit {
   constructor(
     private ref: ChangeDetectorRef,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private translate: TranslateService
   ) { }
 
   ngOnInit(): void {
@@ -98,5 +100,9 @@ export class ProductCategoriesPageComponent implements OnInit {
 
   goBack() {
     this.location.back();
+  }
+
+  get culture(): string {
+    return this.translate.currentLang
   }
 }

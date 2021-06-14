@@ -27,4 +27,8 @@ export class EmailDisclaimerPageComponent implements OnInit {
     this.translate.use(language);
     this.ref.markForCheck();
   }
+
+  get culture(): string {
+    return this.translate.currentLang
+  }
 }

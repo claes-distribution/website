@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'dis-order',
@@ -7,34 +8,14 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OrderPageComponent implements OnInit {
-  slides = [{
-    url: 'https://pcm.groupclaes.be/v3/content/dis/website/banner-image/900',
-    title: {
-      nl: 'Bestel 24/7 online via onze eShop',
-      fr: 'Fournisseur fiable de grandes marques'
-    }
-  }, {
-    url: 'https://pcm.groupclaes.be/v3/content/dis/website/banner-image/1000',
-    title: {
-      nl: 'Installeer onze app op je smartphone of tablet',
-      fr: 'Bienvenue également dans notre salle d\'exposition'
-    }
-  }, {
-    url: 'https://pcm.groupclaes.be/v3/content/dis/website/banner-image/1100',
-    title: {
-      nl: 'Ruime keuze in onze toonzaal',
-      fr: 'Techniciens bien formés'
-    }
-  }, {
-    url: 'https://pcm.groupclaes.be/v3/content/dis/website/banner-image/1200',
-    title: {
-      nl: 'Onze klantendienst denkt graag met je mee',
-      fr: 'Propre service d\'intervention'
-    }
-  }];
-
-  constructor() { }
+  constructor(
+    private translate: TranslateService
+  ) { }
 
   ngOnInit() {
+  }
+
+  get culture(): string {
+    return this.translate.currentLang
   }
 }

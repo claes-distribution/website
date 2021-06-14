@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'dis-privacy-policy',
@@ -7,7 +8,9 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PrivacyPolicyPageComponent implements OnInit {
-  constructor() { }
+  constructor(
+    private translate: TranslateService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -18,5 +21,9 @@ export class PrivacyPolicyPageComponent implements OnInit {
 
   get policyRequired() {
     return !(window.localStorage.getItem('cookiesAccepted') === 'yes');
+  }
+
+  get culture(): string {
+    return this.translate.currentLang
   }
 }

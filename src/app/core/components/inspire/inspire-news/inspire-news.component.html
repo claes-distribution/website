@@ -5,7 +5,8 @@
       <a href="#" (click)="open(news, $event)" [title]="news.ctaText[culture]" *ngIf="!news.ctaHref">
         <img [src]="news.image" [alt]="news.title[culture]">
       </a>
-      <a [href]="newsHref(news.ctaHref)" target="_blank" [title]="news.ctaText[culture]" *ngIf="news.ctaHref">
+      <a rel="noreferrer noopener" [href]="newsHref(news.ctaHref)" target="_blank" [title]="news.ctaText[culture]"
+        *ngIf="news.ctaHref">
         <img [src]="news.image" [alt]="news.title[culture]">
       </a>
       <h3 [innerText]="news.title[culture]"></h3>
@@ -18,7 +19,8 @@
           <span [innerText]="news.ctaText[culture]"></span>
         </button>
       </a>
-      <a [href]="newsHref(news.ctaHref)" target="_blank" [title]="news.ctaText[culture]" *ngIf="news.ctaHref">
+      <a rel="noreferrer noopener" [href]="newsHref(news.ctaHref)" target="_blank" [title]="news.ctaText[culture]"
+        *ngIf="news.ctaHref">
         <button color="">
           <i class="fal fa-fw" [ngClass]="news.icon"></i>&nbsp;
           <span [innerText]="news.ctaText[culture]"></span>
