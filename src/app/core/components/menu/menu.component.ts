@@ -1,4 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core'
+import { Title } from '@angular/platform-browser'
 
 @Component({
   selector: 'dis-menu',
@@ -7,10 +8,20 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MenuComponent implements OnInit {
+  @Input() pageTitle: string
 
-  constructor() { }
+  constructor(
+    private titleService: Title
+  ) { }
 
   ngOnInit() {
   }
 
+  get title(): string {
+    return this.pageTitle
+  }
+
+  get subtitle(): string {
+    return this.titleService.getTitle()
+  }
 }

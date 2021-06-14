@@ -18,6 +18,7 @@ const routes: Routes = [
     path: '',
     component: HomePageComponent,
     data: {
+      pageTitle: 'pages.home.pagetTitle',
       title: 'pages.home.metaTitle',
       description: 'pages.home.metaDescription'
     }
@@ -25,20 +26,111 @@ const routes: Routes = [
     path: 'products',
     component: ProductsPageComponent,
     data: {
+      pageTitle: 'pages.products.pagetTitle',
       title: 'pages.products.metaTitle',
       description: 'pages.products.metaDescription'
     }
   }, {
-    path: 'products/:grp',
+    path: 'products/koopjes',
     component: ProductCategoriesPageComponent,
     data: {
-      title: 'pages.products.metaTitle',
-      description: 'pages.products.metaDescription'
+      pageTitle: 'pages.product-categories.koopjes.pagetTitle',
+      title: 'pages.product-categories.koopjes.metaTitle',
+      description: 'pages.product-categories.koopjes.metaDescription'
+    }
+  }, {
+    path: 'products/voeding',
+    component: ProductCategoriesPageComponent,
+    data: {
+      pageTitle: 'pages.product-categories.voeding.pagetTitle',
+      title: 'pages.product-categories.voeding.metaTitle',
+      description: 'pages.product-categories.voeding.metaDescription'
+    }
+  }, {
+    path: 'products/darmen',
+    component: ProductCategoriesPageComponent,
+    data: {
+      pageTitle: 'pages.product-categories.darmen.pagetTitle',
+      title: 'pages.product-categories.darmen.metaTitle',
+      description: 'pages.product-categories.darmen.metaDescription'
+    }
+  }, {
+    path: 'products/verpakkingen',
+    component: ProductCategoriesPageComponent,
+    data: {
+      pageTitle: 'pages.product-categories.verpakkingen.pagetTitle',
+      title: 'pages.product-categories.verpakkingen.metaTitle',
+      description: 'pages.product-categories.verpakkingen.metaDescription'
+    }
+  }, {
+    path: 'products/uitrusting winkel',
+    component: ProductCategoriesPageComponent,
+    data: {
+      pageTitle: 'pages.product-categories.uitrustingWinkel.pagetTitle',
+      title: 'pages.product-categories.uitrustingWinkel.metaTitle',
+      description: 'pages.product-categories.uitrustingWinkel.metaDescription'
+    }
+  }, {
+    path: 'products/uitrusting werkhuis',
+    component: ProductCategoriesPageComponent,
+    data: {
+      pageTitle: 'pages.product-categories.uitrustingWerkhuis.pagetTitle',
+      title: 'pages.product-categories.koopjes.metaTitle',
+      description: 'pages.product-categories.uitrustingWerkhuis.metaDescription'
+    }
+  }, {
+    path: 'products/snijgerief en toebehoren',
+    component: ProductCategoriesPageComponent,
+    data: {
+      pageTitle: 'pages.product-categories.snijgeriefToebehoren.pagetTitle',
+      title: 'pages.product-categories.snijgeriefToebehoren.metaTitle',
+      description: 'pages.product-categories.snijgeriefToebehoren.metaDescription'
+    }
+  }, {
+    path: 'products/specifiek slagerijmateriaal',
+    component: ProductCategoriesPageComponent,
+    data: {
+      pageTitle: 'pages.product-categories.specifiekSlagerijmateriaal.pagetTitle',
+      title: 'pages.product-categories.specifiekSlagerijmateriaal.metaTitle',
+      description: 'pages.product-categories.specifiekSlagerijmateriaal.metaDescription'
+    }
+  }, {
+    path: 'products/algemeen keukengerief',
+    component: ProductCategoriesPageComponent,
+    data: {
+      pageTitle: 'pages.product-categories.algemeenKeukengerief.pagetTitle',
+      title: 'pages.product-categories.algemeenKeukengerief.metaTitle',
+      description: 'pages.product-categories.algemeenKeukengerief.metaDescription'
+    }
+  }, {
+    path: 'products/party en buffet',
+    component: ProductCategoriesPageComponent,
+    data: {
+      pageTitle: 'pages.product-categories.partyBuffet.pagetTitle',
+      title: 'pages.product-categories.partyBuffet.metaTitle',
+      description: 'pages.product-categories.partyBuffet.metaDescription'
+    }
+  }, {
+    path: 'products/onderhoud',
+    component: ProductCategoriesPageComponent,
+    data: {
+      pageTitle: 'pages.product-categories.onderhoud.pagetTitle',
+      title: 'pages.product-categories.onderhoud.metaTitle',
+      description: 'pages.product-categories.onderhoud.metaDescription'
+    }
+  }, {
+    path: 'products/kledij en verzorging',
+    component: ProductCategoriesPageComponent,
+    data: {
+      pageTitle: 'pages.product-categories.kledijVerzorging.pagetTitle',
+      title: 'pages.product-categories.kledijVerzorging.metaTitle',
+      description: 'pages.product-categories.kledijVerzorging.metaDescription'
     }
   }, {
     path: 'order',
     component: OrderPageComponent,
     data: {
+      pageTitle: 'pages.order.pagetTitle',
       title: 'pages.order.metaTitle',
       description: 'pages.order.metaDescription'
     }
@@ -46,6 +138,7 @@ const routes: Routes = [
     path: 'inspire',
     component: InspirePageComponent,
     data: {
+      pageTitle: 'pages.inspire.pagetTitle',
       title: 'pages.inspire.metaTitle',
       description: 'pages.inspire.metaDescription'
     }
@@ -53,6 +146,7 @@ const routes: Routes = [
     path: 'about',
     component: AboutPageComponent,
     data: {
+      pageTitle: 'pages.about.pagetTitle',
       title: 'pages.about.metaTitle',
       description: 'pages.about.metaDescription'
     }
@@ -60,6 +154,7 @@ const routes: Routes = [
     path: 'contact',
     component: ContactPageComponent,
     data: {
+      pageTitle: 'pages.contact.pagetTitle',
       title: 'pages.contact.metaTitle',
       description: 'pages.contact.metaDescription'
     }
@@ -67,6 +162,7 @@ const routes: Routes = [
     path: 'verify-subscribe/:hash',
     component: VerifySubscribePageComponent,
     data: {
+      pageTitle: 'pages.verify-subscribe.pagetTitle',
       title: 'pages.verify-subscribe.metaTitle',
       description: 'pages.verify-subscribe.metaDescription'
     }
@@ -74,6 +170,7 @@ const routes: Routes = [
     path: 'privacy-policy',
     component: PrivacyPolicyPageComponent,
     data: {
+      pageTitle: 'pages.privacy-policy.pagetTitle',
       title: 'pages.privacy-policy.title',
       description: 'pages.privacy-policy.description',
       hidePolicy: true
@@ -82,6 +179,7 @@ const routes: Routes = [
     path: 'legal/email-disclaimer',
     component: EmailDisclaimerPageComponent,
     data: {
+      pageTitle: 'pages.email-disclaimer.pagetTitle',
       title: 'pages.email-disclaimer.title',
       description: 'pages.email-disclaimer.title'
     }
@@ -89,6 +187,7 @@ const routes: Routes = [
     path: 'legal/email-disclaimer/:language',
     component: EmailDisclaimerPageComponent,
     data: {
+      pageTitle: 'pages.email-disclaimer.pagetTitle',
       title: 'pages.email-disclaimer.title',
       description: 'pages.email-disclaimer.title'
     }

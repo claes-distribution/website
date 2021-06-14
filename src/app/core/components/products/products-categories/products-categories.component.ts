@@ -65,6 +65,7 @@ export class ProductsCategoriesComponent implements OnInit {
   }
 
   private mapChildCategory(e) {
+    console.log(e.name[this.culture].toLowerCase())
     return {
       id: e.id,
       name: e.name,
@@ -72,11 +73,12 @@ export class ProductsCategoriesComponent implements OnInit {
       css: this.sanitizer.bypassSecurityTrustStyle(
         `background-image:url('https://pcm.groupclaes.be/v3/miniature/dis/website/category-image/${e.id}');`
       ),
-      href: `https://shop.claes-distribution.be/products/${e.name[this.culture]}/${e.id}`
+      href: `https://shop.claes-distribution.be/products/${e.name[this.culture].toLowerCase()}/${e.id}`
     }
   }
 
   private mapCategory(e) {
+    console.log(e.name[this.culture].toLowerCase())
     return {
       id: e.id,
       name: e.name,
@@ -84,7 +86,7 @@ export class ProductsCategoriesComponent implements OnInit {
       css: this.sanitizer.bypassSecurityTrustStyle(
         `background-image:url('https://pcm.groupclaes.be/v3/miniature/dis/website/category-image/${e.id}');`
       ),
-      href: `/products/${e.name[this.culture]}?id=${e.id}`
+      href: `/products/${e.name[this.culture].toLowerCase()}?id=${e.id}`
     }
   }
 

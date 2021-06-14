@@ -22,7 +22,7 @@
     "@angular/platform-browser": "^12.0.4",
     "@angular/platform-browser-dynamic": "^12.0.4",
     "@angular/router": "^12.0.4",
-    "@groupclaes/angular-pcm": "^1.0.2",
+    "@groupclaes/angular-pcm": "^1.1.6",
     "@ngx-translate/core": "^13.0.0",
     "crypto-js": "^4.0.0",
     "rxjs": "^6.6.3",

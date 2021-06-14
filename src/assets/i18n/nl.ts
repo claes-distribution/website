@@ -183,7 +183,7 @@ export const nl = {
           button: 'Bekijk onze folder'
         },
         'block-recipes': {
-          title: 'Doe inspiratie op',
+          title: 'Recepten: Doe inspiratie op',
           text: 'Op zoek naar een leuk recept voor een lekker gerecht? Wij reiken je originele ideeën en tips aan voor nét dat tikkeltje extra.',
           button: 'Ontdek onze recepten'
         }
@@ -348,82 +348,96 @@ export const nl = {
   },
   pages: {
     home: {
+      pagetTitle: 'Claes Distribution',
       metaTitle: 'Groothandel voor beenhouwerij en voedingsindustrie',
       metaDescription: 'Claes Distribution is een betrouwbare totaalleverancier van producten voor de verwerking van o.a. vlees, gevogelte, vis, groenten en kant-en-klare maaltijden.'
     },
     products: {
+      pagetTitle: 'Producten',
       metaTitle: 'Kies uit meer dan 14.000 artikelen',
       metaDescription: 'Ons gamma omvat o.a. kruiden, sauzen, marinades, specerijen, voedingswaren, darmen, verpakkingen en producten voor schoonmaak, winkel, keuken en werkhuis.',
     },
     'product-categories': {
       'return-overview': 'Terug naar overzicht',
       voeding: {
+        pagetTitle: 'Producten > Voeding',
         title: 'Etenswaren van a tot z',
         description: 'Bij Claes Distribution vind je een uitgebreide keuze aan kruiden, sauzen, fonds en marinades. De ideale smaakmakers dus voor al je vlees, vis, gevogelte, vegetarische en kant-en klare gerechten. Ook basisingrediënten zoals bloem, olie en suiker behoren tot ons assortiment. En dan vergeten we nog de soepen, conserven, deegwaren en pasta’s te vermelden. Kortom, zo goed als alle levensmiddelen die jij nodig hebt voor lekkere en verse bereidingen zitten in ons gamma.',
         metaTitle: 'Etenswaren en levensmiddelen van a tot z',
         metaDescription: 'Voor kruiden, sauzen, fonds en marinades kan je altijd bij ons terecht, maar ook voor basisingrediënten (bloem, olie en suiker), soepen, conserven en deegwaren.'
       },
       darmen: {
+        pagetTitle: 'Producten > Darmen',
         title: 'Het ideale omhulsel voor worst en vleeswaren',
         description: 'Voor de bereiding en verpakking van vleeswaren en andere voeding beschikken wij over een uitgebreid assortiment darmen. Wij bieden natuurlijke darmen afkomstig van schapen, varkens en runderen, maar ook kunstdarmen uit verschillende materialen, met diverse afwerkingsmogelijkheden en confectievormen: op rollen, in bundels, al dan niet afgebonden, met collageenfolie, faser, met of zonder coating …',
         metaTitle: 'Darmen, het ideale omhulsel voor worst en vlees',
         metaDescription: 'Wij verdelen natuurlijke darmen afkomstig van schapen, varkens en runderen, maar ook kunstdarmen op rollen, in bundels, met collageenfolie, faser, coating …'
       },
       verpakkingen: {
+        pagetTitle: 'Producten > Verpakkingen',
         title: 'Nuttig, handig én mooi om mee uit te pakken',
         description: 'Voor een optimale presentatie, verkoop en take-away van vlees en andere voeding is de verpakking van essentieel belang. Bij Claes Distribution is de keuze erg uitgebreid: schalen, bakjes, bowls, cups, flesjes, deksels, schotels, zakken, folies … We hebben het allemaal! Ook qua materiaal, afwerking en personalisatie zijn de mogelijkheden eindeloos: karton, alu, PP, PLA, CPET, APET, biologisch afbreekbaar en andere. Zijn recyclage en duurzaamheid voor jou belangrijk? Vraag zeker naar onze oplossingen!',
         metaTitle: 'Verpakkingen in alle soorten en maten',
         metaDescription: 'Schalen, bakjes, bowls, cups, flesjes, deksels, schotels, zakken en folies. In karton, alu, PP, PLA, CPET, APET, biologisch afbreekbaar … De mogelijkheden zijn eindeloos!'
       },
       uitrustingWinkel: {
+        pagetTitle: 'Producten > Uitrusting winkel',
         title: 'Alles om je zaak professioneel in te richten',
         description: 'De meeste consumenten kopen met hun ogen, dus je toonbank ligt er maar beter piekfijn bij. Op zoek naar benodigdheden om de presentatie en inrichting van je winkel naar een hoger niveau te tillen? Reken op Claes Distribution. Wij helpen je graag verder met schotels, schalen en roosters of serveergerei zoals scheppers, tangen of lepels. Ook aan lampen, decoratie, staanders, displays en sokkels hebben wij gedacht. Hetzelfde geldt voor labelprinters, prijskaartjes en promoclips: ons gamma is uitgebreider dan je denkt!',
         metaTitle: 'Alles om je winkel professioneel uit te rusten',
         metaDescription: 'Ons gamma voor je winkelpresentatie is erg uitgebreid: schotels, scheppers, tangen, lampen, staanders, displays, labelprinters, prijskaartjes en promoclips.'
       },
       uitrustingWerkhuis: {
+        pagetTitle: 'Producten > Uitrusting werkhuis',
         title: 'Opgeruimd staat altijd netjes',
         description: 'Om je werkhuis optimaal te organiseren zijn rekken, tonnen, bakken, afvalemmers, transportkarren en voedselcontainers onmisbaar materiaal. Zoek je betrouwbaar gerief van goede kwaliteit dat lang meegaat in je atelier? Claes Distribution heeft zowat alles in huis om je zaak ook achter de schermen praktisch en vlot uit te rusten. Van vloermatten tot thermoboxen!',
         metaTitle: 'Optimale organisatie van je werkhuis',
         metaDescription: 'Met onze rekken, tonnen, bakken, afvalemmers, transportkarren, vloermatten, voedselcontainers en thermoboxen ligt je atelier er altijd netjes en ordelijk bij.'
       },
       snijgeriefToebehoren: {
+        pagetTitle: 'Producten > Snijgerief en toebehoren',
         title: 'Het ene mes is het andere niet',
         description: 'Voor vakmensen is enkel het beste goed genoeg, dat begrijpt Claes Distribution als geen ander. Doe je ambacht als slager of traiteur eer aan en investeer in degelijke messen, kapmessen, scharen en zagen voor manueel gebruik. Ook voor snijplanken, magneten en oplossingen om je materiaal vakkundig te slijpen en op te bergen kan je bij ons terecht. En verkies je in bepaalde gevallen toch een machinale snijtoepassing? Weet dat wij ook lintzagen, ontzwoerdmessen en toebehoren voor je vleesmolen verdelen. Kortom, een vlijmscherp aanbod van topkwaliteit!',
         metaTitle: 'Professioneel snijgerief en toebehoren',
         metaDescription: 'Doe je ambacht als slager of traiteur eer aan en investeer in degelijke messen, kapmessen, scharen, zagen, snijplanken, magneten en professionele slijpoplossingen.'
       },
       specifiekSlagerijmateriaal: {
+        pagetTitle: 'Producten > Specifiek slagerijmateriaal',
         title: 'Vlees verwerken, een stiel op zich',
         description: 'Als beenhouwer in hart en nieren ga je er elke dag voluit tegenaan om je klanten het allerbeste vlees en de lekkerste bereidingen te bezorgen. Daarvoor heb je uiteraard heel wat specifiek materiaal nodig: haken, vulhoorns, hamburgertoestellen, krabbers, vleesvermalsers, rolladepijpen, scheppers, satebrikkers, kooknetten … Alles wat je elders haast niet vindt, is bij ons standaard opgenomen in het assortiment. Kwaliteit verzekerd!',
         metaTitle: 'Materialen en benodigdheden voor slagers',
         metaDescription: 'Haken, vulhoorns, hamburgertoestellen, krabbers, vleesvermalsers, rolladepijpen, scheppers, satebrikkers, kooknetten … Alles wat je elders niet vindt, is bij ons standaard.'
       },
       algemeenKeukengerief: {
+        pagetTitle: 'Producten > Algemeen keukengerief',
         title: 'Een goed uitgeruste keuken, de basis van alles',
         description: 'Op zoek naar handig en duurzaam keukenmateriaal om snel en efficiënt te werken? Bij Claes Distribution vind je alles van a tot z: van afbakpapier en blikopeners tot zeven. Maar ook alles daartussen zoals ovenmateriaal, potten en pannen, kloppers, mengkommen, spuitzakken, dresseervormen, vergieten, maatbekers en timers. Zowat alle toebehoren zijn snel uit voorraad leverbaar. Ideaal dus voor een veeleisende professional zoals jij!',
         metaTitle: 'Algemeen keukengerief, de basis van alles',
         metaDescription: 'Alle toebehoren voor je keuken zijn snel uit voorraad leverbaar. Van blikopeners, mengkommen en spuitzakken tot potten, pannen, dresseervormen en maatbekers.'
       },
       partyBuffet: {
+        pagetTitle: 'Producten > Party en buffet',
         title: 'Altijd een feestje met het juiste materiaal',
         description: 'Niets is zo gezellig als samen tafelen. Plannen om te gourmetten, grillen of barbecueën op gas of houtskool? Maakt niet uit, wij hebben al het materiaal in huis om er een feestje van te maken. Ook voor warmhoudtoestellen, teppanyaki’s, borden, bestek, schotels, servetten en andere toebehoren kan je rekenen op Claes Distribution. Wedden dat je etentje een voltreffer wordt?',
         metaTitle: 'Alles voor party, buffet en gezellig tafelen',
         metaDescription: 'Ook voor warmhoudtoestellen, teppanyaki’s, borden, bestek, schotels en servetten kan je bij ons terecht. Ideaal om te gourmetten, grillen of barbecueën op gas of houtskool!'
       },
       onderhoud: {
+        pagetTitle: 'Producten > Onderhoud',
         title: 'Omdat hygiëne een topprioriteit is',
         description: 'Hygiëne en netheid zijn van essentieel belang, zeker aangezien je dag in, dag uit met voedsel werkt. Gelukkig hoef je op dat vlak geen compromissen te sluiten: alles wat je nodig hebt voor reiniging, desinfectie en onderhoud is bij Claes Distribution verkrijgbaar. Van dweilen, borstels, insectenverdelgers en poetsdoekjes tot volledige doseersystemen en dispensers voor een optimale toilet- en handhygiëne. Van proper werk gesproken!',
         metaTitle: 'Alles voor reiniging, desinfectie en onderhoud',
         metaDescription: 'Voor dagelijkse en periodieke schoonmaak bieden wij een totaalgamma van krachtige producten aan, maar ook dweilen, borstels, insectenverdelgers en dispensers.'
       },
       kledijVerzorging: {
+        pagetTitle: 'Producten > Kledij en verzorging',
         title: 'Zo maak je de juiste indruk',
         description: 'Feit: de professionele uitstraling van je zaak heeft een grote invloed op de koopbeleving van je klanten. Daarom investeer je best in hoogwaardige, moderne en duurzame beroepskledij als slager, traiteur of versondernemer. Liefst mét hoog draagcomfort en goede bewegingsvrijheid natuurlijk … In ons gamma vind je niet alleen slagersjassen, overalls, handschoenen, klompen, laarzen, haarnetjes en schorten, maar ook EHBO-kits voor medische verzorging. Zo ben je in 1-2-3 deskundig uitgerust!',
         metaTitle: 'Kledij en verzorging voor slagers',
         metaDescription: 'Wij verkopen niet alleen slagersjassen, overalls, handschoenen, klompen, laarzen, haarnetjes en schorten, maar ook EHBO-kits voor medische verzorging.'
       },
       koopjes: {
+        pagetTitle: 'Producten > Koopjes',
         title: 'Interessant geprijsd, mooi meegenomen',
         description: 'Wist je al dat onze eShop een apart uitverkoophoekje heeft? Daar vind je heel wat artikelen terug tegen een scherpe prijs. Het gaat o.a. om producten die het assortiment verlaten, laatste stuks van een specifiek gamma of voedingsmiddelen die dichtbij de THT-datum komen (kort voor ‘tenminste houdbaar tot’). Zo houden we onze stock optimaal up-to-date én vermijden we verspilling. Interesse? Neem regelmatig kijkje, want de afgeprijsde producten vliegen snel de deur uit!',
         metaTitle: 'Koopjes: interessant geprijsd, mooi meegenomen',
@@ -431,22 +445,27 @@ export const nl = {
       }
     },
     order: {
+      pagetTitle: 'Bestellen',
       metaTitle: 'Een order plaatsen? Jij kiest hoe',
       metaDescription: 'Bestellen kan via de eShop of app, in onze winkel, via je vertegenwoordiger of bel, mail of fax onze klantendienst. Wij zijn er voor jou!'
     },
     inspire: {
+      pagetTitle: 'Nieuws',
       metaTitle: 'Wij inspireren je met plezier',
       metaDescription: 'Claes Distribution houdt je regelmatig op de hoogte van nieuwigheden, trends, tips, recepten … Ook onze kortingen en promoties wil je zeker niet missen!'
     },
     about: {
+      pagetTitle: 'Over ons',
       metaTitle: 'Kwaliteit staat voorop bij Claes Distribution en Claes Machines',
       metaDescription: 'In de foodindustrie en vooral de vleesverwerkende sector staan wij als groothandel bekend voor ons kwaliteitsvolle gamma en onze uitmuntende service.'
     },
     contact: {
+      pagetTitle: 'Contact',
       metaTitle: 'Claes Distribution staat voor je klaar!',
       metaDescription: 'Vragen? Of advies nodig? Spreek je vertegenwoordiger aan, kom langs in onze toonzaal in Paal-Beringen of je kan ons bellen, mailen of faxen.'
     },
     'verify-subscribe': {
+      pagetTitle: 'bevestig je inschrijving',
       title: 'Bijna klaar: bevestig je inschrijving',
       description: 'Bedankt voor je interesse in onze nieuwsbrieven!\n\nOm je inschrijving helemaal volgens de regels van de kunst af te ronden, moet je alleen nog even bevestigen. Nadien ontvang je 1 tot maximaal 2 keer per maand een mailtje van ons.',
       metaTitle: 'Bijna klaar: bevestig je inschrijving',
@@ -462,10 +481,12 @@ export const nl = {
       }
     },
     'privacy-policy': {
+      pagetTitle: 'Privacy policy',
       title: 'Jouw privacy, onze zorg',
       description: 'Claes Distribution gebruikt cookies om je een betere en meer persoonlijke gebruikservaring te bieden. In onze privacyverklaring vertellen we je er alles over.'
     },
     'email-disclaimer': {
+      pagetTitle: 'E-mail disclaimer',
       title: 'E-mail disclaimer',
       subtitle: 'E-mailverkeer is onderworpen aan volgende voorwaarden:',
       text1: 'De informatie vervat in deze e-mails is <b>eigendom</b> van Claes Distribution of de met haar verbonden vennootschappen. Deze informatie is <b>strikt vertrouwelijk</b> en is uitsluitend bestemd voor gebruik door de geadresseerde. Het verder verspreiden, kopiëren of gebruiken van deze informatie is verboden zonder expliciete toelating.',
@@ -477,6 +498,7 @@ export const nl = {
     },
     errors: {
       'not-found': {
+        pagetTitle: '404 - Oeps ... er ging iets mis!',
         title: '404 - Oeps ... er ging iets mis!',
         text: 'Laat dit je vooral niet tegenhouden en neem een kijkje bij ',
         button: 'Naar de homepagina'
@@ -506,4 +528,5 @@ export const nl = {
       friday: 'vr'
     }
   },
+  unknown: 'Onbekend'
 };
