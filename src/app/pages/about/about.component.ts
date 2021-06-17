@@ -18,5 +18,4 @@ export class AboutPageComponent implements OnInit {
   get culture(): string {
     return this.translate.currentLang
   }
-
 }
