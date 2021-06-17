@@ -23,6 +23,6 @@ Claes distribution public Company website
 
 ## Publishing
   - Goto output dir `cd dist/claesdistribution-website/`
-  - Connect to SFTP Server `sftp ubnt-samba.groupclaes.be`
-  - Change working directory `cd /share-data/www/sites/claes-distribution.be/www.claes-distribution.be`
+  - Connect to SFTP Servers `sftp 172.18.11.14` and `sftp 172.18.11.18`
+  - Change working directory `cd /mnt/www/sites/claes-distribution.be/www.claes-distribution.be`
   - Put all files `put -r *`
