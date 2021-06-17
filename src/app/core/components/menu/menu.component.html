@@ -1,8 +1,26 @@
 <div id="menu">
-  <div id="mobile-menu"></div>
+  <div id="mobile-menu">
+    <a class="menu-link-button menu-button" #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="mobileMenu">
+      <i class="far fa-fw fa-lg fa-bars"></i>
+    </a>
+    <div id="stacked-menu">
+      <div id="menu-header">
+        <h1>
+          <span [textContent]="title"></span>
+        </h1>
+      </div>
+      <div id="menu-subheader">
+        <h2>
+          <span [textContent]="subtitle"></span>
+        </h2>
+      </div>
+    </div>
+    <a class="logo" routerLink="">
+      <pcm-website-logo company="dis" height="48" width="93"></pcm-website-logo>
+    </a>
+  </div>
   <div id="desktop-menu">
-    <a class="menu-link-button logo" routerLink="" [routerLinkActiveOptions]="{ exact: true }"
-      routerLinkActive="active">
+    <a class="logo" routerLink="">
       <pcm-website-logo company="dis" height="58" width="112"></pcm-website-logo>
     </a>
     <div id="stacked-menu">
@@ -46,41 +64,6 @@
   </div>
 </div>
 
-<!-- <mat-toolbar color="primary">
-  <a class="menu-link-button menu-button" #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="mobileMenu">
-    <i class="far fa-fw fa-lg fa-bars"></i>
-  </a>
-  <a class="menu-link-button logo" routerLink="" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
-    <pcm-website-logo company="dis"></pcm-website-logo>
-  </a>
-  <div class="grid-spacer"></div>
-  <div id="desktop-menu" class="grid-m">
-    <a class="menu-link-button" routerLink="" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
-      <i class="fal fa-fw fa-lg fa-home"></i>
-    </a>
-    <a class="menu-link-button" routerLink="products" routerLinkActive="active">
-      <span translate="components.menu.products"></span>
-    </a>
-    <a class="menu-link-button" routerLink="order" routerLinkActive="active">
-      <span translate="components.menu.order"></span>
-    </a>
-    <a class="menu-link-button" routerLink="inspire" routerLinkActive="active">
-      <span translate="components.menu.inspire"></span>
-    </a>
-    <a class="menu-link-button" href="https://www.groupclaes.be/vacatures" target="_blank">
-      <span translate="components.menu.jobs"></span>
-    </a>
-    <a class="menu-link-button" routerLink="about" routerLinkActive="active">
-      <span translate="components.menu.about"></span>
-    </a>
-    <a class="menu-link-button" routerLink="contact" routerLinkActive="active">
-      <span translate="components.menu.contact"></span>
-    </a>
-    <a class="menu-link-button" href="https://shop.claes-distribution.be" target="_blank">
-      <i class="fal fa-fw fa-lg fa-shopping-basket"></i>
-    </a>
-  </div>
-</mat-toolbar> -->
 <div class="spacer"></div>
 <mat-menu #mobileMenu="matMenu" [overlapTrigger]="false">
   <button mat-menu-item routerLink="" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
