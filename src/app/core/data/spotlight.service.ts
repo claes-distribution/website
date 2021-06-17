@@ -24,11 +24,12 @@ export interface IGetSpotlightProductsResult {
 }
 
 export interface ISpotlightProduct {
-  id: number;
+  id: number
   name: {
-    nl: string;
-    fr: string;
-  };
-  url: string;
-  price: number;
+    nl: string
+    fr: string
+  }
+  color: string
+  url: string
+  price: number
 }

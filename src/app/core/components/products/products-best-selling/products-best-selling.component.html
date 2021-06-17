@@ -21,7 +21,7 @@
         </button>
       </div>
       <div class="loaded-content" *ngIf="product">
-        <img [src]="product.url" [alt]="product.name[culture]">
+        <img [src]="product.url" [style]="'background-color:#' + product.color" [alt]="product.name[culture]">
         <header [innerText]="product.name[culture]"></header>
         <!-- <aside *ngIf="product.price > 0" [innerText]="product.price | currency:'EUR':'symbol-narrow':'0.2-2':'nl-BE'">
         </aside>

@@ -24,11 +24,12 @@ export interface IGetBestSellingProductsResult {
 }
 
 export interface IBestSellingProduct {
-  id: number;
+  id: number
   name: {
-    nl: string;
-    fr: string;
-  };
-  url: string;
-  price: number;
+    nl: string
+    fr: string
+  }
+  color: string
+  url: string
+  price: number
 }
