@@ -65,6 +65,10 @@ export const nl = {
           duplicate: {
             title: 'OPGELET!',
             message: 'Dit e-mailadres komt reeds voor in ons bestand. Je ontvangt onze nieuwsbrief dus sowieso al elke maand in je inbox.'
+          },
+          invalid: {
+            title: 'OPGELET!',
+            message: 'Dit e-mailadres is ongeldig, gelieve een geldig e-mail adres in te vullen.'
           }
         }
       }
