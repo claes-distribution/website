@@ -36,14 +36,21 @@ export class ContactSubscribeComponent implements OnInit {
         alert(`${title.toUpperCase()}\n\n${message}`)
       }
     }, err => {
+      console.log(err)
       if (err) {
         if (err.status) {
           switch (err.status) {
             case 400:
+              title = this.translate.instant(`components.contact.contact-subscribe.messages.invalid.title`)
+              message = this.translate.instant(`components.contact.contact-subscribe.messages.invalid.message`)
+              alert(`${title.toUpperCase()}\n\n${message}`)
+              return
+            case 409:
               title = this.translate.instant(`components.contact.contact-subscribe.messages.${err.error.reason}.title`)
               message = this.translate.instant(`components.contact.contact-subscribe.messages.${err.error.reason}.message`)
               alert(`${title.toUpperCase()}\n\n${message}`)
               return
+
           }
         }
       }
